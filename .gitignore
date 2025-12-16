@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Data files
+*.json
+*.csv
+*.tsv
+*.log
+*.graphml
+
+# Environments
+.env
+.venv/
+env/
+venv/
+
+# Jupyter
+.ipynb_checkpoints
+
+# Model checkpoints
+*.ckpt
+*.pt
+*.bin
+
+# VSCode
+.vscode/
