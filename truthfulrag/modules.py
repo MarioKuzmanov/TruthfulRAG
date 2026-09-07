@@ -432,32 +432,10 @@ async def entropy_filter(
         entropy_deltas_dict[element] = entropy_with_fact
         entropy_delta = entropy_with_fact - baseline_entropy
 
-        if entropy_delta >= 0.0:
-            entropy_deltas.append({
-                "element": element,
-                "delta": entropy_delta
-            })
-        elif entropy_with_fact != 0.0 and baseline_entropy / entropy_with_fact <= 10 ** threshold:
-            entropy_deltas.append({
-                "element": element,
-                "delta": entropy_delta
-            })
-    if not entropy_deltas and entropy_deltas_dict: 
-        max_entropy_delta = max(entropy_deltas_dict.values())
-        entropy_deltas = [
-            {
-                "element": k,
-                "delta": v
-            }
-            for k, v in entropy_deltas_dict.items() if v == max_entropy_delta
-        ]
+        if entropy_delta > threshold:
+            entropy_deltas.append({"element": element})
 
-    # Step 3: Select top_k elements with the highest entropy reduction
-    top_filtered = heapq.nlargest(top_k, entropy_deltas, key=lambda x: x['delta'])
-
-    filtered_elements = [item['element'] for item in top_filtered]
-
-    return filtered_elements
+    return [item["element"] for item in entropy_deltas]
 
 
 async def predict_answer(
