@@ -78,8 +78,8 @@ class GLiNERService(AbstractNerService):
         nodes = defaultdict(list)
         for chunk, entities in zip(chunks, preds):
             for e in entities:
-                node = f"\"{e['text'].upper()}\""
-                node_type = f"\"{e['label'].upper()}\""
+                node = e['text'].upper()
+                node_type = e['label'].upper()
                 node_meta = {"entity_name": e["text"], "entity_type": node_type, "source_id": chunk["item_id"],
                              "chunk_id": chunk["chunk_id"],
                              "confidence": e["score"]}

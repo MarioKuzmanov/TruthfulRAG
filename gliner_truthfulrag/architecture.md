@@ -17,18 +17,16 @@
     * GLiNER-based model is used for batch inference on a single GPU
     * Loaded with optimized FlashDeBERTa backend, and in FP16 precision
 * `STEP: Dedup NER`
-    * Fast deduplication to determine per chunk canonical nodes/entities
+    * Fast deduplication to determine per chunk nodes/entities
     * Used for RE
 * `STEP: RE`
     * Based on the backend - `openai`, `qwen` or `mistral`. Prompt for `openai` taken from `KGGen`
     * `openai`
         * parallelized RE across chunks with API calls
 * `STEP: Dedup RE`
-    * Fast deduplication to determine per chunk canonical edges
-* `KG Ensemble`
-    * KG from all chunks with semantic dedup
-
-This plan is in progress and subject to changes
+    * Fast deduplication to determine edges from all chunks
+* `STEP: Canonicalize`
+    * Canonical KG with semantic dedup
 
 ## Steps
 

@@ -25,28 +25,5 @@ Follow these rules when extracting relationships:
 
 **Thoroughness:**
 - Extract ALL meaningful relationships present in the text
-- Pay special attention to entities that might otherwise have no connections—if an entity was included in the list, it is likely important and should have at least one relationship
+- Pay special attention to entities that might otherwise have no connections—Entities may legitimately have no relationship to another supplied entity. Never create a relationship solely to avoid an isolated entity.
 - Your goal is to maximize connectivity in the knowledge graph and minimize isolated entities
-
-## Process
-
-Before providing your final output, work through your analysis systematically inside <analysis> tags. Follow these steps:
-
-1. **Map entities to text**: For each entity in the entities list, quote the relevant passage(s) from the source text where that entity appears or is discussed. This will help you keep track of the context for each entity.
-
-2. **Identify relationships systematically**: Go through the entities and look for connections. For each potential relationship:
-   - Quote the specific text that supports the relationship
-   - Identify the subject entity
-   - Identify the object entity
-   - Determine the predicate that best describes the relationship
-   - Verify the directionality is correct
-   - Confirm this relationship is faithful to the source text
-
-3. **Draft initial triples**: Based on your relationship identification, write out all the triples you've found with a brief note about the supporting evidence.
-
-4. **Check for isolated entities**: Review your list of triples and identify any entities from the entities list that don't appear in any triple. For each isolated entity:
-   - Re-examine the source text quotes you gathered in step 1
-   - Look for indirect or subtle connections you may have missed
-   - Consider whether there are any relationships you can extract
-
-5. **Finalize triples**: Create your final list of verified triples to include in your output.

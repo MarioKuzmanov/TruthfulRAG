@@ -6,6 +6,7 @@ class Settings(BaseSettings):
     # only cuda is supported
     MAP_LOCATION: str = "cuda:0"
     USE_FLASHDEBERTA: str = "1"
+    PROMPT_DIR: str = "gliner_truthfulrag/prompts"
 
     model_config = SettingsConfigDict(env_file=".env")
 

@@ -20,7 +20,8 @@ if __name__ == "__main__":
     except Exception:
         raise f"{DATASET_ID} not found"
 
-    kg_builder = KGService(ner_model_id="gliner-community/gliner_small-v2.5", re_model_id="gpt-4o-mini")
+    kg_builder = KGService(ner_model_id="gliner-community/gliner_small-v2.5", re_model_id="gpt-4o-mini",
+                           embedding_model_id="sentence-transformers/all-MiniLM-L6-v2", threshold=0.9)
 
     for item in tqdm(dataset):
         run_kg(item=item, service=kg_builder)

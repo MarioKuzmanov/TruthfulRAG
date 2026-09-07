@@ -19,7 +19,7 @@ async def main():
     dataset_name = 'timeqa_2022_nota' # faitheval_data, musique_negative, squad_negative, timeqa_2022_nota, musique_golden, squad_golden
     dataset = load_dataset("json", data_files=f"./datas/{dataset_name}.json")
     dataset = dataset['train']
-    dataset = dataset.select(range(0,1,1))
+    dataset = dataset.select([2])
 
     rag = TruthfulRAG(
         dataset=dataset,
