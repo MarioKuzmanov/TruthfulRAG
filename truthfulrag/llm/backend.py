@@ -185,7 +185,7 @@ class LLMBackend:
             probs = [math.exp(entry["logprob"]) for entry in token_logits]
             Z = sum(probs) + 1e-10
             normalized_probs = [p / Z for p in probs]
-            entropy = -sum(p * math.log(p + 1e-10) for p in normalized_probs)
+            entropy = -sum(p * math.log2(p + 1e-10) for p in normalized_probs)
             entropy_list.append(entropy)
 
         entropy = sum(entropy_list) / len(entropy_list) if entropy_list else 0.0
