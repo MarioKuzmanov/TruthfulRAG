@@ -51,8 +51,6 @@ def chunking_by_token_size(
                 "chunk_order_index": index,
             }
         )
-    d = {str(item['id']): results}
-    print(f"CHUNK PROCESSED: {d}\n\n")
     return {str(item['id']): results}
 
 
@@ -69,7 +67,7 @@ async def generate_knowledge_graph(
 ) -> List[Dict]:
     """
     Generate knowledge graph for each item in the dataset
-    
+
     Args:
         filtered_chunks: filtered chunks for knowledge graph generation
         similarity_model: similarity model for calculating similarity between entities
@@ -80,7 +78,7 @@ async def generate_knowledge_graph(
         entity_name_vdb: instance of entity name vector storage
         relationships_vdb: instance of relationship vector storage
         backend_config: Generation parameters to override defaults
-        
+
     Returns:
         List of dictionaries containing knowledge graphs for each item
     """
@@ -173,7 +171,6 @@ async def generate_knowledge_graph(
             end="",
             flush=True,
         )
-        print(f"SINGLE CHUNK:\n\nNODES: {dict(maybe_nodes)}\n\nEDGES: {dict(maybe_edges)}")
         return dict(maybe_nodes), dict(maybe_edges)
 
     merged_params = {**default_sampling_params, **backend_config}
@@ -216,8 +213,6 @@ async def generate_knowledge_graph(
             for k, v in maybe_edges.items()
         ]
     )
-
-    print(f"FINAL ENTITIES: {all_entities_data}\n\nFINAL RELATIONSHIPS: {all_relationships_data}\n\n")
 
     if not len(all_entities_data):
         logger.warning("Didn't extract any entities, maybe your LLM is not working")
@@ -276,7 +271,7 @@ async def retrieve_knowledge_graph(
 ) -> List[Dict]:
     """
     Retrieve knowledge graph for each item in the dataset
-    
+
     Args:
         sample: Input sample
         similarity_model: similarity model for calculating similarity between entities
@@ -287,7 +282,7 @@ async def retrieve_knowledge_graph(
         entity_name_vdb: instance of entity name vector storage
         relationships_vdb: instance of relationship vector storage
         backend_config: Generation parameters to override defaults
-        
+
     Returns:
         List of dictionaries containing retrieved knowledge graphs for each item
     """
@@ -365,7 +360,7 @@ async def entropy_filter(
 ) -> List[Dict]:
     """
     Apply entropy filtering to the retrieved knowledge graph elements
-    
+
     Args:
         sample: Input sample
         elements: List of knowledge graph elements
@@ -374,7 +369,7 @@ async def entropy_filter(
         top_k: Number of top elements to keep
         threshold: Entropy threshold for filtering
         backend_config: Generation parameters to override defaults
-        
+
     Returns:
         Filtered list of elements
     """
@@ -476,7 +471,7 @@ async def predict_answer(
 ) -> Dict[str, str]:
     """
     Predict answers using chain-of-thought reasoning
-    
+
     Args:
         dataset: Input dataset
         elements: Factual knowledge for each item
@@ -484,7 +479,7 @@ async def predict_answer(
         model_name: Model name for generation
         generation_type: Type of generation to use
         backend_config: Generation parameters to override defaults
-        
+
     Returns:
         Dictionary of predictions keyed by item ID
     """
@@ -516,9 +511,10 @@ async def predict_answer(
     # Generate prompts
     prompts = []
     for item in dataset:
+        element_list = []
         for e in elements:
             if e['id'] == item['id']:
-                element_list = e['element']
+                element_list.extend(e['element'])
         elements_str = '\n\n'.join(element_list)
         print(f"elements_str: {elements_str}\n\n")
         if generation_type == "cot":
@@ -569,7 +565,7 @@ async def predict_answer_wo_facts(
 ) -> Dict[str, str]:
     """
     Predict answers using chain-of-thought reasoning
-    
+
     Args:
         dataset: Input dataset
         backend_type: Backend type for generation
@@ -577,7 +573,7 @@ async def predict_answer_wo_facts(
         withrag: Whether to use RAG or not
         generation_type: Type of generation to use
         backend_config: Generation parameters to override defaults
-        
+
     Returns:
         Dictionary of predictions keyed by item ID
     """
