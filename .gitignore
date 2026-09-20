@@ -26,3 +26,5 @@ venv/
 
 # VSCode
 .vscode/
+
+.idea
