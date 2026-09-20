@@ -132,6 +132,31 @@ class DedupService(AbstractDedupService):
 
         return edges_clean
 
+    def dedup_nodes_final(self, nodes: dict) -> list[dict]:
+        dedup_nodes = {}
+        for chunk_id in nodes:
+            nodes_in_chunk = nodes[chunk_id]
+            for node in nodes_in_chunk:
+                k = (node["node"], node["node_type"])
+                if k not in dedup_nodes:
+                    dedup_nodes[k] = node
+                else:
+                    old_mentions = dedup_nodes[k]["mentions"]
+                    new_mentions = node["mentions"]
+
+                    dedup_nodes[k]["max_confidence"] = max(
+                        dedup_nodes[k]["max_confidence"],
+                        node["max_confidence"],
+                    )
+
+                    dedup_nodes[k]["mentions"] += new_mentions
+
+                    # new confidence
+                    dedup_nodes[k]["confidence"] = (dedup_nodes[k]["confidence"] * old_mentions  + node["confidence"] * new_mentions) / dedup_nodes[k]["mentions"]
+        final_nodes = list(dedup_nodes.values())
+        logger.info(f"Final Nodes={len(final_nodes), final_nodes}")
+        return final_nodes
+
     def dedup_edges_final(self, edges: list[dict]):
         dedup_edges = {}
         for e in edges:
@@ -158,6 +183,6 @@ class DedupService(AbstractDedupService):
 
         kg = [{**edge, "chunk_ids": sorted(edge["chunk_ids"])} for edge in dedup_edges.values()]
 
-        logger.info(f"KG={kg}")
+        logger.info(f"KG={len(kg), kg}")
 
         return kg

@@ -1,11 +1,9 @@
 from abc import ABC, abstractmethod
-import os
 
 from gliner_truthfulrag.services.chunk_service import ChunkerService
-from gliner_truthfulrag.services.ner_service import GLiNERService
-from gliner_truthfulrag.services.dedup_service import DedupService
-from gliner_truthfulrag.services.re_service import REService
-from gliner_truthfulrag.services.canonicalize_service import CanonicalizeService
+from gliner_truthfulrag.services.llm_service import QwenLLMService
+from gliner_truthfulrag.services.ner_re_service import GLiNERService
+from gliner_truthfulrag.services.helpers import *
 
 import logging
 
@@ -19,10 +17,6 @@ logging.basicConfig(
     ),
 )
 
-# GLiNER labels and threshold (balance precision and recall)
-LABELS = ["organization", "person", "location", "event"]
-GLINER_THRESHOLD = 0.7
-
 
 class AbstractKGService(ABC):
     @abstractmethod
@@ -30,108 +24,57 @@ class AbstractKGService(ABC):
         ...
 
     @abstractmethod
-    def ner_step(self, item: dict):
+    def llm_step(self, chunks: list[dict]):
         ...
 
     @abstractmethod
-    def re_step(self, chunks: list[dict], nodes_per_chunk: dict):
+    def ner_re_step(self, chunks: list[dict]):
         ...
 
     @abstractmethod
-    def dedup_nodes_step(self, nodes: dict):
+    def build_kg_step(self, item: dict) -> tuple[list[dict], list[dict]]:
         ...
-
-    @abstractmethod
-    def dedup_edges_step(self, edges: dict):
-        ...
-
-    @abstractmethod
-    def canonicalize_step(self, nodes: dict, dedup_edges: list[dict]):
-        ...
-
-    @abstractmethod
-    def build_kg(self, item: dict):
-        ...
-
-
-NUM_PARALLEL_WORKERS = os.cpu_count() or 1
-
 
 class KGService(AbstractKGService):
 
-    def __init__(self, ner_model_id: str, re_model_id: str, embedding_model_id: str, threshold: int | float):
-        self.re_model_id = re_model_id
+    def __init__(self, gliner_model_id: str, llm_model_id: str, gliner_batch_size: int = 32, llm_batch_size: int = 4):
+        # download and load models
+        gliner_model, gliner_tokenizer, llm_model, llm_tokenizer = init_pipeline(gliner_model_id, llm_model_id)
 
-        # load services on startup
-        self.ner_service = GLiNERService(model_id=ner_model_id, labels=LABELS, threshold=GLINER_THRESHOLD)
+        # load services
+        self.chunker = ChunkerService(tokenizer=gliner_tokenizer, max_tokens=512, offset=16, overlap_tokens=32)
+        self.qwen_service = QwenLLMService(model=llm_model, tokenizer=llm_tokenizer, batch_size=llm_batch_size)
 
-        tokenizer = self.ner_service.model.data_processor.transformer_tokenizer
-        self.chunker_service = ChunkerService(tokenizer=tokenizer)
-
-        self.dedup_service = DedupService()
-
-        self.re_service = REService(model_id=re_model_id)
-
-        self.canonicalize_service = CanonicalizeService(embedding_model_id=embedding_model_id, threshold=threshold)
+        # default entity labels
+        entity_labels = ["organization", "person", "location", "event"]
+        self.gliner_service = GLiNERService(model=gliner_model, entity_labels=entity_labels, relation_labels=[],
+                                            batch_size=gliner_batch_size)
 
     def chunk_step(self, item: dict) -> list[dict]:
-        chunks = self.chunker_service.chunk_by_token_size(item=item)
-
-        logger.info(f"chunker response: {chunks}\n\n")
-
+        chunks = self.chunker.chunk_by_gliner_token_size(item)
         return chunks
 
-    def ner_step(self, item: dict) -> tuple[list, list]:
-        # STEP: Chunk
-        chunks = self.chunk_step(item=item)
+    def llm_step(self, chunks: list[dict]) -> list[str]:
+        relation_labels = self.qwen_service.extract_raw_predicates(chunks)
+        return relation_labels
 
-        # STEP: NER
-        nodes = self.ner_service.predict_batch(chunks)
+    def ner_re_step(self, chunks: list[dict]) -> tuple[dict, list[dict]]:
+        nodes, relations = self.gliner_service.predict_batch(chunks)
+        return nodes, relations
 
-        return chunks, nodes
+    # best-effort conformance to TruthfulRAG entities and relations output
+    def build_kg_step(self, item: dict) -> tuple[list[dict], list[dict]]:
+        # STEP 1: Chunking
+        chunks = self.chunk_step(item)
 
-    def re_step(self, chunks: list[dict], nodes_per_chunk: dict) -> dict:
-        # STEP: RE
-        triples_per_chunk = self.re_service.predict_batch(chunks, nodes_per_chunk)
-        return triples_per_chunk
+        # STEP 2: LLM raw predicate extraction
+        relation_labels = self.llm_step(chunks)
 
-    def dedup_nodes_step(self, nodes: dict) -> dict:
-        # STEP: Dedup Nodes
-        nodes_per_chunk = self.dedup_service.dedup_nodes(nodes)
-        return nodes_per_chunk
+        self.gliner_service.relation_labels = relation_labels
 
-    def dedup_edges_step(self, edges: dict) -> list[dict]:
-        # STEP: Dedup Edges
-        dedup_all_edges = self.dedup_service.dedup_edges(edges)
-        return dedup_all_edges
+        # STEP 3: GLiNER NER and RE
+        nodes, relations = self.ner_re_step(chunks)
 
-    def dedup_edges_final(self, edges: list[dict]):
-        # STEP: Dedup canonical edges
-        dedup_canonical_edges = self.dedup_service.dedup_edges_final(edges)
-        return dedup_canonical_edges
+        logger.info(f"KG Building step completed")
 
-    def canonicalize_step(self, nodes: dict, dedup_edges: list[dict]) -> list[dict]:
-        # STEP: KG Canonicalization
-        canonicalized_edges = self.canonicalize_service.canonicalize_edges(nodes, dedup_edges)
-        return canonicalized_edges
-
-    def build_kg(self, item: dict):
-        # STEP 1: Chunking and NER
-        chunks, nodes = self.ner_step(item)
-
-        # STEP 2: Per Chunk Nodes Dedup
-        nodes_per_chunk = self.dedup_nodes_step(nodes=nodes)
-
-        # STEP 3: RE Per Chunk
-        edges_per_chunk = self.re_step(chunks=chunks, nodes_per_chunk=nodes_per_chunk)
-
-        # STEP 4: All Edges Dedup
-        edges_dedup = self.dedup_edges_step(edges=edges_per_chunk)
-
-        # STEP 5: Canonicalize KG
-        edges_canonicalize = self.canonicalize_step(nodes=nodes_per_chunk, dedup_edges=edges_dedup)
-
-        # STEP 6: Form Clean KG
-        kg = self.dedup_edges_final(edges=edges_canonicalize)
-
-        return kg
+        return nodes, relations

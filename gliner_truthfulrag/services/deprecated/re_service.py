@@ -2,6 +2,7 @@ from abc import ABC, abstractmethod
 from pathlib import Path
 from openai import OpenAI
 import os
+import json
 
 from gliner_truthfulrag.core.env_manager import settings
 import logging
@@ -67,7 +68,7 @@ class REService(AbstractREService):
         logger.info(f"Chunk_id={chunk_id}, entities={entities}")
 
         if len(entities) < 2:
-            return []
+            return [], 0, 0
 
         prompt_input = f"""SOURCE TEXT: {context}\nENTITIES: {entities}"""
 
@@ -93,7 +94,7 @@ class REService(AbstractREService):
                 "No parsed RE output for chunk_id=%s",
                 chunk_id,
             )
-            return []
+            return [], response.usage.input_tokens, response.usage.output_tokens
 
         # we can be more harsh if we define domain and range
         triples = [
@@ -111,11 +112,13 @@ class REService(AbstractREService):
             chunk_id,
             triples,
         )
+        usage = response.usage
 
-        return triples
+        return triples, usage.input_tokens, usage.output_tokens
 
     def predict_batch(self, chunks: list[dict], nodes_per_chunk: dict) -> dict:
         relations_per_chunk = {}
+        all_in, all_out = 0, 0
 
         with ThreadPoolExecutor(max_workers=NUM_PARALLEL_WORKERS) as executor:
             future_to_chunk_id = {
@@ -131,7 +134,11 @@ class REService(AbstractREService):
                 chunk_id = future_to_chunk_id[future]
 
                 try:
-                    relations_per_chunk[chunk_id] = future.result()
+                    triples, in_, out_ = future.result()
+                    relations_per_chunk[chunk_id] = triples
+
+                    all_in += in_
+                    all_out += out_
 
                 except Exception:
                     logger.exception(
@@ -139,5 +146,18 @@ class REService(AbstractREService):
                         chunk_id,
                     )
                     relations_per_chunk[chunk_id] = []
+
+        if os.path.exists("track_tokens.json"):
+            with open("track_tokens.json", "r") as f:
+                tokens = json.load(f)
+            tokens["input"] += all_in
+            tokens["output"] += all_out
+            tokens["total"] += all_in + all_out
+        else:
+            tokens = {"input": all_in, "output": all_out,
+                      "total": all_in + all_out}
+
+        with open("track_tokens.json", "w") as f:
+            json.dump(tokens, f, indent=2)
 
         return relations_per_chunk
