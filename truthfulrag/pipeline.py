@@ -104,7 +104,7 @@ class TruthfulRAG:
     embedding_batch_num: int = 32
     embedding_func_max_async: int = 16
 
-    entropy_filter_method: EntropyFilterMethod = "legacy"
+    entropy_filter_method: EntropyFilterMethod = "legacy" # or "paper"
 
     kg_backend: str = "llm"
     gliner_kg_service_config: Dict = field(

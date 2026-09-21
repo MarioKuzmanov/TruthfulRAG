@@ -189,6 +189,7 @@ class LLMBackend:
             probs = [math.exp(entry["logprob"]) for entry in token_logits]
             Z = sum(probs) + 1e-10
             normalized_probs = [p / Z for p in probs]
+            # log base is defined here by the chosen strategy (natural for legacy, base2 for paper)
             log_fn = math.log if entropy_log_base == "natural" else math.log2
             entropy = -sum(p * log_fn(p + 1e-10) for p in normalized_probs)
             entropy_list.append(entropy)

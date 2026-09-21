@@ -380,6 +380,7 @@ async def entropy_filter(
     if entropy_filter_method not in {"legacy", "paper"}:
         raise ValueError("entropy_filter_method must be 'legacy' or 'paper'")
 
+    # Log base is different for legacy and paper methods
     entropy_log_base = "natural" if entropy_filter_method == "legacy" else "base2"
 
     llm_backend = LLMBackend(
@@ -444,9 +445,11 @@ async def entropy_filter(
         entropy_deltas_dict[element] = entropy_with_fact
         entropy_delta = entropy_with_fact - baseline_entropy
 
+        # Entropy filtering based on paper method
         if entropy_filter_method == "paper":
             if entropy_delta > threshold:
                 entropy_deltas.append({"element": element})
+        # Entropy filtering based on legacy repo method
         elif entropy_delta >= 0.0:
             entropy_deltas.append({
                 "element": element,
@@ -457,9 +460,13 @@ async def entropy_filter(
                 "element": element,
                 "delta": entropy_delta
             })
+    # Return here for the paper method
+    # If the list is empty an empty list will be returned (different from the legacy repo method)
     if entropy_filter_method == "paper":
         return [item["element"] for item in entropy_deltas]
-
+    
+    # Handle the case when no elements passed the entropy filter, 
+    # resulting in selecting the element with the maximum entropy delta
     if not entropy_deltas and entropy_deltas_dict:
         max_entropy_delta = max(entropy_deltas_dict.values())
         entropy_deltas = [
