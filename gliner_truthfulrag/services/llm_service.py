@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 import json
+import re
 from typing import Any
 import torch
 
@@ -10,9 +11,25 @@ def parse_decoded(response: str) -> list[str]:
     try:
         predicates = json.loads(response)
     except json.JSONDecodeError:
-        raise ValueError(f"Predicates from {response} not parsed")
+        print(f"Predicate JSON response {response} is malformed. Attempting reconstruction...")
 
-    return list(dict.fromkeys(predicates))
+        predicates = []
+        for match in re.finditer(r'"(?:[^"\\]|\\.)*"', response):
+            try:
+                predicate = json.loads(match.group(0))
+            except json.JSONDecodeError:
+                continue
+
+            predicates.append(predicate)
+
+    if not isinstance(predicates, list) or not predicates:
+        return []
+
+    return list(dict.fromkeys(
+        predicate.strip()
+        for predicate in predicates
+        if isinstance(predicate, str) and predicate.strip()
+    ))
 
 
 # pre-load extraction prompt

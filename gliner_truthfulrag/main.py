@@ -8,6 +8,7 @@ os.environ["USE_FLASHDEBERTA"] = settings.USE_FLASHDEBERTA
 import asyncio
 
 from gliner_truthfulrag.services.kg_service import AbstractKGService
+from gliner_truthfulrag.services.helpers import unload_model
 from truthfulrag.pipeline import TruthfulRAG
 from time import perf_counter
 
@@ -20,12 +21,19 @@ def run_kg(item: dict, service: AbstractKGService) -> tuple[dict, list[dict]]:
 
 async def run_experiment():
     DATASET_ID = "timeqa_2022_nota.json"
-    EXPERIMENT_ID = "gliner"
+    EXPERIMENT_ID = "gliner-run-15"
+    KG_BACKEND = "gliner"  # "gliner" | "llm"
+
+    if KG_BACKEND not in ["gliner", "llm"]:
+        raise ValueError("KG_BACKEND must be 'gliner' or 'llm'")
 
     try:
         dataset = load_dataset("json", data_files=f"datas/{DATASET_ID}")
+        if len(dataset) < 1:
+            raise ValueError(f"dataset {DATASET_ID} is empty")
+
         dataset = dataset['train']
-        dataset = dataset.select(range(0, 5, 1))
+        dataset = dataset.select(range(0, 15, 1))
 
     except Exception:
         raise f"{DATASET_ID} not found"
@@ -36,7 +44,7 @@ async def run_experiment():
         model_name="Qwen/Qwen2.5-7B-Instruct",
         similarity_model="sentence-transformers/all-MiniLM-L6-v2",
         threshold=3,
-        kg_backend="gliner",
+        kg_backend=KG_BACKEND,
         gliner_kg_service_config={
             "gliner_model_id": "knowledgator/gliner-relex-large-v0.5",
             "llm_model_id": "Qwen/Qwen2.5-7B-Instruct",
@@ -46,6 +54,14 @@ async def run_experiment():
         working_dir=f"./cache/{EXPERIMENT_ID}",
         output_dir=f"./outputs/{EXPERIMENT_ID}",
     )
+
+    # warmup-job
+    ## initialize model setups for fair comparison
+    ## if implementations are repeatedly re-loading weights after the warmup, this is included in the timings!!
+    ## warmup is not measured
+    await rag.make_knowledge_graph(dataset[0])
+    elements = await rag.knowledge_graph_retrieve(dataset[0])
+    await rag.entropy_based_filter(sample=dataset[0], elements=elements[:30], threshold=3)
 
     # eval on dataset
     with open(f"./outputs/{EXPERIMENT_ID}/stats.jsonl", "w") as f:
@@ -94,6 +110,11 @@ async def run_experiment():
         results = rag.evaluate(dataset, predictions_full, cot_format=True, detailed_output=True)
 
         json.dump(results, f, indent=2)
+
+    # clean-up (GLiNER)
+    if rag._gliner_kg_service is not None:
+        unload_model(rag._gliner_kg_service.qwen_service.model)
+        unload_model(rag._gliner_kg_service.gliner_service.model)
 
 
 if __name__ == "__main__":

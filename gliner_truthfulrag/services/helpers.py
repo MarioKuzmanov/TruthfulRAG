@@ -48,7 +48,8 @@ def download_load_qwen(model_id: str) -> tuple[Any, Any]:
         model_id_or_path = snapshot_download(model_id)
 
     # load models
-    model = AutoModelForCausalLM.from_pretrained(model_id_or_path, device_map=settings.DEVICE, torch_dtype=torch.float16,
+    model = AutoModelForCausalLM.from_pretrained(model_id_or_path, device_map=settings.DEVICE,
+                                                 torch_dtype=torch.float16,
                                                  trust_remote_code=True).eval()
     tokenizer = AutoTokenizer.from_pretrained(model_id_or_path, device_map=settings.DEVICE, padding_side="left",
                                               trust_remote_code=True)
@@ -63,19 +64,19 @@ def init_pipeline(gliner_model_id: str, llm_model_id: str) -> tuple:
 
 
 def unload_model(model):
-    logger.info("Before")
+    logger.info(f"Cleaning {model.__class__.__name__}\n")
     free, total = torch.cuda.mem_get_info()
 
     logger.info(f"Total GBs: {total / 2 ** 30:.2f}")
-    logger.info(f"Free GBs: {free / 2 ** 30:.2f}")
+    logger.info(f"Free GBs: {free / 2 ** 30:.2f}\n\n")
 
     del model
 
     torch.cuda.empty_cache()
 
-    logger.info("After")
+    logger.info("After\n")
 
     free, total = torch.cuda.mem_get_info()
 
     logger.info(f"Total GBs: {total / 2 ** 30:.2f}")
-    logger.info(f"Free GBs: {free / 2 ** 30:.2f}")
+    logger.info(f"Free GBs: {free / 2 ** 30:.2f}\n\n")

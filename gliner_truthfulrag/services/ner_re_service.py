@@ -36,8 +36,8 @@ class GLiNERService(AbstractNerREService):
 
         # order is same as in chunks
         pred_entities, pred_relations = self.model.inference(texts, labels=self.entity_labels + ["other"],
-                                                             relations=self.relation_labels, threshold=0.5,
-                                                             adjacency_threshold=0.5, relation_threshold=0.7,
+                                                             relations=self.relation_labels, threshold=0.4,
+                                                             adjacency_threshold=0.4, relation_threshold=0.8,
                                                              batch_size=self.batch_size, multi_label=False,
                                                              return_relations=True, flat_ner=True)
 
