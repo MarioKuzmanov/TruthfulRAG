@@ -11,9 +11,9 @@ from tqdm import tqdm
 from tqdm.asyncio import tqdm_asyncio
 from transformers import AutoModel, AutoTokenizer
 from .evaluate import (
-    exact_match_score, 
-    acc_score, 
-    f1_score, 
+    exact_match_score,
+    acc_score,
+    f1_score,
     metric_max_over_ground_truths
 )
 from .modules import (
@@ -106,9 +106,28 @@ class TruthfulRAG:
 
     entropy_filter_method: EntropyFilterMethod = "legacy"
 
+    kg_backend: str = "llm"
+    gliner_kg_service_config: Dict = field(
+        default_factory=lambda: {
+            "gliner_model_id": "knowledgator/gliner-relex-large-v0.5",
+            "llm_model_id": "Qwen/Qwen2.5-7B-Instruct",
+            "gliner_batch_size": 32,
+            "llm_batch_size": 4
+        }
+    )
+
     def __post_init__(self):
+        if self.kg_backend not in {"llm", "gliner"}:
+            raise ValueError("kg_backend must be 'llm' or 'gliner'")
         if self.entropy_filter_method not in {"legacy", "paper"}:
             raise ValueError("entropy_filter_method must be 'legacy' or 'paper'")
+
+        # Runtime objects stay out of dataclass fields: asdict() deep-copies them.
+        # Load the service lazily, once, and reuse it across dataset items.
+
+        self._gliner_kg_service = None
+        if self.kg_backend == "gliner":
+            self._gliner_kg_service = self._get_gliner_kg_service()
 
         # Set default sampling parameters if not provided
         if self.kg_making_sampling_params is None:
@@ -131,11 +150,11 @@ class TruthfulRAG:
                 {'max_tokens': 1000, 'top_p': 1.0} if self.backend_type == 'openai'
                 else {'max_new_tokens': 1000, 'do_sample': False}
             )
-        
+
         time = datetime.now().strftime('%Y-%m-%d-%H:%M:%S')
         result_id = compute_mdhash_id(self.model_name + time)
         self.working_dir = os.path.join(self.working_dir, result_id)
-        
+
         if not os.path.exists(self.working_dir):
             os.makedirs(self.working_dir)
 
@@ -148,7 +167,7 @@ class TruthfulRAG:
 
         self.vector_db_storage_cls = partial(self.vector_db_storage_cls, global_config=global_config)
         self.graph_storage_cls = partial(self.graph_storage_cls, global_config=global_config)
-        
+
         if not self.embedding_func:
             self.embedding_func = EmbeddingFunc(
                 embedding_dim=384,
@@ -184,8 +203,8 @@ class TruthfulRAG:
             embedding_func=self.embedding_func,
             meta_fields={"src_id", "tgt_id"},
         )
-    
-    
+
+
     def _get_storage_class(self, storage_name: str) -> dict:
         import_path = STORAGES[storage_name]
         storage_class = lazy_external_import(import_path, storage_name)
@@ -213,10 +232,17 @@ class TruthfulRAG:
             tasks.append(cast(StorageNameSpace, storage_inst).index_done_callback())
         await asyncio.gather(*tasks)
 
+    # GLiNER-replacement service
+    def _get_gliner_kg_service(self):
+        if self._gliner_kg_service is None:
+            from gliner_truthfulrag.services.kg_service import KGService
+            self._gliner_kg_service = KGService(**self.gliner_kg_service_config)
+
+        return self._gliner_kg_service
 
     async def make_knowledge_graph(
-        self, 
-        sample: Dict, 
+        self,
+        sample: Dict,
         **generation_params
     ):
         """
@@ -229,33 +255,47 @@ class TruthfulRAG:
         Returns:
             List of knowledge graph dictionaries
         """
+        if self.kg_backend == "gliner" and generation_params:
+            raise ValueError("Generation parameters apply only to kg_backend='llm'")
+
         if os.path.exists(self.working_dir):
             shutil.rmtree(self.working_dir)
         os.makedirs(self.working_dir, exist_ok=True)
 
         await self.reset_storages()
 
-        # Filter chunks
-        filtered_chunks = chunking_by_token_size(sample)
+        # integrate GLiNER backend
+        if self.kg_backend == "gliner":
+            from gliner_truthfulrag.adapter import make_gliner_kg
 
-        # Generate knowledge graph
-        params = {**self.kg_making_sampling_params, **generation_params}
-        await generate_knowledge_graph(
-            filtered_chunks,
-            similarity_model=self.similarity_model,
-            backend_type=self.backend_type,
-            model_name=self.model_name,
-            knowledge_graph_inst=self.chunk_entity_relation_graph,
-            entities_vdb=self.entities_vdb,
-            entity_name_vdb=self.entity_name_vdb,
-            relationships_vdb=self.relationships_vdb,
-            **params
-        )
+            kg_service = self._gliner_kg_service
+            await make_gliner_kg(
+                sample,
+                kg_service=kg_service,
+                knowledge_graph_inst=self.chunk_entity_relation_graph,
+                entities_vdb=self.entities_vdb,
+                entity_name_vdb=self.entity_name_vdb,
+                relationships_vdb=self.relationships_vdb,
+            )
+        else:
+            filtered_chunks = chunking_by_token_size(sample)
+            params = {**self.kg_making_sampling_params, **generation_params}
+            await generate_knowledge_graph(
+                filtered_chunks,
+                similarity_model=self.similarity_model,
+                backend_type=self.backend_type,
+                model_name=self.model_name,
+                knowledge_graph_inst=self.chunk_entity_relation_graph,
+                entities_vdb=self.entities_vdb,
+                entity_name_vdb=self.entity_name_vdb,
+                relationships_vdb=self.relationships_vdb,
+                **params
+            )
         return await self._insert_done()
 
 
     async def knowledge_graph_retrieve(
-        self, 
+        self,
         sample: Dict,
         **generation_params
     ):
@@ -309,12 +349,12 @@ class TruthfulRAG:
 
         # Apply entropy filter
         return await entropy_filter(
-            sample, 
-            elements, 
+            sample,
+            elements,
             backend_type=self.backend_type,
             model_name=self.model_name,
-            top_k=top_k, 
-            threshold=threshold, 
+            top_k=top_k,
+            threshold=threshold,
             entropy_filter_method=self.entropy_filter_method,
             **params
         )
@@ -322,7 +362,7 @@ class TruthfulRAG:
 
     async def get_predictions(
         self,
-        dataset: Dataset, 
+        dataset: Dataset,
         elements: List[Dict],
         generation_type: str = "cot",
         **generation_params
@@ -342,18 +382,18 @@ class TruthfulRAG:
         # Use provided parameters or defaults
         params = {**self.generation_sampling_params, **generation_params}
         return await predict_answer(
-            dataset, 
-            elements, 
+            dataset,
+            elements,
             backend_type=self.backend_type,
             model_name=self.model_name,
-            generation_type=generation_type, 
+            generation_type=generation_type,
             **params
         )
 
-    
+
     async def get_predictions_wo_elements(
         self,
-        dataset: Dataset, 
+        dataset: Dataset,
         withrag: bool = False,
         generation_type: str = "cot",
         **generation_params
@@ -373,10 +413,10 @@ class TruthfulRAG:
         # Use provided parameters or defaults
         params = {**self.generation_sampling_params, **generation_params}
         return await predict_answer_wo_facts(
-            dataset, 
+            dataset,
             backend_type=self.backend_type,
             model_name=self.model_name,
-            generation_type=generation_type, 
+            generation_type=generation_type,
             withrag=withrag,
             **params
         )
@@ -400,7 +440,7 @@ class TruthfulRAG:
         result_id = compute_mdhash_id(dataset_name + self.model_name)
         result_dir = os.path.join(self.output_dir, result_id)
         os.makedirs(result_dir, exist_ok=True)
-        
+
         with open(os.path.join(result_dir, "result_name.txt"), "w") as f:
             f.write(f"dataset_name: {dataset_name}\n")
             f.write(f"model_name: {self.model_name}\n")
@@ -424,7 +464,7 @@ class TruthfulRAG:
 
         with open(os.path.join(result_dir, "filtered_elements_list.json"), "w") as f:
             json.dump(filtered_elements_list, f, indent=4, default=json_converter, ensure_ascii=False)
-        
+
         # with open(os.path.join(result_dir, "filtered_elements_list.json"), "r") as f:
         #     filtered_elements_list = json.load(f)
 
@@ -457,7 +497,7 @@ class TruthfulRAG:
         result_id = compute_mdhash_id(dataset_name + self.model_name)
         result_dir = os.path.join(self.output_dir, result_id)
         os.makedirs(result_dir, exist_ok=True)
-        
+
         with open(os.path.join(result_dir, "result_name.txt"), "w") as f:
             f.write(f"dataset_name: {dataset_name}\n")
             f.write(f"model_name: {self.model_name}\n")
@@ -500,7 +540,7 @@ class TruthfulRAG:
         os.makedirs(result_dir, exist_ok=True)
         ablation_dir = os.path.join(result_dir, "ablations")
         os.makedirs(ablation_dir, exist_ok=True)
-        
+
         with open(os.path.join(ablation_dir, "result_name.txt"), "w") as f:
             f.write(f"dataset_name: {dataset_name}\n")
             f.write(f"model_name: {self.model_name}\n")
@@ -518,7 +558,7 @@ class TruthfulRAG:
 
         elements_list = []
         filtered_elements_list = []
-        
+
         for item in tqdm_asyncio(dataset, desc="Processing dataset items"):
             # Filter elements based on entropy threshold
             elements = split_by_sentence(item['context'])
@@ -529,7 +569,7 @@ class TruthfulRAG:
 
         with open(os.path.join(ablation_dir, "filtered_elements_wo_kg_list.json"), "w") as f:
             json.dump(filtered_elements_list, f, indent=4, default=json_converter, ensure_ascii=False)
-        
+
         # Generate predictions
         predictions = await self.get_predictions(dataset, filtered_elements_list, generation_type="cot")
         with open(os.path.join(ablation_dir, "predictions_wo_kg.json"), "w") as f:
@@ -542,8 +582,8 @@ class TruthfulRAG:
 
 
     def evaluate(
-        self, 
-        dataset: Dataset, 
+        self,
+        dataset: Dataset,
         predictions: Dict[str, str],
         cot_format: bool = False,
         detailed_output: bool = False
@@ -562,7 +602,7 @@ class TruthfulRAG:
         prediction_details = []
         total_em = total_acc = total_f1 = 0
         num_items = 0
-        
+
         for item in tqdm(dataset, desc="Evaluating"):
             prediction = predictions.get(item['id'], "")
             # if prediction is in JSON format, extract the 'answer' field
@@ -581,13 +621,13 @@ class TruthfulRAG:
                 acc_score, prediction, ground_truth)
             f1_score_val = metric_max_over_ground_truths(
                 f1_score, prediction, ground_truth)
-            
+
             # Accumulate totals
             total_em += em_score
             total_acc += acc_score_val
             total_f1 += f1_score_val
             num_items += 1
-            
+
             # Store details if requested
             if detailed_output:
                 prediction_details.append({
@@ -599,12 +639,12 @@ class TruthfulRAG:
                     "acc": acc_score_val,
                     "f1": f1_score_val
                 })
-        
+
         # Calculate averages
         avg_em = 100.0 * total_em / num_items if num_items > 0 else 0
         avg_acc = 100.0 * total_acc / num_items if num_items > 0 else 0
         avg_f1 = 100.0 * total_f1 / num_items if num_items > 0 else 0
-        
+
         # Prepare result
         result = {
             "num_items": num_items,
@@ -612,8 +652,8 @@ class TruthfulRAG:
             "acc": avg_acc,
             "f1": avg_f1
         }
-        
+
         if detailed_output:
             result["details"] = prediction_details
-            
+
         return result
