@@ -34,15 +34,15 @@ from .base import (
 
 
 def chunking_by_token_size(
-    item: Dict, overlap_token_size=128, max_token_size=1024, tiktoken_model="gpt-4o"
+        item: Dict, overlap_token_size=128, max_token_size=1024, tiktoken_model="gpt-4o"
 ):
     tokens = encode_string_by_tiktoken(item['context'], model_name=tiktoken_model)
     results = []
     for index, start in enumerate(
-        range(0, len(tokens), max_token_size - overlap_token_size)
+            range(0, len(tokens), max_token_size - overlap_token_size)
     ):
         chunk_content = decode_tokens_by_tiktoken(
-            tokens[start : start + max_token_size], model_name=tiktoken_model
+            tokens[start: start + max_token_size], model_name=tiktoken_model
         )
         results.append(
             {
@@ -55,19 +55,19 @@ def chunking_by_token_size(
 
 
 async def generate_knowledge_graph(
-    filtered_chunks: List[Dict],
-    similarity_model: str,
-    backend_type: str,
-    model_name: str,
-    knowledge_graph_inst: BaseGraphStorage,
-    entities_vdb: BaseVectorStorage,
-    entity_name_vdb: BaseVectorStorage,
-    relationships_vdb: BaseVectorStorage,
-    **backend_config
+        filtered_chunks: List[Dict],
+        similarity_model: str,
+        backend_type: str,
+        model_name: str,
+        knowledge_graph_inst: BaseGraphStorage,
+        entities_vdb: BaseVectorStorage,
+        entity_name_vdb: BaseVectorStorage,
+        relationships_vdb: BaseVectorStorage,
+        **backend_config
 ) -> List[Dict]:
     """
     Generate knowledge graph for each item in the dataset
-    
+
     Args:
         filtered_chunks: filtered chunks for knowledge graph generation
         similarity_model: similarity model for calculating similarity between entities
@@ -78,7 +78,7 @@ async def generate_knowledge_graph(
         entity_name_vdb: instance of entity name vector storage
         relationships_vdb: instance of relationship vector storage
         backend_config: Generation parameters to override defaults
-        
+
     Returns:
         List of dictionaries containing knowledge graphs for each item
     """
@@ -95,6 +95,7 @@ async def generate_knowledge_graph(
         'max_new_tokens': 1000,
         'do_sample': False
     }
+
     async def _process_single_chunk(single_chunk):
         nonlocal already_processed, already_entities, already_relations
         chunk_key = single_chunk[0]
@@ -129,7 +130,7 @@ async def generate_knowledge_graph(
             if_loop_result = if_loop_result.strip().strip('"').strip("'").lower()
             if if_loop_result != "yes":
                 break
-            
+
         records = split_string_by_multi_markers(
             final_result,
             [context_base["record_delimiter"], context_base["completion_delimiter"]],
@@ -164,7 +165,7 @@ async def generate_knowledge_graph(
         already_relations += len(maybe_edges)
         now_ticks = PROMPTS["process_tickers"][
             already_processed % len(PROMPTS["process_tickers"])
-        ]
+            ]
         print(
             f"{now_ticks} Processed {already_processed} chunks, {already_entities} entities(duplicated), {already_relations} relations(duplicated)\r",
             end="",
@@ -199,7 +200,7 @@ async def generate_knowledge_graph(
             maybe_nodes[k].extend(v)
         for k, v in m_edges.items():
             maybe_edges[tuple(sorted(k))].extend(v)
-    
+
     all_entities_data = await asyncio.gather(
         *[
             _merge_nodes_then_upsert(k, v, knowledge_graph_inst)
@@ -246,31 +247,31 @@ async def generate_knowledge_graph(
                 "src_id": dp["src_id"],
                 "tgt_id": dp["tgt_id"],
                 "content": dp["keywords"]
-                + " " + dp["src_id"]
-                + " " + dp["tgt_id"]
-                + " " + dp["description"],
+                           + " " + dp["src_id"]
+                           + " " + dp["tgt_id"]
+                           + " " + dp["description"],
             }
             for dp in all_relationships_data
         }
         await relationships_vdb.upsert(data_for_vdb)
 
     return knowledge_graph_inst
-        
+
 
 async def retrieve_knowledge_graph(
-    sample: Dict,
-    similarity_model: str,
-    backend_type: str,
-    model_name: str,
-    knowledge_graph_inst: BaseGraphStorage,
-    entities_vdb: BaseVectorStorage,
-    entity_name_vdb: BaseVectorStorage,
-    relationships_vdb: BaseVectorStorage,
-    **backend_config
+        sample: Dict,
+        similarity_model: str,
+        backend_type: str,
+        model_name: str,
+        knowledge_graph_inst: BaseGraphStorage,
+        entities_vdb: BaseVectorStorage,
+        entity_name_vdb: BaseVectorStorage,
+        relationships_vdb: BaseVectorStorage,
+        **backend_config
 ) -> List[Dict]:
     """
     Retrieve knowledge graph for each item in the dataset
-    
+
     Args:
         sample: Input sample
         similarity_model: similarity model for calculating similarity between entities
@@ -281,7 +282,7 @@ async def retrieve_knowledge_graph(
         entity_name_vdb: instance of entity name vector storage
         relationships_vdb: instance of relationship vector storage
         backend_config: Generation parameters to override defaults
-        
+
     Returns:
         List of dictionaries containing retrieved knowledge graphs for each item
     """
@@ -349,17 +350,17 @@ async def retrieve_knowledge_graph(
 
 
 async def entropy_filter(
-    sample: Dict,
-    elements: List[Dict],
-    backend_type: str, 
-    model_name: str,
-    top_k: int = 10,
-    threshold: int = 1,
-    **backend_config
+        sample: Dict,
+        elements: List[Dict],
+        backend_type: str,
+        model_name: str,
+        top_k: int = 10,
+        threshold: int = 1,
+        **backend_config
 ) -> List[Dict]:
     """
     Apply entropy filtering to the retrieved knowledge graph elements
-    
+
     Args:
         sample: Input sample
         elements: List of knowledge graph elements
@@ -368,7 +369,7 @@ async def entropy_filter(
         top_k: Number of top elements to keep
         threshold: Entropy threshold for filtering
         backend_config: Generation parameters to override defaults
-        
+
     Returns:
         Filtered list of elements
     """
@@ -377,7 +378,7 @@ async def entropy_filter(
         model_name=model_name,
         **backend_config
     )
-    
+
     default_sampling_params = {
         'max_tokens': len(encode_string_by_tiktoken(sample["answer"])),
         'top_p': 1.0
@@ -442,7 +443,7 @@ async def entropy_filter(
                 "element": element,
                 "delta": entropy_delta
             })
-    if not entropy_deltas and entropy_deltas_dict: 
+    if not entropy_deltas and entropy_deltas_dict:
         max_entropy_delta = max(entropy_deltas_dict.values())
         entropy_deltas = [
             {
@@ -461,16 +462,16 @@ async def entropy_filter(
 
 
 async def predict_answer(
-    dataset: Dataset,
-    elements: List[Dict],
-    backend_type: str, 
-    model_name: str,
-    generation_type: str = "cot",
-    **backend_config
+        dataset: Dataset,
+        elements: List[Dict],
+        backend_type: str,
+        model_name: str,
+        generation_type: str = "cot",
+        **backend_config
 ) -> Dict[str, str]:
     """
     Predict answers using chain-of-thought reasoning
-    
+
     Args:
         dataset: Input dataset
         elements: Factual knowledge for each item
@@ -478,7 +479,7 @@ async def predict_answer(
         model_name: Model name for generation
         generation_type: Type of generation to use
         backend_config: Generation parameters to override defaults
-        
+
     Returns:
         Dictionary of predictions keyed by item ID
     """
@@ -488,7 +489,7 @@ async def predict_answer(
         model_name=model_name,
         **backend_config
     )
-    
+
     # Initialize prompt generators
     prompt_generator_qa_cot = PromptGenerator(
         llm_type=backend_type,
@@ -498,7 +499,7 @@ async def predict_answer(
         llm_type=backend_type,
         task="qa"
     )
-    
+
     # Default sampling parameters
     default_sampling_params = {
         'max_tokens': 1000,
@@ -510,9 +511,10 @@ async def predict_answer(
     # Generate prompts
     prompts = []
     for item in dataset:
+        element_list = []
         for e in elements:
             if e['id'] == item['id']:
-                element_list = e['element']
+                element_list.extend(e['element'])
         elements_str = '\n\n'.join(element_list)
         print(f"elements_str: {elements_str}\n\n")
         if generation_type == "cot":
@@ -533,7 +535,7 @@ async def predict_answer(
                     facts=elements_str
                 )
             )
-    
+
     # Generate responses
     merged_params = {**default_sampling_params, **backend_config}
     if generation_type == "cot":
@@ -548,22 +550,22 @@ async def predict_answer(
             system_prompt=prompt_generator_qa.system_prompt,
             **merged_params
         )
-    
+
     # Return predictions
     return {item['id']: res for item, res in zip(dataset, results)}
 
 
 async def predict_answer_wo_facts(
-    dataset: Dataset,
-    backend_type: str, 
-    model_name: str,
-    withrag: bool = False,
-    generation_type: str = "cot",
-    **backend_config
+        dataset: Dataset,
+        backend_type: str,
+        model_name: str,
+        withrag: bool = False,
+        generation_type: str = "cot",
+        **backend_config
 ) -> Dict[str, str]:
     """
     Predict answers using chain-of-thought reasoning
-    
+
     Args:
         dataset: Input dataset
         backend_type: Backend type for generation
@@ -571,7 +573,7 @@ async def predict_answer_wo_facts(
         withrag: Whether to use RAG or not
         generation_type: Type of generation to use
         backend_config: Generation parameters to override defaults
-        
+
     Returns:
         Dictionary of predictions keyed by item ID
     """
@@ -581,7 +583,7 @@ async def predict_answer_wo_facts(
         model_name=model_name,
         **backend_config
     )
-    
+
     # Initialize prompt generators
     prompt_generator_qa_cot = PromptGenerator(
         llm_type=backend_type,
@@ -591,7 +593,7 @@ async def predict_answer_wo_facts(
         llm_type=backend_type,
         task="qa"
     )
-    
+
     # Default sampling parameters
     default_sampling_params = {
         'max_tokens': 1000,
@@ -641,7 +643,7 @@ async def predict_answer_wo_facts(
                         facts=""
                     )
                 )
-    
+
     # Generate responses
     merged_params = {**default_sampling_params, **backend_config}
     if generation_type == "cot":
@@ -656,14 +658,14 @@ async def predict_answer_wo_facts(
             system_prompt=prompt_generator_qa.system_prompt,
             **merged_params
         )
-    
+
     # Return predictions
     return {item['id']: res for item, res in zip(dataset, results)}
 
 
 async def _handle_single_entity_extraction(
-    record_attributes: list[str],
-    chunk_key: str,
+        record_attributes: list[str],
+        chunk_key: str,
 ):
     if len(record_attributes) < 4 or record_attributes[0] != '"entity"':
         return None
@@ -683,8 +685,8 @@ async def _handle_single_entity_extraction(
 
 
 async def _handle_single_relationship_extraction(
-    record_attributes: list[str],
-    chunk_key: str,
+        record_attributes: list[str],
+        chunk_key: str,
 ):
     if len(record_attributes) < 5 or record_attributes[0] != '"relationship"':
         return None
@@ -709,9 +711,9 @@ async def _handle_single_relationship_extraction(
 
 
 async def _merge_nodes_then_upsert(
-    entity_name: str,
-    nodes_data: list[dict],
-    knowledge_graph_inst: BaseGraphStorage,
+        entity_name: str,
+        nodes_data: list[dict],
+        knowledge_graph_inst: BaseGraphStorage,
 ):
     already_entitiy_types = []
     already_source_ids = []
@@ -755,10 +757,10 @@ async def _merge_nodes_then_upsert(
 
 
 async def _merge_edges_then_upsert(
-    src_id: str,
-    tgt_id: str,
-    edges_data: list[dict],
-    knowledge_graph_inst: BaseGraphStorage,
+        src_id: str,
+        tgt_id: str,
+        edges_data: list[dict],
+        knowledge_graph_inst: BaseGraphStorage,
 ):
     already_weights = []
     already_source_ids = []
@@ -775,7 +777,7 @@ async def _merge_edges_then_upsert(
         already_keywords.extend(
             split_string_by_multi_markers(already_edge["keywords"], [GRAPH_FIELD_SEP])
         )
-    
+
     weight = sum([dp["weight"] for dp in edges_data] + already_weights)
     description = GRAPH_FIELD_SEP.join(
         sorted(set([dp["description"] for dp in edges_data] + already_description))
@@ -818,14 +820,14 @@ async def _merge_edges_then_upsert(
 
 
 async def _build_query_context(
-    ent_from_query,
-    type_keywords,
-    originalquery,
-    knowledge_graph_inst: BaseGraphStorage,
-    entities_vdb: BaseVectorStorage,
-    entity_name_vdb: BaseVectorStorage,
-    relationships_vdb: BaseVectorStorage,
-    query_param: QueryParam,
+        ent_from_query,
+        type_keywords,
+        originalquery,
+        knowledge_graph_inst: BaseGraphStorage,
+        entities_vdb: BaseVectorStorage,
+        entity_name_vdb: BaseVectorStorage,
+        relationships_vdb: BaseVectorStorage,
+        query_param: QueryParam,
 ):
     imp_ents = []
     nodes_from_query_list = []
@@ -914,13 +916,16 @@ async def _build_query_context(
             for edge in edges_list
         ]
     )
-    nodes_description = {entity_name: node_data["description"] for entity_name, node_data in zip(scored_edged_reasoning_path.keys(), node_datas)}
-    edges_description = {(edge[0], edge[1]): edges_data["description"] for edge, edges_data in zip(edges_list, edges_datas)}
+    nodes_description = {entity_name: node_data["description"] for entity_name, node_data in
+                         zip(scored_edged_reasoning_path.keys(), node_datas)}
+    edges_description = {(edge[0], edge[1]): edges_data["description"] for edge, edges_data in
+                         zip(edges_list, edges_datas)}
 
     for k, v in pairs_append.items():
         path_str = '->'.join(k)
-        node_str = '\n'.join(list((str(e) + ": " + nodes_description[e]) for e in k if e in scored_edged_reasoning_path.keys()))
+        node_str = '\n'.join(
+            list((str(e) + ": " + nodes_description[e]) for e in k if e in scored_edged_reasoning_path.keys()))
         edge_str = '\n'.join(list((str(e[0]) + '->' + str(e[1]) + ": " + edges_description[e]) for e in v))
         element_str = f"Path:\n{path_str}\nNodes:\n{node_str}\nEdges:\n{edge_str}"
-        elements.append(element_str)        
+        elements.append(element_str)
     return elements
