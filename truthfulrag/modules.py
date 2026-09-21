@@ -1,4 +1,4 @@
-from typing import List, Dict
+from typing import List, Dict, Literal
 import re
 from sentence_transformers import SentenceTransformer
 from datasets import Dataset
@@ -31,6 +31,8 @@ from .base import (
     BaseVectorStorage,
     QueryParam,
 )
+
+EntropyFilterMethod = Literal["legacy", "paper"]
 
 
 def chunking_by_token_size(
@@ -354,7 +356,8 @@ async def entropy_filter(
     backend_type: str, 
     model_name: str,
     top_k: int = 10,
-    threshold: int = 1,
+    threshold: float = 1,
+    entropy_filter_method: EntropyFilterMethod = "legacy",
     **backend_config
 ) -> List[Dict]:
     """
@@ -365,13 +368,19 @@ async def entropy_filter(
         elements: List of knowledge graph elements
         backend_type: Backend type for generation
         model_name: Model name for generation
-        top_k: Number of top elements to keep
-        threshold: Entropy threshold for filtering
+        top_k: Maximum number of elements to keep with the legacy method
+        threshold: Method-specific entropy threshold
+        entropy_filter_method: Entropy filtering implementation to use
         backend_config: Generation parameters to override defaults
         
     Returns:
         Filtered list of elements
     """
+    if entropy_filter_method not in {"legacy", "paper"}:
+        raise ValueError("entropy_filter_method must be 'legacy' or 'paper'")
+
+    entropy_log_base = "natural" if entropy_filter_method == "legacy" else "base2"
+
     llm_backend = LLMBackend(
         backend_type=backend_type,
         model_name=model_name,
@@ -405,6 +414,7 @@ async def entropy_filter(
         prompt=baseline_prompt,
         system_prompt=prompt_generator.system_prompt,
         answer=sample["answer"],
+        entropy_log_base=entropy_log_base,
         **merged_params
     )
 
@@ -425,6 +435,7 @@ async def entropy_filter(
             prompt=prompt_with_fact,
             system_prompt=prompt_generator.system_prompt,
             answer=sample["answer"],
+            entropy_log_base=entropy_log_base,
             **merged_params
         )
 
@@ -432,10 +443,35 @@ async def entropy_filter(
         entropy_deltas_dict[element] = entropy_with_fact
         entropy_delta = entropy_with_fact - baseline_entropy
 
-        if entropy_delta > threshold:
-            entropy_deltas.append({"element": element})
+        if entropy_filter_method == "paper":
+            if entropy_delta > threshold:
+                entropy_deltas.append({"element": element})
+        elif entropy_delta >= 0.0:
+            entropy_deltas.append({
+                "element": element,
+                "delta": entropy_delta
+            })
+        elif entropy_with_fact != 0.0 and baseline_entropy / entropy_with_fact <= 10 ** threshold:
+            entropy_deltas.append({
+                "element": element,
+                "delta": entropy_delta
+            })
 
-    return [item["element"] for item in entropy_deltas]
+    if entropy_filter_method == "paper":
+        return [item["element"] for item in entropy_deltas]
+
+    if not entropy_deltas and entropy_deltas_dict:
+        max_entropy_delta = max(entropy_deltas_dict.values())
+        entropy_deltas = [
+            {
+                "element": k,
+                "delta": v
+            }
+            for k, v in entropy_deltas_dict.items() if v == max_entropy_delta
+        ]
+
+    top_filtered = heapq.nlargest(top_k, entropy_deltas, key=lambda x: x["delta"])
+    return [item["element"] for item in top_filtered]
 
 
 async def predict_answer(

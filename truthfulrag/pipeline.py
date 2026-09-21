@@ -17,6 +17,7 @@ from .evaluate import (
     metric_max_over_ground_truths
 )
 from .modules import (
+    EntropyFilterMethod,
     chunking_by_token_size,
     generate_knowledge_graph,
     retrieve_knowledge_graph,
@@ -73,7 +74,7 @@ class TruthfulRAG:
     backend_type: str
     model_name: str
     similarity_model: str
-    threshold: int
+    threshold: float
     kg_making_sampling_params: Optional[Dict] = None
     kg_retrieval_sampling_params: Optional[Dict] = None
     entropy_filtering_sampling_params: Optional[Dict] = None
@@ -103,7 +104,12 @@ class TruthfulRAG:
     embedding_batch_num: int = 32
     embedding_func_max_async: int = 16
 
+    entropy_filter_method: EntropyFilterMethod = "legacy"
+
     def __post_init__(self):
+        if self.entropy_filter_method not in {"legacy", "paper"}:
+            raise ValueError("entropy_filter_method must be 'legacy' or 'paper'")
+
         # Set default sampling parameters if not provided
         if self.kg_making_sampling_params is None:
             self.kg_making_sampling_params = (
@@ -284,7 +290,7 @@ class TruthfulRAG:
         sample: Dict,
         elements: List[Dict],
         top_k: int = 10,
-        threshold: int = 1,
+        threshold: float = 1,
         **generation_params
     ) -> List[Dict]:
         """
@@ -309,6 +315,7 @@ class TruthfulRAG:
             model_name=self.model_name,
             top_k=top_k, 
             threshold=threshold, 
+            entropy_filter_method=self.entropy_filter_method,
             **params
         )
 
