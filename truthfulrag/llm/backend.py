@@ -2,7 +2,7 @@ import asyncio
 import logging
 import os
 import sys
-from typing import Dict, List, Optional, Callable, Any, Coroutine
+from typing import Dict, List, Optional, Callable, Any, Coroutine, Literal
 from tqdm.asyncio import tqdm_asyncio
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
@@ -150,12 +150,16 @@ class LLMBackend:
             system_prompt: Optional[str] = None,
             history_messages: Optional[List[Dict[str, str]]] = None,
             answer: Optional[str] = None,
+            entropy_log_base: Literal["natural", "base2"] = "natural",
             **sampling_kwargs
     ) -> float:
         """
         Calculate entropy from top-k token logprobs of the first generated token,
         restricted to tokens matching the given options.
         """
+        if entropy_log_base not in {"natural", "base2"}:
+            raise ValueError("entropy_log_base must be 'natural' or 'base2'")
+
         if self.backend_type == "openai":
             # Set logprob sampling
             sampling_kwargs.setdefault("logprobs", True)
@@ -185,7 +189,8 @@ class LLMBackend:
             probs = [math.exp(entry["logprob"]) for entry in token_logits]
             Z = sum(probs) + 1e-10
             normalized_probs = [p / Z for p in probs]
-            entropy = -sum(p * math.log(p + 1e-10) for p in normalized_probs)
+            log_fn = math.log if entropy_log_base == "natural" else math.log2
+            entropy = -sum(p * log_fn(p + 1e-10) for p in normalized_probs)
             entropy_list.append(entropy)
 
         entropy = sum(entropy_list) / len(entropy_list) if entropy_list else 0.0
