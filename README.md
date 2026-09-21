@@ -84,6 +84,7 @@ flowchart TD
 ### Preliminary Results
 
 - pilot study (first 15 items from `timeqa_2022_nota.json`)
+- **hardware** - A100 40GBs hosted on Colab
 
 #### GLiNER
 
@@ -127,29 +128,44 @@ flowchart TD
 |-----------------------:|------------------------:|--------------------------:|-----------------------------:|-----------------:|--------------------------:|
 |               109.89 s |                  3.44 s |                    0.81 s |                       2.79 s |             6.20 |                      5.27 |
 
+---
+
+#### Baselines
+
+##### Quality
+
+|                                  Method | num_items | exact_match |      acc |       f1 |
+|----------------------------------------:|----------:|------------:|---------:|---------:|
+|                         `w/o` RAG + cot |        15	 |    20.0000%	 | 20.0000%	 | 22.6667% |
+| `w/o` RAG + wo_cot (**paper baseline**) |        15	 |    26.6667%	 | 26.6667%	 | 31.1111% |
+|                               RAG + cot |        15 |    66.6667%		 | 66.6667% | 70.0000% |
+|      RAG + wo_cot  (**paper baseline**) |        15 |    73.3333%		 | 73.3333% | 76.6667% |
+
+---
+
 ### Comparison
 
 * `TruthfulRAG-GLiNER-KG` is retaining 83.3% of the accuracy of the original `TruthfulRAG`
 * `TruthfulRAG-GLiNER-KG` is ~ 11x faster than the original `TruthfulRAG`
 * KG-construction is approximately 26.5x faster with `GLiNER-backend` than with `LLM-backend`
+* `TruthfulRAG-GLiNER-KG` is on-par with RAG + cot
 
 ---
 
 ### Experimental Design
 
+* `timeqa_2022`
+
 * **RQ1** Can we replicate the reported results from the paper?
-    * three runs on `timeqa_2022`
     * TruthfulRAG with `Qwen`
     * `w/o` RAG
     * RAG
 
 * **RQ2** How does GLiNER-based KG building compares with LLM-driven KG building within TruthfulRAG?
-    - three runs on `timeqa_2022`
     - `GLiNER-KG`
     - `Qwen-KG`
 
 * **RQ3** What is the connection between KG paths and QA accuracy?
-    - one run on `timeqa_2022`
     - Ablation Study
         - final context -> paths (`GLiNER-KG`) vs paths (`GLiNER-KG`) + context
         - final context -> only paths (`Qwen-KG`) vs paths (`Qwen-KG`) + context
