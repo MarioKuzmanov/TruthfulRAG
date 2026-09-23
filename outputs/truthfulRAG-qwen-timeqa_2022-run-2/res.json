@@ -1,0 +1,1025 @@
+{
+  "num_items": 113,
+  "exact_match": 78.76106194690266,
+  "acc": 79.64601769911505,
+  "f1": 79.20353982300885,
+  "details": [
+    {
+      "id": 0,
+      "question": "Which wildly popular show was recently green lit for a new season?",
+      "answer": "I don't know",
+      "prediction": "I don't know",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 1,
+      "question": "To help reduce cable clutter and waste, which continent will soon require Apple and other smartphone makers to support a single common charging standard for all mobile devices?",
+      "answer": "Europe",
+      "prediction": "Europe",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 2,
+      "question": "Police arrested 31 men this week believed to be affiliated with the White nationalist group Patriot Front who allegedly planned to riot at an LGBTQ Pride event. Where was the event?",
+      "answer": "Idaho",
+      "prediction": "Idaho",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 3,
+      "question": "Broadway\u2019s biggest stars were recognized this week at which prestigious awards show?",
+      "answer": "The Tony Awards",
+      "prediction": "I don't know",
+      "exact_match": false,
+      "acc": false,
+      "f1": 0
+    },
+    {
+      "id": 4,
+      "question": "What is the biggest security threat in the Asia-Pacific region, according to Fiji\u2019s minister of defense?",
+      "answer": "Climate change",
+      "prediction": "Climate change",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 5,
+      "question": "Which US national park was impacted by severe flooding this week that washed out roads and bridges?",
+      "answer": "Yellowstone",
+      "prediction": "Yellowstone",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 6,
+      "question": "According to the White House, how soon could Covid-19 vaccines be available for children as young as 6 months?",
+      "answer": "Next week",
+      "prediction": "Next month",
+      "exact_match": false,
+      "acc": false,
+      "f1": 0.5
+    },
+    {
+      "id": 7,
+      "question": "Which automaker recalled 2.9 million vehicles this week?",
+      "answer": "Ford",
+      "prediction": "Ford",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 8,
+      "question": "Microsoft retired its Internet Explorer browser this week. What year did it debut?",
+      "answer": "I don't know",
+      "prediction": "1995",
+      "exact_match": false,
+      "acc": false,
+      "f1": 0
+    },
+    {
+      "id": 9,
+      "question": "Kim Kardashian was accused of damaging a historic Marilyn Monroe dress at the Met Gala. Who was the designer of the garment?",
+      "answer": "I don't know",
+      "prediction": "I don't know",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 10,
+      "question": "Historic rainfall led to flooding, mudslides and visitor evacuations at which national park?",
+      "answer": "Yellowstone National Park",
+      "prediction": "Yellowstone National Park",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 11,
+      "question": "It\u2019s official: Beyonc\u00e9's next project will be released this summer with \"Act I\" coming July 29. What is it titled?",
+      "answer": "I don't know",
+      "prediction": "Renaissance",
+      "exact_match": false,
+      "acc": false,
+      "f1": 0
+    },
+    {
+      "id": 12,
+      "question": "\u200b\u200bWhich popular flea-and-tick treatment for pets did lawmakers say should be taken off the market after research showed it was harmful?",
+      "answer": "I don't know",
+      "prediction": "Bravecto Chews",
+      "exact_match": false,
+      "acc": false,
+      "f1": 0
+    },
+    {
+      "id": 13,
+      "question": "Temperatures in Britain are set to soar this weekend, but what is the hottest UK temperature on record?",
+      "answer": "I don't know",
+      "prediction": "I don't know",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 14,
+      "question": "What is the name of the \u201cmodest\u201d four-bedroom Windsor property to which the Duke and Duchess of Cambridge hope to relocate in order to be closer to the Queen?",
+      "answer": "Adelaide Cottage",
+      "prediction": "Adelaide Cottage",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 15,
+      "question": "According to a new report from the Reuters Institute, what percentage of people worldwide often or sometimes avoid the news because it lowers their mood?",
+      "answer": "I don't know",
+      "prediction": "I don't know",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 16,
+      "question": "Which technology company could be forced to pay millions of Britons compensation after being accused of using an upgrade to slow the functioning of its smartphones?",
+      "answer": "I don't know",
+      "prediction": "I don't know",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 17,
+      "question": "New research has found that the Black Death, also known as the bubonic plague, may have originated in what animal over 600 years ago?",
+      "answer": "I don't know",
+      "prediction": "Rats",
+      "exact_match": false,
+      "acc": false,
+      "f1": 0
+    },
+    {
+      "id": 18,
+      "question": "Which country is set to become the first in the world to print a warning on every cigarette sold?",
+      "answer": "I don't know",
+      "prediction": "I don't know",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 19,
+      "question": "How high will inflation likely climb this year according to The Bank of England?",
+      "answer": "I don't know",
+      "prediction": "I don't know",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 20,
+      "question": "An anonymous bidder recently paid a record-breaking sum for a private lunch with legendary investor Warren Buffett. How much did the bidder pay?",
+      "answer": "$19 million",
+      "prediction": "$19 million",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 21,
+      "question": "What country elected its first-ever leftist leader this week?",
+      "answer": "Colombia",
+      "prediction": "Colombia",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 22,
+      "question": "Which embattled celebrity was found liable in a sexual battery case this week?",
+      "answer": "Bill Cosby",
+      "prediction": "Bill Cosby",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 23,
+      "question": "Which Ivy League school announced it will eliminate student loans for undergraduates?",
+      "answer": "Dartmouth College",
+      "prediction": "Dartmouth College",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 24,
+      "question": "What NFL star announced his retirement on Tuesday?",
+      "answer": "Rob Gronkowski",
+      "prediction": "Rob Gronkowski",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 25,
+      "question": "Afghanistan was rocked by a powerful earthquake this week that killed more than 1,000 people and injured many others. What was the magnitude of the quake?",
+      "answer": "5.9",
+      "prediction": "5.9",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 26,
+      "question": "A recent study found that balancing on one leg for how many seconds may predict likelihood of living or dying?",
+      "answer": "10 seconds",
+      "prediction": "10 seconds",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 27,
+      "question": "In an interview with Closer Weekly, Martin Sheen said he regrets not using his birth name professionally. What is it?",
+      "answer": "Ramon Est\u00e9vez",
+      "prediction": "Ramon Est\u00e9vez",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 28,
+      "question": "Uber announced this week the return of which feature?",
+      "answer": "Shared rides",
+      "prediction": "Shared rides",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 29,
+      "question": "President Joe Biden called on Congress to suspend federal gas taxes for how long?",
+      "answer": "I don't know",
+      "prediction": "3 months",
+      "exact_match": false,
+      "acc": false,
+      "f1": 0
+    },
+    {
+      "id": 30,
+      "question": "Yellowstone National Park partially reopened to visitors Wednesday after being closed since June 13. Why was it shut down?",
+      "answer": "Damage from flooding",
+      "prediction": "Damage from flooding",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 31,
+      "question": "Leveraging summer travel woes, hundreds of pilots picketed this week over lack of progress on new contract. Which airline were they from?",
+      "answer": "I don't know",
+      "prediction": "I don't know",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 32,
+      "question": "How many times will media mogul Rupert Murdoch have been divorced, after reports he is to end his marriage to actress Jerry Hall?",
+      "answer": "I don't know",
+      "prediction": "Two",
+      "exact_match": false,
+      "acc": false,
+      "f1": 0
+    },
+    {
+      "id": 33,
+      "question": "Health officials have warned a virus causing which disease has been detected in several sewage samples in London?",
+      "answer": "Polio",
+      "prediction": "Polio",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 34,
+      "question": "Which Tory MP has resigned from a senior role after two crushing by-election defeats for the Conservative Party this week?",
+      "answer": "I don't know",
+      "prediction": "I don't know",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 35,
+      "question": "Which city has been named the most \u201cliveable\u201d city in the world, according to a report compiled by The Economist?",
+      "answer": "I don't know",
+      "prediction": "I don't know",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 36,
+      "question": "Nuclear power is to make up what percentage of the UK\u2019s electricity sources by 2025, according to the government\u2019s energy strategy?",
+      "answer": "25%",
+      "prediction": "I don't know",
+      "exact_match": false,
+      "acc": false,
+      "f1": 0
+    },
+    {
+      "id": 37,
+      "question": "Which country was recommended for EU candidacy alongside Ukraine this week?",
+      "answer": "Moldova",
+      "prediction": "I don't know",
+      "exact_match": false,
+      "acc": false,
+      "f1": 0
+    },
+    {
+      "id": 38,
+      "question": "The governing body of which sport has introduced new rules that athletes who have undergone male puberty cannot compete in elite women\u2019s categories?",
+      "answer": "Swimming",
+      "prediction": "Swimming",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 39,
+      "question": "Which popular US tourist attraction announced public tours will resume a full operating schedule after being suspended for two years due to Covid-19?",
+      "answer": "White House",
+      "prediction": "White House",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 40,
+      "question": "Which meal kit service received hundreds of reports of illness following a recall of one of its products?",
+      "answer": "Daily Harvest",
+      "prediction": "Daily Harvest",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 41,
+      "question": "NASA made history this week after successfully completing its first launch from a commercial spaceport outside the US. Where did the launch occur?",
+      "answer": "I don't know",
+      "prediction": "Florida",
+      "exact_match": false,
+      "acc": false,
+      "f1": 0
+    },
+    {
+      "id": 42,
+      "question": "A Russian court this week ruled that WNBA star Brittney Griner will be detained for several additional months pending her trial outcome. How many months was her detention extended?",
+      "answer": "6",
+      "prediction": "6",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 43,
+      "question": "The CDC announced this week it has activated a new emergency operations center to respond to which virus outbreak?",
+      "answer": "Monkeypox",
+      "prediction": "Monkeypox",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 44,
+      "question": "Which team won the 2022 NHL Stanley Cup Finals?",
+      "answer": "I don't know",
+      "prediction": "Colorado Avalanche",
+      "exact_match": false,
+      "acc": false,
+      "f1": 0
+    },
+    {
+      "id": 45,
+      "question": "According to a recent survey, what percentage of US adults disapprove of the Supreme Court\u2019s decision to overturn Roe v. Wade?",
+      "answer": "60%",
+      "prediction": "60%",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 46,
+      "question": "A massive, record-breaking reptile was recently caught in Florida, becoming the heaviest of its species to ever be captured in the state. Which animal was it?",
+      "answer": "Snake",
+      "prediction": "Snake",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 47,
+      "question": "Which two countries did NATO formally invite to join its alliance this week?",
+      "answer": "Sweden and Finland",
+      "prediction": "Sweden and Finland",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 48,
+      "question": "The Colorado Avalanche won the Stanley Cup title after defeating the Tampa Bay Lightning. How many championships do the Avalanche have?",
+      "answer": "3",
+      "prediction": "3",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 49,
+      "question": "Justice Ketanji Brown Jackson made history this week, becoming the first Black woman to sit on the Supreme Court. Whose seat is she filling?",
+      "answer": "Stephen Breyer",
+      "prediction": "Stephen Breyer",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 50,
+      "question": "About what percentage of people said they haven\u2019t felt true happiness since early 2020, according to the Oracle Happiness Report?",
+      "answer": "I don't know",
+      "prediction": "I don't know",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 51,
+      "question": "Which two Pac-12 schools are in negotiations to leave the conference and join the Big Ten?",
+      "answer": "USC and UCLA",
+      "prediction": "USC and UCLA",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 52,
+      "question": "Which retailer lowered its gas prices to $3.99 a gallon through July 4 weekend to help drivers save money?",
+      "answer": "I don't know",
+      "prediction": "I don't know",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 53,
+      "question": "A man believed to be a former Nazi guard was convicted by a German court of being an accessory to 3,518 counts of murder. How old is he?",
+      "answer": "101",
+      "prediction": "101",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 54,
+      "question": "Which of these celebs was not invited to be an Oscar-voting member of the Academy of Motion Picture Arts and Sciences this week?",
+      "answer": "I don't know",
+      "prediction": "Will Smith",
+      "exact_match": false,
+      "acc": false,
+      "f1": 0
+    },
+    {
+      "id": 55,
+      "question": "How much did the Royal Family cost UK taxpayers last year?",
+      "answer": "I don't know",
+      "prediction": "\u00a335m",
+      "exact_match": false,
+      "acc": false,
+      "f1": 0
+    },
+    {
+      "id": 56,
+      "question": "Which world leader did Boris Johnson accuse of being \u201ca perfect example of toxic masculinity\u201d this week?",
+      "answer": "Vladimir Putin",
+      "prediction": "Vladimir Putin",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 57,
+      "question": "How much has cancer campaigner and podcast host Deborah James, who has died aged 40, raised for cancer research through her Bowelbabe fund?",
+      "answer": "I don't know",
+      "prediction": "\u00a35m",
+      "exact_match": false,
+      "acc": false,
+      "f1": 0
+    },
+    {
+      "id": 58,
+      "question": "Why did some cities across the western US cancel their Fourth of July fireworks displays this year?",
+      "answer": "Drought",
+      "prediction": "Drought",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 59,
+      "question": "How many hot dogs did competitive eater Joey Chestnut devour to win the Nathan\u2019s Famous International Hot Dog Eating Contest this week?",
+      "answer": "I don't know",
+      "prediction": "I don't know",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 60,
+      "question": "Activists around the world have been gluing themselves to historic works of art in a recent string of protests. What are they trying to call attention to?",
+      "answer": "I don't know",
+      "prediction": "I don't know",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 61,
+      "question": "Which country is now \u201cbankrupt,\u201d according to a statement this week from its administration?",
+      "answer": "I don't know",
+      "prediction": "I don't know",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 62,
+      "question": "Which food chain launched a redesigned menu in roughly 21,000 of its restaurants?",
+      "answer": "Subway",
+      "prediction": "Subway",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 63,
+      "question": "Approximately 1 billion people had their personal data leaked in what could be one of the biggest breaches ever recorded in history. Where did the massive data leak occur?",
+      "answer": "China",
+      "prediction": "China",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 64,
+      "question": "Which virus is making officials at the World Health Organization reconsider whether they should declare a public health emergency?",
+      "answer": "Monkeypox",
+      "prediction": "Monkeypox",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 65,
+      "question": "Passengers on a Delta Air Lines flight reported that the company offered them how much money to give up their seat on an overs\u200b\u200bold flight?",
+      "answer": "$10,000",
+      "prediction": "$10,000",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 66,
+      "question": "Climate change activists glued themselves to which painting in an effort to protest new oil and gas projects?",
+      "answer": "I don't know",
+      "prediction": "The Starry Night",
+      "exact_match": false,
+      "acc": false,
+      "f1": 0
+    },
+    {
+      "id": 67,
+      "question": "Sotheby\u2019s announced it was selling the 76-million-year-old skeleton of which dinosaur?",
+      "answer": "Gorgosaurus",
+      "prediction": "Gorgosaurus",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 68,
+      "question": "Ramesh \u201cSunny\u201d Balwani was convicted on 12 fraud counts Thursday. Which company was he a top executive for?",
+      "answer": "Theranos",
+      "prediction": "Theranos",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 69,
+      "question": "Which beloved series has been asked by the BBC to be \u201cmindful\u201d of how references to the British Empire are handled?",
+      "answer": "I don't know",
+      "prediction": "I don't know",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 70,
+      "question": "A former prime minister of which nation was killed after being shot at a political campaigning event?",
+      "answer": "Japan",
+      "prediction": "Japan",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 71,
+      "question": "Climate protesters from activist group Just Stop Oil glued their hands to which John Constable painting in the National Gallery?",
+      "answer": "I don't know",
+      "prediction": "I don't know",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 72,
+      "question": "Which tennis star pulled out of Wimbledon ahead of the semi-finals due to injury?",
+      "answer": "Rafael Nadal",
+      "prediction": "Rafael Nadal",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 73,
+      "question": "What percentage of children in lone parent families now live in poverty, according to analysis by The Guardian?",
+      "answer": "I don't know",
+      "prediction": "I don't know",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 74,
+      "question": "Which major change will soon be introduced to Netflix?",
+      "answer": "Advertisements",
+      "prediction": "Advertisements",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 75,
+      "question": "Nearly two-and-a-half years since the Covid-19 pandemic began, the most infectious and transmissible variant yet has arrived. What is it called?",
+      "answer": "I don't know",
+      "prediction": "BA.5",
+      "exact_match": false,
+      "acc": false,
+      "f1": 0
+    },
+    {
+      "id": 76,
+      "question": "Which island nation plunged into chaos in recent days, prompting its leader to flee?",
+      "answer": "Sri Lanka",
+      "prediction": "Sri Lanka",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 77,
+      "question": "NASA released astonishing images from space this week. What did the images show?",
+      "answer": "Distant galaxies",
+      "prediction": "Distant galaxies",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 78,
+      "question": "Which is the world\u2019s best airline, according to a new analysis from AirlineRankings.com?",
+      "answer": "I don't know",
+      "prediction": "I don't know",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 79,
+      "question": "Which show received the most nominations for the 2022 Emmy Awards?",
+      "answer": "\u201cTed Lasso\u201d",
+      "prediction": "Ted Lasso",
+      "exact_match": false,
+      "acc": true,
+      "f1": 0
+    },
+    {
+      "id": 80,
+      "question": "Dozens of people were unaccounted for early Thursday after severe flooding in which state?",
+      "answer": "Virginia",
+      "prediction": "Virginia",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 81,
+      "question": "Approximately how much has the Biden administration approved in security assistance for Ukraine since the beginning of Russia\u2019s invasion?",
+      "answer": "I don't know",
+      "prediction": "$3 billion",
+      "exact_match": false,
+      "acc": false,
+      "f1": 0
+    },
+    {
+      "id": 82,
+      "question": "Despite dropping slightly from recent record levels, how much have gas prices increased in the US over the past year?",
+      "answer": "I don't know",
+      "prediction": "40%",
+      "exact_match": false,
+      "acc": false,
+      "f1": 0
+    },
+    {
+      "id": 83,
+      "question": "The first images from the James Webb Telescope were released, showing the deepest view of the cosmos captured. How much did the telescope cost?",
+      "answer": "$10 billion",
+      "prediction": "$10 billion",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 84,
+      "question": "Lea Michele officially joined the cast of Broadway\u2019s revival of \u201cFunny Girl.\u201d Who is she replacing?",
+      "answer": "Beanie Feldstein",
+      "prediction": "Beanie Feldstein",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 85,
+      "question": "Which of these people is joining the Denver Broncos' incoming ownership group?",
+      "answer": "I don't know",
+      "prediction": "I don't know",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 86,
+      "question": "The nominees for the 2022 Primetime Emmys were announced this week. Which of these shows had the most nominations?",
+      "answer": "I don't know",
+      "prediction": "Ted Lasso",
+      "exact_match": false,
+      "acc": false,
+      "f1": 0
+    },
+    {
+      "id": 87,
+      "question": "MLB announced this week the rosters for this year\u2019s All-Star Game in Los Angeles. Which member of the hometown Dodgers is not an all-star?",
+      "answer": "I don't know",
+      "prediction": "Will Smith",
+      "exact_match": false,
+      "acc": false,
+      "f1": 0
+    },
+    {
+      "id": 88,
+      "question": "The Washburn Fire threatened the Mariposa Grove, located in which national park?",
+      "answer": "Yosemite National Park",
+      "prediction": "Yosemite National Park",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 89,
+      "question": "Olympic gold medallist Mo Farah this week made public that he was trafficked from which African country to the UK when he was eight or nine years old?",
+      "answer": "I don't know",
+      "prediction": "I don't know",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 90,
+      "question": "Sri Lankan President Gotabaya Rajapaksa fled to which country this week as the nation saw public unrest and uprisings sparked by the ongoing economic crisis?",
+      "answer": "Singapore",
+      "prediction": "Singapore",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 91,
+      "question": "One of the first bills put to parliament by French President Emmanuel Macron was defeated this week after the three main opposition parties united to reject what proposal?",
+      "answer": "I don't know",
+      "prediction": "I don't know",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 92,
+      "question": "Fans of which legendary musician will not be able to take photos or videos during concerts on their upcoming tour?",
+      "answer": "I don't know",
+      "prediction": "I don't know",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 93,
+      "question": "A woman has been detained after sending \u201cthreatening\u201d letters to and stalking the family of which football star?",
+      "answer": "I don't know",
+      "prediction": "I don't know",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 94,
+      "question": "Which high-ranking US official tested positive for Covid-19 this week?",
+      "answer": "I don't know",
+      "prediction": "I don't know",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 95,
+      "question": "Which type of extreme weather swept through several European countries this week, including the UK, Spain, and France?",
+      "answer": "Heat waves",
+      "prediction": "Heat waves",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 96,
+      "question": "What special announcement did celebrity couple Jennifer Lopez and Ben Affleck make this week?",
+      "answer": "They got married",
+      "prediction": "They got married",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 97,
+      "question": "Which product remains difficult to find in many US stores due to a nationwide shortage?",
+      "answer": "Baby formula",
+      "prediction": "Baby formula",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 98,
+      "question": "Which state has the highest average price for a gallon of regular gas?",
+      "answer": "I don't know",
+      "prediction": "California",
+      "exact_match": false,
+      "acc": false,
+      "f1": 0
+    },
+    {
+      "id": 99,
+      "question": "US first lady Jill Biden met with the first lady of which country this week?",
+      "answer": "Ukraine",
+      "prediction": "Ukraine",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 100,
+      "question": "Which company\u2019s stock became substantially cheaper for everyday investors after a massive 20-for-1 stock split this week?",
+      "answer": "I don't know",
+      "prediction": "I don't know",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 101,
+      "question": "How many minutes did then-President Donald Trump let violence play out at the US Capitol during the insurrection on January 6, 2021?",
+      "answer": "187",
+      "prediction": "187",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 102,
+      "question": "Which menu item did KFC roll out this week to attract a younger crowd?",
+      "answer": "Chicken nuggets",
+      "prediction": "Chicken nuggets",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 103,
+      "question": "Scientists this week placed which insect on the endangered list?",
+      "answer": "Monarch butterflies",
+      "prediction": "Monarch butterflies",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 104,
+      "question": "Netflix says it lost how many subscribers in the three months ending June 30?",
+      "answer": "970,000",
+      "prediction": "970,000",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 105,
+      "question": "The United Kingdom broke its record for highest recorded temperature during a scorching heat wave this week. What was the new high mark?",
+      "answer": "I don't know",
+      "prediction": "104.5 F",
+      "exact_match": false,
+      "acc": false,
+      "f1": 0
+    },
+    {
+      "id": 106,
+      "question": "A protest at the Supreme Court resulted in the arrest of 35 people, including 17 members of Congress. What were they protesting for?",
+      "answer": "Abortion rights",
+      "prediction": "Abortion rights",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 107,
+      "question": "What social media platform is the fastest growing news source for UK adults, according to a survey by Ofcom?",
+      "answer": "I don't know",
+      "prediction": "I don't know",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 108,
+      "question": "According to the National Fire Chiefs Council, how many wildfires have there been in England and Wales since the start of the year?",
+      "answer": "I don't know",
+      "prediction": "I don't know",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 109,
+      "question": "Texas State University is running a course on which British pop star?",
+      "answer": "I don't know",
+      "prediction": "I don't know",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 110,
+      "question": "Which country confirmed its first ever cases of Marburg virus this week, a highly infectious disease similar to Ebola?",
+      "answer": "Ghana",
+      "prediction": "Ghana",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 111,
+      "question": "Which UK supermarket launched its Christmas campaign in the middle of July?",
+      "answer": "I don't know",
+      "prediction": "I don't know",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 112,
+      "question": "By what percentage will council tax bills rise in Wales for second homes, under new plans to control the number of holiday homes and lets in the country?",
+      "answer": "I don't know",
+      "prediction": "I don't know",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    }
+  ]
+}
