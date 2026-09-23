@@ -17,6 +17,12 @@ def parse_args() -> argparse.Namespace:
         default="legacy",
     )
     parser.add_argument("--threshold", type=float, default=3)
+    parser.add_argument(
+            "--generation-context",
+            choices=["original", "none"],
+            default="original",
+    
+        )
     parser.add_argument("--dataset-id", default="timeqa_2022_nota.json")
     parser.add_argument("--dataset-limit", type=int)
     return parser.parse_args()
@@ -98,7 +104,7 @@ async def run_experiment(args: argparse.Namespace):
 
             start_pred_eval = perf_counter()
 
-            predictions = await rag.get_predictions(single_dataset, filtered_list, generation_type="cot")
+            predictions = await rag.get_predictions(single_dataset, filtered_list, generation_type="cot", generation_context=args.generation_context)
 
             results = rag.evaluate(single_dataset, predictions, cot_format=True, detailed_output=True)
 
@@ -113,7 +119,7 @@ async def run_experiment(args: argparse.Namespace):
             f.write(json.dumps(results) + "\n")
 
     with open(f"./outputs/{args.experiment_id}/res.json", "w") as f:
-        predictions_full = await rag.get_predictions(dataset, filtered_list_full, generation_type="cot")
+        predictions_full = await rag.get_predictions(dataset, filtered_list_full, generation_type="cot", generation_context=args.generation_context)
         results = rag.evaluate(dataset, predictions_full, cot_format=True, detailed_output=True)
 
         json.dump(results, f, indent=2)
