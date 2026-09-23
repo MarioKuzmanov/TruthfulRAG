@@ -49,14 +49,28 @@ def initialize_hf_client(
 ) -> tuple:
     logger.info(f"Loading Hugging Face model: {model_name}")
 
-    quantization_config = None
-    if load_in_4bit:
+    model_kwargs = {
+        "device_map": device_map,
+        "torch_dtype": torch_dtype,
+        "trust_remote_code": True,
+    }
+    if load_in_4bit or load_in_8bit:
         from transformers import BitsAndBytesConfig
-        quantization_config = BitsAndBytesConfig(
-            load_in_4bit=True,
-            bnb_4bit_compute_dtype=torch_dtype,
-            bnb_4bit_use_double_quant=True,
-            bnb_4bit_quant_type="nf4"
+
+        quantization_config_kwargs = {
+            "load_in_4bit": load_in_4bit,
+            "load_in_8bit": load_in_8bit,
+        }
+        if load_in_4bit:
+            quantization_config_kwargs.update(
+                {
+                    "bnb_4bit_compute_dtype": torch_dtype,
+                    "bnb_4bit_use_double_quant": True,
+                    "bnb_4bit_quant_type": "nf4",
+                }
+            )
+        model_kwargs["quantization_config"] = BitsAndBytesConfig(
+            **quantization_config_kwargs
         )
     
     try:
@@ -68,11 +82,7 @@ def initialize_hf_client(
         
         model = AutoModelForCausalLM.from_pretrained(
             model_name,
-            device_map=device_map,
-            torch_dtype=torch_dtype,
-            trust_remote_code=True,
-            quantization_config=quantization_config,
-            load_in_8bit=load_in_8bit if not load_in_4bit else False
+            **model_kwargs
         )
         
         if tokenizer.pad_token is None:
