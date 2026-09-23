@@ -667,7 +667,7 @@ Answer:
             else:
                 return choices_w_facts_prompt.format(question=question, context=context, options=options, facts=facts)
 
-    def generate_qa_prompt_normal_cot(self, context, question, options = None, facts = None):
+    def generate_qa_prompt_normal_cot(self, context, question, options = None, facts = None, include_context=True):
         normal_w_facts_prompt = """
 -Task Description-
 Given facts, a question and a context, your task is to select the most accurate and relevant answer from the provided options. You should only choose the option that directly answers the question based on the facts and context.
@@ -828,6 +828,88 @@ Options:
 #############
 CoT-Answer:
 """
+        normal_wo_context_prompt ="""
+-Task Description-
+Given facts and a question, your task is to select the most accurate and relevant answer from the provided options. You should only choose the option that directly answers the question based on the facts.
+
+-Steps-
+1. Analyze the **Question** carefully.
+2. Use the **Facts** to provide a clear and accurate answer to the question.
+3. Please return in JSON format: {{"Reason": "(reason)", "Answer": "(answer)"}}
+
+######################
+-Example-
+######################
+Question:  
+Which element has the highest electronegativity?  
+
+Facts:  
+Electronegativity increases across periods and decreases down groups. Fluorine is the most electronegative element.  
+
+#############
+CoT-Answer:
+{{"Reason": "According to the facts, electronegativity increases across periods and decreases down groups, and it is stated that fluorine is the most electronegative element. Therefore, based on the given information, fluorine has the highest electronegativity.", "Answer": "Fluorine"}}
+
+######################
+-Real Data-
+######################
+Question:
+{question}
+
+Facts:
+{facts}
+
+#############
+CoT-Answer:
+"""
+        choice_wo_context_prompt ="""
+-Task Description-
+Given facts and a question, your task is to select the most accurate and relevant answer from the provided options. You should only choose the option that directly answers the question based on the facts.
+
+-Steps-
+1. Analyze the **Question** and the **Options**.
+2. Use the **Facts** to select the most accurate answer from the **Options**.
+3. Please return in JSON format: {{"Reason": "(reason)", "Answer": "(answer)"}}
+
+######################
+-Example-
+######################
+Question:  
+Which element has the highest electronegativity?  
+
+Facts:  
+Electronegativity increases across periods and decreases down groups. Fluorine is the most electronegative element.  
+
+Options:  
+Oxygen  
+Chlorine  
+Fluorine 
+#############
+CoT-Answer:
+{{"Reason": "According to the facts, electronegativity increases across periods and decreases down groups, and it is stated that fluorine is the most electronegative element. Therefore, based on the given information, fluorine has the highest electronegativity.", "Answer": "Fluorine"}}
+
+######################
+-Real Data-
+######################
+Question:
+{question}
+
+Facts:
+{facts}
+
+Options:
+{options}
+#############
+CoT-Answer:
+"""
+        # For the ablation with facts only
+        if not include_context:
+            facts = facts or "" # if no facts pass filtering just provide an empty string
+            if options is None:
+                return normal_wo_context_prompt.format(question=question, facts=facts)
+            else:
+                return choice_wo_context_prompt.format(question=question, facts=facts, options=options)
+        # Standard prompt options
         if options is None:
             if facts is None:
                 return normal_wo_facts_prompt.format(question=question, context=context)

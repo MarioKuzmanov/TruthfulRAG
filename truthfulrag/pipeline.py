@@ -365,6 +365,7 @@ class TruthfulRAG:
         dataset: Dataset,
         elements: List[Dict],
         generation_type: str = "cot",
+        generation_context: str = "original",
         **generation_params
     ) -> Dict[str, str]:
         """
@@ -374,6 +375,7 @@ class TruthfulRAG:
             dataset: Input dataset
             elements: List of elements to use for generation
             generation_type: Type of generation ("cot", "wo_cot")
+            generation_context: Context source for CoT generation ("original" or "none")
             generation_params: Override parameters for generation
             
         Returns:
@@ -387,6 +389,7 @@ class TruthfulRAG:
             backend_type=self.backend_type,
             model_name=self.model_name,
             generation_type=generation_type,
+            generation_context=generation_context,
             **params
         )
 

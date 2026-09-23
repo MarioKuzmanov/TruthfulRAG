@@ -487,6 +487,7 @@ async def predict_answer(
         backend_type: str,
         model_name: str,
         generation_type: str = "cot",
+        generation_context: str = "original",
         **backend_config
 ) -> Dict[str, str]:
     """
@@ -498,11 +499,15 @@ async def predict_answer(
         backend_type: Backend type for generation
         model_name: Model name for generation
         generation_type: Type of generation to use
+        generation_context: Defines whether to include the original context.
         backend_config: Generation parameters to override defaults
 
     Returns:
         Dictionary of predictions keyed by item ID
     """
+    if generation_context not in {"original", "none"}:
+        raise ValueError("generation_context must be 'original' or 'none'")
+
     # Initialize LLM backend
     llm_backend = LLMBackend(
         backend_type=backend_type,
@@ -537,13 +542,17 @@ async def predict_answer(
                 element_list.extend(e['element'])
         elements_str = '\n\n'.join(element_list)
         print(f"elements_str: {elements_str}\n\n")
+        
+        include_context = generation_context == "original"  # False if "none"
+
         if generation_type == "cot":
             prompts.append(
                 prompt_generator_qa_cot.generate_qa_prompt_normal_cot(
-                    context=item.get('context', ''),
+                    context=item.get('context', '') if include_context else '',
                     question=item['question'],
                     options=item.get('choices'),
-                    facts=elements_str
+                    facts=elements_str,
+                    include_context=include_context
                 )
             )
         else:
