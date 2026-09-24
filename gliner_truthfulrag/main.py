@@ -10,7 +10,8 @@ from tqdm import tqdm
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     parser.add_argument("--experiment-id", required=True)
-    parser.add_argument("--kg-backend", choices=["gliner", "llm"], required=True)
+    parser.add_argument("--pipeline-mode", choices=["kg", "direct-paths"], default="kg")
+    parser.add_argument("--kg-backend", choices=["gliner", "llm"], default="llm")
     parser.add_argument(
         "--entropy-filter-method",
         choices=["legacy", "paper"],
