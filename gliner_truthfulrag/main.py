@@ -147,10 +147,24 @@ async def run_experiment(args: argparse.Namespace):
 
             runtime_pred_eval = perf_counter() - start_pred_eval
 
-            metrics = {"runtime_kg_building": runtime_kg_building, "runtime_kg_retrieval": runtime_kg_retrieval,
-                       "runtime_entropy_filter": runtime_entropy_filter, "runtime_pred_eval": runtime_pred_eval,
-                       "runtime_path_extraction": runtime_path_extraction, "extraction_error": extraction_error,
-                       "elements_list": elements, "filtered_elements_list": filtered_elements}
+            metrics = {
+                "pipeline_mode": args.pipeline_mode,
+                "runtime_entropy_filter": runtime_entropy_filter,
+                "runtime_pred_eval": runtime_pred_eval,
+                "elements_list": elements,
+                "filtered_elements_list": filtered_elements,
+            }
+            # Make metrics dependent on the pipeline mode
+            if args.pipeline_mode == "kg":
+                metrics.update({
+                    "runtime_kg_building": runtime_kg_building,
+                    "runtime_kg_retrieval": runtime_kg_retrieval,
+                })
+            else:
+                metrics.update({
+                    "runtime_path_extraction": runtime_path_extraction,
+                    "extraction_error": extraction_error,
+                })
 
             results.update(metrics)
 
