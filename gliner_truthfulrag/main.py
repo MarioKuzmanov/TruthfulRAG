@@ -50,7 +50,7 @@ async def run_experiment(args: argparse.Namespace):
         similarity_model="sentence-transformers/all-MiniLM-L6-v2",
         threshold=args.threshold,
         entropy_filter_method=args.entropy_filter_method,
-        kg_backend=args.kg_backend,
+        kg_backend=args.kg_backend if args.pipeline_mode == "kg" else "llm",    # if using direct path extraction, enforce llm backend
         gliner_kg_service_config={
             "gliner_model_id": "knowledgator/gliner-relex-large-v0.5",
             "llm_model_id": "Qwen/Qwen2.5-7B-Instruct",
@@ -61,12 +61,29 @@ async def run_experiment(args: argparse.Namespace):
         output_dir=f"./outputs/{args.experiment_id}",
     )
 
+    direct_path_service = None
+    if args.pipeline_mode == "direct-paths":
+        from gliner_truthfulrag.services.direct_path_service import QwenDirectPathService
+        from gliner_truthfulrag.services.helpers import download_load_qwen
+
+        # Load the direct path service
+        model, tokenizer = download_load_qwen("Qwen/Qwen2.5-7B-Instruct")
+        direct_path_service = QwenDirectPathService(model=model, tokenizer=tokenizer)
+
     # warmup-job
     ## initialize model setups for fair comparison
     ## if implementations are repeatedly re-loading weights after the warmup, this is included in the timings!!
     ## warmup is not measured
-    await rag.make_knowledge_graph(dataset[0])
-    elements = await rag.knowledge_graph_retrieve(dataset[0])
+    if args.pipeline_mode == "kg":
+        await rag.make_knowledge_graph(dataset[0])
+        elements = await rag.knowledge_graph_retrieve(dataset[0])
+    else:
+        try:
+            elements = direct_path_service.extract_direct_paths(dataset[0])
+        except (ValueError, RuntimeError) as error:
+            elements = []
+            print(f"Direct-path warmup extraction failed: {error}")
+    
     await rag.entropy_based_filter(
         sample=dataset[0],
         elements=elements[:30],
@@ -78,17 +95,36 @@ async def run_experiment(args: argparse.Namespace):
         filtered_list_full = []
         for idx, item in enumerate(tqdm(dataset)):
             single_dataset = dataset.select([idx])
-            start_kg_building = perf_counter()
 
-            await rag.make_knowledge_graph(item)
+            if args.pipeline_mode == "kg":
+                start_kg_building = perf_counter()
 
-            runtime_kg_building = perf_counter() - start_kg_building
+                await rag.make_knowledge_graph(item)
 
-            start_kg_retrieval = perf_counter()
+                runtime_kg_building = perf_counter() - start_kg_building
 
-            elements = await rag.knowledge_graph_retrieve(item)
+                start_kg_retrieval = perf_counter()
 
-            runtime_kg_retrieval = perf_counter() - start_kg_retrieval
+                elements = await rag.knowledge_graph_retrieve(item)
+
+                runtime_kg_retrieval = perf_counter() - start_kg_retrieval
+
+                runtime_path_extraction = 0.0
+                extraction_error = None
+
+            # For direct extraction of paths kg building is skipped    
+            else:
+                runtime_kg_building = 0.0
+                runtime_kg_retrieval = 0.0
+
+                start = perf_counter()
+                try:
+                    elements = direct_path_service.extract_direct_paths(item)
+                    extraction_error = None
+                except (ValueError, RuntimeError) as error:
+                    elements = []
+                    extraction_error = str(error)
+                runtime_path_extraction = perf_counter() - start
 
             start_entropy_filter = perf_counter()
 
@@ -113,6 +149,7 @@ async def run_experiment(args: argparse.Namespace):
 
             metrics = {"runtime_kg_building": runtime_kg_building, "runtime_kg_retrieval": runtime_kg_retrieval,
                        "runtime_entropy_filter": runtime_entropy_filter, "runtime_pred_eval": runtime_pred_eval,
+                       "runtime_path_extraction": runtime_path_extraction, "extraction_error": extraction_error,
                        "elements_list": elements, "filtered_elements_list": filtered_elements}
 
             results.update(metrics)
@@ -131,6 +168,12 @@ async def run_experiment(args: argparse.Namespace):
 
         unload_model(rag._gliner_kg_service.qwen_service.model)
         unload_model(rag._gliner_kg_service.gliner_service.model)
+
+    # clean-up (Direct Path Service)
+    if direct_path_service is not None:
+        from gliner_truthfulrag.services.helpers import unload_model
+
+        unload_model(direct_path_service.model)
 
 
 if __name__ == "__main__":
