@@ -25,15 +25,20 @@ def parse_decoded(response: str) -> list[str]:
     seen_paths = set()
     for index, path in enumerate(paths):
         if not isinstance(path, list):      # ensure each direct path is a list
-            raise ValueError(f"Direct path at index {index} must be a JSON array")  
+            logger.warning("Direct path at index %d must be a JSON array", index)
+            continue
         if len(path) not in {3, 5}:         # each direct path must contain exactly 3 or 5 elements
-            raise ValueError(
-                f"Direct path at index {index} must contain exactly 3 or 5 strings"
+            logger.warning(
+                "Direct path at index %d must contain exactly 3 or 5 strings",
+                index,
             )
+            continue
         if not all(isinstance(part, str) and part.strip() for part in path):    # each element in the direct path must be a non-empty string
-            raise ValueError(
-                f"Direct path at index {index} must contain only non-empty strings"
+            logger.warning(
+                "Direct path at index %d must contain only non-empty strings",
+                index,
             )
+            continue
 
         normalized_path = tuple(part.strip() for part in path)
         if normalized_path in seen_paths:   # no duplicate direct paths allowed
