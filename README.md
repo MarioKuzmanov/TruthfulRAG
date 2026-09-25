@@ -1,4 +1,18 @@
-# KG Building
+# TruthfulRAG
+
+## TruthfulRAG Service
+
+### Quick Start
+
+Recommended to create a clean environment (for now)
+- `conda create -n truthful-rag-service python=3.11`
+- `conda activate truthful-rag-service`
+- `pip install -r app/requirements.txt`
+- `make start`
+
+---
+
+## KG Building
 
 * drop-in replacement for the LLM KG building module in TruthfulRAG
 
