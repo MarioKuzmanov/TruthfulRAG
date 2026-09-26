@@ -1,0 +1,104 @@
+[
+  {
+    "src_id": "\"PROTESTS\"",
+    "tgt_id": "\"UPUL\"",
+    "description": "\"Upul is participating in the protests against the government's economic policies.\"",
+    "keywords": "\"protestor, demonstration\""
+  },
+  {
+    "src_id": "\"ECONOMIC CRISIS\"",
+    "tgt_id": "\"PROTESTS\"",
+    "description": "\"Protests are a direct result of the Economic Crisis, including power cuts and shortages.\"<SEP>\"Protests are a result of the economic crisis, including power cuts and shortages.\"",
+    "keywords": "\"causation, unrest\"<SEP>\"caused by, unrest\""
+  },
+  {
+    "src_id": "\"GOTABAYA RAJAPAKSA\"",
+    "tgt_id": "\"PROTESTS\"",
+    "description": "\"Gotabaya Rajapaksa is the target of the Protests, with protesters demanding his resignation.\"<SEP>\"President Gotabaya Rajapaksa is targeted by protesters who demand his resignation.\"",
+    "keywords": "\"leader, protest target\"<SEP>\"target, protest\""
+  },
+  {
+    "src_id": "\"ECONOMIC CRISIS\"",
+    "tgt_id": "\"GOTABAYA RAJAPAKSA\"",
+    "description": "\"President Gotabaya Rajapaksa is associated with the economic crisis, leading to public dissatisfaction and protests.\"",
+    "keywords": "\"leadership, crisis\""
+  },
+  {
+    "src_id": "\"GOTABAYA RAJAPAKSA\"",
+    "tgt_id": "\"SINGAPORE\"",
+    "description": "\"President Gotabaya Rajapaksa fled to Singapore after resigning from his position in Sri Lanka.\"",
+    "keywords": "\"refuge, resignation\""
+  },
+  {
+    "src_id": "\"PROTESTS\"",
+    "tgt_id": "\"RANIL WICKREMESINGHE\"",
+    "description": "\"Prime Minister Ranil Wickremesinghe is also targeted by protesters who demand his resignation.\"",
+    "keywords": "\"leader, protest target\""
+  },
+  {
+    "src_id": "\"CNN\"",
+    "tgt_id": "\"HONG KONG\"",
+    "description": "\"CNN is operating in Hong Kong, reporting on events in Sri Lanka.\"",
+    "keywords": "\"reporting, location\""
+  },
+  {
+    "src_id": "\"VIRTUAL SUMMIT\"",
+    "tgt_id": "\"XI JINPING\"",
+    "description": "\"Chinese leader Xi Jinping is addressing a virtual summit with leaders from major emerging economies.\"",
+    "keywords": "\"leader, summit\""
+  },
+  {
+    "src_id": "\"GLOBAL ECONOMIC CHALLENGES\"",
+    "tgt_id": "\"VIRTUAL SUMMIT\"",
+    "description": "\"The virtual summit is addressing global economic challenges, including new security challenges.\"",
+    "keywords": "\"summit, challenges\""
+  },
+  {
+    "src_id": "\"ECONOMIC CRISIS\"",
+    "tgt_id": "\"POWER CUTS\"",
+    "description": "\"Power Cuts are a part of the broader Economic Crisis affecting Sri Lanka.\"",
+    "keywords": "\"part of, crisis\""
+  },
+  {
+    "src_id": "\"ECONOMIC CRISIS\"",
+    "tgt_id": "\"GAS SHORTAGE\"",
+    "description": "\"Gas Shortage is another aspect of the Economic Crisis impacting daily life in Sri Lanka.\"",
+    "keywords": "\"part of, crisis\""
+  },
+  {
+    "src_id": "\"FAMILIES\"",
+    "tgt_id": "\"GAS SHORTAGE\"",
+    "description": "\"Families are affected by the Gas Shortage, making it difficult to cook.\"",
+    "keywords": "\"affected by, hardship\""
+  },
+  {
+    "src_id": "\"DEMONSTRATORS\"",
+    "tgt_id": "\"PROTESTS\"",
+    "description": "\"Demonstrators are the participants in the Protests against the government's economic policies.\"",
+    "keywords": "\"participant, protest\""
+  },
+  {
+    "src_id": "\"GOTABAYA RAJAPAKSA\"",
+    "tgt_id": "\"HIGH-RANKING SECURITY SOURCE\"",
+    "description": "\"High-Ranking Security Source provides information about Gotabaya Rajapaksa's flight to Singapore.\"",
+    "keywords": "\"source, information\""
+  },
+  {
+    "src_id": "\"PRIME MINISTER\"",
+    "tgt_id": "\"PROTESTS\"",
+    "description": "\"Prime Minister Ranil Wickremesinghe is also targeted by the Protests, with protesters demanding his resignation.\"",
+    "keywords": "\"target, protest\""
+  },
+  {
+    "src_id": "\"COMMERCIAL CAPITAL\"",
+    "tgt_id": "\"PROTESTS\"",
+    "description": "\"Protests are occurring in the Commercial Capital, Colombo, Sri Lanka.\"",
+    "keywords": "\"location, protest\""
+  },
+  {
+    "src_id": "\"BRICS ECONOMIC BLOC\"",
+    "tgt_id": "\"VIRTUAL SUMMIT\"",
+    "description": "\"The Virtual Summit involves leaders from the BRICS Economic Bloc, including Brazil, Russia, India, China, and South Africa.\"",
+    "keywords": "\"participating in, summit\""
+  }
+]

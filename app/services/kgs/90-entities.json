@@ -1,0 +1,164 @@
+[
+  {
+    "entity_type": "\"PERSON\"",
+    "description": "\"Upul is a protester in Colombo, Sri Lanka, participating in demonstrations against the government's economic policies.\"",
+    "source_id": "90",
+    "entity_name": "\"UPUL\""
+  },
+  {
+    "entity_type": "\"LOCATION\"",
+    "description": "\"Colombo is the capital city of Sri Lanka, where protests and power outages are occurring.\"",
+    "source_id": "90",
+    "entity_name": "\"COLOMBO\""
+  },
+  {
+    "entity_type": "\"LOCATION\"",
+    "description": "\"Sri Lanka is experiencing a severe economic crisis, with power cuts and shortages affecting daily life.\"",
+    "source_id": "90",
+    "entity_name": "\"SRI LANKA\""
+  },
+  {
+    "entity_type": "\"PERSON\"",
+    "description": "\"Gotabaya Rajapaksa is the embattled President of Sri Lanka who fled the country and resigned.\"",
+    "source_id": "90",
+    "entity_name": "\"GOTABAYA RAJAPAKSA\""
+  },
+  {
+    "entity_type": "\"LOCATION\"",
+    "description": "\"Singapore is where President Gotabaya Rajapaksa fled to after resigning from his position in Sri Lanka.\"",
+    "source_id": "90",
+    "entity_name": "\"SINGAPORE\""
+  },
+  {
+    "entity_type": "\"PERSON\"",
+    "description": "\"Ranil Wickremesinghe is the Prime Minister of Sri Lanka, also targeted by protesters.\"",
+    "source_id": "90",
+    "entity_name": "\"RANIL WICKREMESINGHE\""
+  },
+  {
+    "entity_type": "\"LOCATION\"",
+    "description": "\"Hong Kong is mentioned as a location where CNN operates, reporting on events in Sri Lanka.\"",
+    "source_id": "90",
+    "entity_name": "\"HONG KONG\""
+  },
+  {
+    "entity_type": "\"PERSON\"",
+    "description": "\"Xi Jinping is the Chinese leader who addressed a virtual summit with leaders from major emerging economies.\"",
+    "source_id": "90",
+    "entity_name": "\"XI JINPING\""
+  },
+  {
+    "entity_type": "\"LOCATION\"",
+    "description": "\"Maldives is a location where President Gotabaya Rajapaksa sought refuge before fleeing to Singapore.\"",
+    "source_id": "90",
+    "entity_name": "\"MALDIVES\""
+  },
+  {
+    "entity_type": "\"ORGANIZATION\"",
+    "description": "\"CNN is a news organization reporting on the political and economic situation in Sri Lanka.\"",
+    "source_id": "90",
+    "entity_name": "\"CNN\""
+  },
+  {
+    "entity_type": "\"EVENT\"",
+    "description": "\"Protests are occurring in Sri Lanka against the government's economic policies and leadership.\"",
+    "source_id": "90",
+    "entity_name": "\"PROTESTS\""
+  },
+  {
+    "entity_type": "\"EVENT\"",
+    "description": "\"An economic crisis is affecting Sri Lanka, characterized by power cuts, shortages, and public unrest.\"",
+    "source_id": "90",
+    "entity_name": "\"ECONOMIC CRISIS\""
+  },
+  {
+    "entity_type": "\"EVENT\"",
+    "description": "\"A virtual summit is taking place with leaders from major emerging economies, addressing global economic challenges.\"",
+    "source_id": "90",
+    "entity_name": "\"VIRTUAL SUMMIT\""
+  },
+  {
+    "entity_type": "\"LOCATION\"",
+    "description": "\"Sri Lanka's Capital City refers to Colombo, where the protests are taking place.\"",
+    "source_id": "90",
+    "entity_name": "\"SRI LANKA'S CAPITAL CITY\""
+  },
+  {
+    "entity_type": "\"EVENT\"",
+    "description": "\"Power Cuts are a significant issue in Sri Lanka, causing darkness in Colombo.\"",
+    "source_id": "90",
+    "entity_name": "\"POWER CUTS\""
+  },
+  {
+    "entity_type": "\"EVENT\"",
+    "description": "\"Gas Shortage is another issue affecting daily life in Sri Lanka, making it difficult for families to cook.\"",
+    "source_id": "90",
+    "entity_name": "\"GAS SHORTAGE\""
+  },
+  {
+    "entity_type": "\"PERSON\"",
+    "description": "\"Families are affected by the gas shortage, struggling to cook due to the lack of gas.\"",
+    "source_id": "90",
+    "entity_name": "\"FAMILIES\""
+  },
+  {
+    "entity_type": "\"PERSON\"",
+    "description": "\"Demonstrators are the people storming the official residences of the President and demanding his resignation.\"",
+    "source_id": "90",
+    "entity_name": "\"DEMONSTRATORS\""
+  },
+  {
+    "entity_type": "\"ROLE\"",
+    "description": "\"Prime Minister is a political role held by Ranil Wickremesinghe, targeted by protesters.\"",
+    "source_id": "90",
+    "entity_name": "\"PRIME MINISTER\""
+  },
+  {
+    "entity_type": "\"LOCATION\"",
+    "description": "\"Commercial Capital refers to Colombo, the commercial center of Sri Lanka.\"",
+    "source_id": "90",
+    "entity_name": "\"COMMERCIAL CAPITAL\""
+  },
+  {
+    "entity_type": "\"PERSON\"",
+    "description": "\"High-Ranking Security Source is a person providing information about President Gotabaya Rajapaksa's flight to Singapore.\"",
+    "source_id": "90",
+    "entity_name": "\"HIGH-RANKING SECURITY SOURCE\""
+  },
+  {
+    "entity_type": "\"ORGANIZATION\"",
+    "description": "\"BRICS Economic Bloc is a group of countries including Brazil, Russia, India, China, and South Africa.\"",
+    "source_id": "90",
+    "entity_name": "\"BRICS ECONOMIC BLOC\""
+  },
+  {
+    "entity_type": "\"EVENT\"",
+    "description": "\"Business Forum is an event where Chinese leader Xi Jinping addressed a speech ahead of the virtual summit.\"",
+    "source_id": "90",
+    "entity_name": "\"BUSINESS FORUM\""
+  },
+  {
+    "entity_type": "\"CONCEPT\"",
+    "description": "\"Sanctions are a concept mentioned by Chinese leader Xi Jinping as a tool to 'weaponize' the global economy.\"",
+    "source_id": "90",
+    "entity_name": "\"SANCTIONS\""
+  },
+  {
+    "entity_type": "\"CONCEPT\"",
+    "description": "\"Global Economy is a concept discussed by Chinese leader Xi Jinping in the context of financial challenges.\"",
+    "source_id": "90",
+    "entity_name": "\"GLOBAL ECONOMY\""
+  },
+  {
+    "entity_type": "\"EVENT\"",
+    "description": "\"Pandemic is a global event that has impacted the world's recovery from economic challenges.\"",
+    "source_id": "90",
+    "entity_name": "\"PANDEMIC\""
+  },
+  {
+    "entity_type": "\"CONCEPT\"",
+    "description": "\"Security Challenges are a concept mentioned by Chinese leader Xi Jinping as new challenges facing the global economy.\"",
+    "source_id": "90",
+    "entity_name": "\"SECURITY CHALLENGES\""
+  }
+]
