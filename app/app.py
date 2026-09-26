@@ -1,34 +1,35 @@
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from app.api.router import router as main_router
-
-import logging
-
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s %(levelname)s [%(name)s] %(message)s",
-)
-logger = logging.getLogger(__name__)
+from app.services.setup_service import SetupService
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    logger.info("Setting up TruthfulRAG")
-
+    # we will use shared item across all router endpoints
+    app.state.setup_service = SetupService()
     yield
-
-    logger.info("Cleaning up TruthfulRAG")
-
 
 usage_md = """
 ## How to use TruthfulRAG?
 
 ### Endpoints
-- `truthfulrag-original`
-- `truthfulrag-gliner`
+
+- `setup`
+    - selects a random `item_id` to examine the behaviour of a method
+- `truthfulrag`
+    - Original KG building steps
+    - Integrated GLiNER KG building module
 - `rag-triples`
+    - RAG with provided extracted triples as additional context
 - `rag`
+    - simple RAG
 - `llm`
+    - LLM without context nor facts
+    
+- LLM is always `Qwen/Qwen2.5-7B-Instruct`
+- GLiNER is always `knowledgator/gliner-relex-large-v0.5`
+- Entropy filtering `threshold=3` (where applicable)
 """
 app = FastAPI(title="TruthfulRAG Demo Service",
               version="0.1.0",
