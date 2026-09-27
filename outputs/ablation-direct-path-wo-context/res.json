@@ -1,8 +1,8 @@
 {
   "num_items": 113,
-  "exact_match": 53.097345132743364,
-  "acc": 53.982300884955755,
-  "f1": 54.85897717944898,
+  "exact_match": 56.63716814159292,
+  "acc": 57.52212389380531,
+  "f1": 57.80882968682361,
   "details": [
     {
       "id": 0,
@@ -44,10 +44,10 @@
       "id": 4,
       "question": "What is the biggest security threat in the Asia-Pacific region, according to Fiji\u2019s minister of defense?",
       "answer": "Climate change",
-      "prediction": "I don't know",
-      "exact_match": false,
-      "acc": false,
-      "f1": 0
+      "prediction": "Climate change",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
     },
     {
       "id": 5,
@@ -98,10 +98,10 @@
       "id": 10,
       "question": "Historic rainfall led to flooding, mudslides and visitor evacuations at which national park?",
       "answer": "Yellowstone National Park",
-      "prediction": "Yosemite National Park",
-      "exact_match": false,
-      "acc": false,
-      "f1": 0.6666666666666666
+      "prediction": "Yellowstone National Park",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
     },
     {
       "id": 11,
@@ -206,7 +206,7 @@
       "id": 22,
       "question": "Which embattled celebrity was found liable in a sexual battery case this week?",
       "answer": "Bill Cosby",
-      "prediction": "Prince Andrew",
+      "prediction": "Harvey Weinstein",
       "exact_match": false,
       "acc": false,
       "f1": 0
@@ -215,10 +215,10 @@
       "id": 23,
       "question": "Which Ivy League school announced it will eliminate student loans for undergraduates?",
       "answer": "Dartmouth College",
-      "prediction": "Columbia University",
-      "exact_match": false,
-      "acc": false,
-      "f1": 0
+      "prediction": "Dartmouth College",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
     },
     {
       "id": 24,
@@ -341,10 +341,10 @@
       "id": 37,
       "question": "Which country was recommended for EU candidacy alongside Ukraine this week?",
       "answer": "Moldova",
-      "prediction": "Moldova",
-      "exact_match": true,
-      "acc": true,
-      "f1": 1.0
+      "prediction": "Ukraine",
+      "exact_match": false,
+      "acc": false,
+      "f1": 0
     },
     {
       "id": 38,
@@ -368,19 +368,19 @@
       "id": 40,
       "question": "Which meal kit service received hundreds of reports of illness following a recall of one of its products?",
       "answer": "Daily Harvest",
-      "prediction": "I don't know",
-      "exact_match": false,
-      "acc": false,
-      "f1": 0
+      "prediction": "Daily Harvest",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
     },
     {
       "id": 41,
       "question": "NASA made history this week after successfully completing its first launch from a commercial spaceport outside the US. Where did the launch occur?",
       "answer": "I don't know",
-      "prediction": "I don't know",
-      "exact_match": true,
-      "acc": true,
-      "f1": 1.0
+      "prediction": "New Mexico",
+      "exact_match": false,
+      "acc": false,
+      "f1": 0
     },
     {
       "id": 42,
@@ -530,10 +530,10 @@
       "id": 58,
       "question": "Why did some cities across the western US cancel their Fourth of July fireworks displays this year?",
       "answer": "Drought",
-      "prediction": "Supply chain issues",
-      "exact_match": false,
-      "acc": false,
-      "f1": 0
+      "prediction": "Drought",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
     },
     {
       "id": 59,
@@ -746,7 +746,7 @@
       "id": 82,
       "question": "Despite dropping slightly from recent record levels, how much have gas prices increased in the US over the past year?",
       "answer": "I don't know",
-      "prediction": "40%",
+      "prediction": "60%",
       "exact_match": false,
       "acc": false,
       "f1": 0
@@ -782,7 +782,7 @@
       "id": 86,
       "question": "The nominees for the 2022 Primetime Emmys were announced this week. Which of these shows had the most nominations?",
       "answer": "I don't know",
-      "prediction": "Abbott Elementary",
+      "prediction": "Succession",
       "exact_match": false,
       "acc": false,
       "f1": 0
@@ -899,10 +899,10 @@
       "id": 99,
       "question": "US first lady Jill Biden met with the first lady of which country this week?",
       "answer": "Ukraine",
-      "prediction": "I don't know",
-      "exact_match": false,
-      "acc": false,
-      "f1": 0
+      "prediction": "Ukraine",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
     },
     {
       "id": 100,

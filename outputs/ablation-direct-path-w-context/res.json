@@ -1,8 +1,8 @@
 {
   "num_items": 113,
-  "exact_match": 84.070796460177,
-  "acc": 84.070796460177,
-  "f1": 84.51327433628319,
+  "exact_match": 81.41592920353982,
+  "acc": 81.41592920353982,
+  "f1": 81.85840707964601,
   "details": [
     {
       "id": 0,
@@ -206,10 +206,10 @@
       "id": 22,
       "question": "Which embattled celebrity was found liable in a sexual battery case this week?",
       "answer": "Bill Cosby",
-      "prediction": "Bill Cosby",
-      "exact_match": true,
-      "acc": true,
-      "f1": 1.0
+      "prediction": "Harvey Weinstein",
+      "exact_match": false,
+      "acc": false,
+      "f1": 0
     },
     {
       "id": 23,
@@ -341,10 +341,10 @@
       "id": 37,
       "question": "Which country was recommended for EU candidacy alongside Ukraine this week?",
       "answer": "Moldova",
-      "prediction": "Moldova",
-      "exact_match": true,
-      "acc": true,
-      "f1": 1.0
+      "prediction": "I don't know",
+      "exact_match": false,
+      "acc": false,
+      "f1": 0
     },
     {
       "id": 38,
@@ -377,10 +377,10 @@
       "id": 41,
       "question": "NASA made history this week after successfully completing its first launch from a commercial spaceport outside the US. Where did the launch occur?",
       "answer": "I don't know",
-      "prediction": "I don't know",
-      "exact_match": true,
-      "acc": true,
-      "f1": 1.0
+      "prediction": "New Mexico",
+      "exact_match": false,
+      "acc": false,
+      "f1": 0
     },
     {
       "id": 42,
@@ -746,7 +746,7 @@
       "id": 82,
       "question": "Despite dropping slightly from recent record levels, how much have gas prices increased in the US over the past year?",
       "answer": "I don't know",
-      "prediction": "40%",
+      "prediction": "20%",
       "exact_match": false,
       "acc": false,
       "f1": 0
