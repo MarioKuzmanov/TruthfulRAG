@@ -1,0 +1,7 @@
+{
+  "90": "{\"Reason\": \"The context explicitly states that 'Embattled President Gotabaya Rajapaksa arrived in Singapore on a flight from Maldives on Thursday, according to a high-ranking security source in Colombo.' This directly indicates that Sri Lankan President Gotabaya Rajapaksa fled to Singapore.\", \"Answer\": \"Singapore\"}",
+  "7": "{\"Reason\": \"The context clearly states that Toyota is recalling 2.9 million vehicles due to various issues. This information directly answers the question about which automaker recalled 2.9 million vehicles.\", \"Answer\": \"Toyota\"}",
+  "68": "{\"Reason\": \"The paths and edges in the provided facts clearly indicate that Ramesh 'Sunny' Balwani served as a top executive for Theranos. Specifically, the path 'RAMESH \\\"SUNNY\\\" BALWANI->ELIZABETH HOLMES->THERANOS' and the edge 'RAMESH \\\"SUNNY\\\" BALWANI->THERANOS: RAMESH \\\"SUNNY\\\" BALWANI served as THERANOS' confirm his role at Theranos.\", \"Answer\": \"Theranos\"}",
+  "99": "{\"Reason\": \"The context clearly states that Jill Biden met with the first lady of Ukraine, Olena Zelenska, during her visit to Uzhhorod, Ukraine. No other country's first lady is mentioned in relation to Jill Biden's recent meetings.\", \"Answer\": \"Ukraine\"}",
+  "8": "{\"Reason\": \"The context states that Internet Explorer was debuted by Microsoft some 27 years before it was retired. Given that it was retired this week, we can subtract 27 years from the current year (assuming the current year is 2022) to find the debut year, which is 1995.\", \"Answer\": \"1995\"}"
+}

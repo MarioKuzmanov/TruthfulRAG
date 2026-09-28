@@ -1,0 +1,42 @@
+[
+  {
+    "element": "Path:\nSOUTH ASIAN STATE->SRI LANKA->SRI LANKA\nNodes:\nSOUTH ASIAN STATE: SOUTH ASIAN STATE is an entity of type LOCATION\nSRI LANKA: SRI LANKA is an entity of type LOCATION\nSRI LANKA: SRI LANKA is an entity of type LOCATION\nEdges:\nSRI LANKA->SRI LANKA: SRI LANKA plunged into chaos SRI LANKA",
+    "delta": 0.8100536303337837
+  },
+  {
+    "element": "Path:\nCOLOMBO->UPUL->ECONOMIC CRISIS\nNodes:\nCOLOMBO: COLOMBO is an entity of type LOCATION\nUPUL: UPUL is an entity of type OTHER\nECONOMIC CRISIS: ECONOMIC CRISIS is an entity of type EVENT\nEdges:\nUPUL->ECONOMIC CRISIS: UPUL protested ECONOMIC CRISIS",
+    "delta": 0.5244727016810482
+  },
+  {
+    "element": "Path:\nSOUTH ASIAN STATE->SRI LANKA->CHAOS\nNodes:\nSOUTH ASIAN STATE: SOUTH ASIAN STATE is an entity of type LOCATION\nSRI LANKA: SRI LANKA is an entity of type LOCATION\nEdges:\nSRI LANKA->CHAOS: SRI LANKA plunged into chaos CHAOS",
+    "delta": 0.49935695675642267
+  },
+  {
+    "element": "Path:\nSRI LANKA->UPUL->COLOMBO\nNodes:\nSRI LANKA: SRI LANKA is an entity of type LOCATION\nUPUL: UPUL is an entity of type OTHER\nCOLOMBO: COLOMBO is an entity of type LOCATION\nEdges:\nUPUL->COLOMBO: UPUL took to the streets COLOMBO",
+    "delta": 0.488175021678128
+  },
+  {
+    "element": "Path:\nECONOMIC CRISIS->UPUL->COLOMBO\nNodes:\nECONOMIC CRISIS: ECONOMIC CRISIS is an entity of type EVENT\nUPUL: UPUL is an entity of type OTHER\nCOLOMBO: COLOMBO is an entity of type LOCATION\nEdges:\nUPUL->COLOMBO: UPUL took to the streets COLOMBO",
+    "delta": 0.48482722920738053
+  },
+  {
+    "element": "Path:\nUPUL->SRI LANKA->SOUTH ASIAN STATE\nNodes:\nUPUL: UPUL is an entity of type OTHER\nSRI LANKA: SRI LANKA is an entity of type LOCATION\nSOUTH ASIAN STATE: SOUTH ASIAN STATE is an entity of type LOCATION\nEdges:\nSRI LANKA->SOUTH ASIAN STATE: SRI LANKA plunged into chaos SOUTH ASIAN STATE\nUPUL->SRI LANKA: UPUL took to the streets SRI LANKA",
+    "delta": 0.47805405513169896
+  },
+  {
+    "element": "Path:\nUPUL->SRI LANKA->XI JINPING\nNodes:\nUPUL: UPUL is an entity of type OTHER\nSRI LANKA: SRI LANKA is an entity of type LOCATION\nEdges:\nUPUL->SRI LANKA: UPUL took to the streets SRI LANKA",
+    "delta": 0.45545148088026255
+  },
+  {
+    "element": "Path:\nUPUL->SRI LANKA->SRI LANKA\nNodes:\nUPUL: UPUL is an entity of type OTHER\nSRI LANKA: SRI LANKA is an entity of type LOCATION\nSRI LANKA: SRI LANKA is an entity of type LOCATION\nEdges:\nSRI LANKA->SRI LANKA: SRI LANKA plunged into chaos SRI LANKA\nUPUL->SRI LANKA: UPUL took to the streets SRI LANKA",
+    "delta": 0.38070601448416697
+  },
+  {
+    "element": "Path:\nGLOBAL ECONOMY->XI JINPING->SRI LANKA\nNodes:\nGLOBAL ECONOMY: GLOBAL ECONOMY is an entity of type OTHER\nSRI LANKA: SRI LANKA is an entity of type LOCATION\nEdges:\nXI JINPING->SRI LANKA: XI JINPING set the tone SRI LANKA",
+    "delta": 0.2584083427891337
+  },
+  {
+    "element": "Path:\nUPUL->SRI LANKA->CHAOS\nNodes:\nUPUL: UPUL is an entity of type OTHER\nSRI LANKA: SRI LANKA is an entity of type LOCATION\nEdges:\nSRI LANKA->CHAOS: SRI LANKA plunged into chaos CHAOS\nUPUL->SRI LANKA: UPUL took to the streets SRI LANKA",
+    "delta": 0.187914824905137
+  }
+]

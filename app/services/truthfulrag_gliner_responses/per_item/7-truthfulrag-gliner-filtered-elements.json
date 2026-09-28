@@ -1,0 +1,42 @@
+[
+  {
+    "element": "Path:\nGENERAL MOTORS->18.32%->TOTAL MARKET SHARE\nNodes:\nGENERAL MOTORS: GENERAL MOTORS is an entity of type ORGANIZATION\nEdges:\nGENERAL MOTORS->18.32%: GENERAL MOTORS rose to 18.32%",
+    "delta": 0.7278180723952485
+  },
+  {
+    "element": "Path:\nCOROLLA->TOYOTA->AVALON HYBRID\nNodes:\nCOROLLA: COROLLA is an entity of type OTHER\nTOYOTA: TOYOTA is an entity of type ORGANIZATION\nAVALON HYBRID: AVALON HYBRID is an entity of type OTHER\nEdges:\nTOYOTA->AVALON HYBRID: TOYOTA is recalling AVALON HYBRID",
+    "delta": 0.5432076722988983
+  },
+  {
+    "element": "Path:\nSPORTS UTILITY VEHICLES->TOYOTA->MATRIX\nNodes:\nSPORTS UTILITY VEHICLES: SPORTS UTILITY VEHICLES is an entity of type OTHER\nTOYOTA: TOYOTA is an entity of type ORGANIZATION\nEdges:\nTOYOTA->MATRIX: TOYOTA is recalling MATRIX",
+    "delta": 0.5296639633741425
+  },
+  {
+    "element": "Path:\n2.9 MILLION VEHICLES->TOYOTA->SPORTS UTILITY VEHICLES\nNodes:\n2.9 MILLION VEHICLES: 2.9 MILLION VEHICLES is an entity of type OTHER\nTOYOTA: TOYOTA is an entity of type ORGANIZATION\nSPORTS UTILITY VEHICLES: SPORTS UTILITY VEHICLES is an entity of type OTHER\nEdges:\nTOYOTA->SPORTS UTILITY VEHICLES: TOYOTA is recalling SPORTS UTILITY VEHICLES",
+    "delta": 0.4506738991419893
+  },
+  {
+    "element": "Path:\nAVALON HYBRID->TOYOTA->SPORTS UTILITY VEHICLES\nNodes:\nAVALON HYBRID: AVALON HYBRID is an entity of type OTHER\nTOYOTA: TOYOTA is an entity of type ORGANIZATION\nSPORTS UTILITY VEHICLES: SPORTS UTILITY VEHICLES is an entity of type OTHER\nEdges:\nTOYOTA->SPORTS UTILITY VEHICLES: TOYOTA is recalling SPORTS UTILITY VEHICLES",
+    "delta": 0.3988128326089322
+  },
+  {
+    "element": "Path:\nCOROLLA->TOYOTA->MATRIX\nNodes:\nCOROLLA: COROLLA is an entity of type OTHER\nTOYOTA: TOYOTA is an entity of type ORGANIZATION\nEdges:\nTOYOTA->MATRIX: TOYOTA is recalling MATRIX",
+    "delta": 0.38925997646644095
+  },
+  {
+    "element": "Path:\nCOROLLA->TOYOTA->AVALON\nNodes:\nCOROLLA: COROLLA is an entity of type OTHER\nTOYOTA: TOYOTA is an entity of type ORGANIZATION\nEdges:\nTOYOTA->AVALON: TOYOTA is recalling AVALON",
+    "delta": 0.3441501764778677
+  },
+  {
+    "element": "Path:\nSPORTS UTILITY VEHICLES->TOYOTA->AVALON\nNodes:\nSPORTS UTILITY VEHICLES: SPORTS UTILITY VEHICLES is an entity of type OTHER\nTOYOTA: TOYOTA is an entity of type ORGANIZATION\nEdges:\nTOYOTA->AVALON: TOYOTA is recalling AVALON",
+    "delta": 0.28527170968491133
+  },
+  {
+    "element": "Path:\nCOROLLA->TOYOTA->SPORTS UTILITY VEHICLES\nNodes:\nCOROLLA: COROLLA is an entity of type OTHER\nTOYOTA: TOYOTA is an entity of type ORGANIZATION\nSPORTS UTILITY VEHICLES: SPORTS UTILITY VEHICLES is an entity of type OTHER\nEdges:\nTOYOTA->SPORTS UTILITY VEHICLES: TOYOTA is recalling SPORTS UTILITY VEHICLES",
+    "delta": 0.270176795080702
+  },
+  {
+    "element": "Path:\nSPORTS UTILITY VEHICLES->TOYOTA->COROLLA\nNodes:\nSPORTS UTILITY VEHICLES: SPORTS UTILITY VEHICLES is an entity of type OTHER\nTOYOTA: TOYOTA is an entity of type ORGANIZATION\nCOROLLA: COROLLA is an entity of type OTHER\nEdges:\nTOYOTA->COROLLA: TOYOTA is recalling COROLLA",
+    "delta": 0.26486649434963105
+  }
+]

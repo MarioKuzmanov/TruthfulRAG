@@ -1,0 +1,520 @@
+{
+  "UZHHOROD": {
+    "entity_type": "LOCATION",
+    "description": "UZHHOROD is an entity of type LOCATION",
+    "source_id": "99",
+    "chunk_id": "99_0",
+    "confidence": 0.9062914252281189
+  },
+  "UKRAINE": {
+    "entity_type": "LOCATION",
+    "description": "UKRAINE is an entity of type LOCATION",
+    "source_id": "99",
+    "chunk_id": "99_0",
+    "confidence": 0.8606732487678528
+  },
+  "JILL BIDEN": {
+    "entity_type": "PERSON",
+    "description": "JILL BIDEN is an entity of type PERSON",
+    "source_id": "99",
+    "chunk_id": "99_0",
+    "confidence": 0.9732800126075745
+  },
+  "MOTHER'S DAY": {
+    "entity_type": "EVENT",
+    "description": "MOTHER'S DAY is an entity of type EVENT",
+    "source_id": "99",
+    "chunk_id": "99_0",
+    "confidence": 0.6783255338668823
+  },
+  "RUSSIA": {
+    "entity_type": "OTHER",
+    "description": "RUSSIA is an entity of type OTHER",
+    "source_id": "99",
+    "chunk_id": "99_0",
+    "confidence": 0.5291237235069275
+  },
+  "OLENA ZELENSKA": {
+    "entity_type": "PERSON",
+    "description": "OLENA ZELENSKA is an entity of type PERSON",
+    "source_id": "99",
+    "chunk_id": "99_0",
+    "confidence": 0.962136447429657
+  },
+  "WASHINGTON": {
+    "entity_type": "OTHER",
+    "description": "WASHINGTON is an entity of type OTHER",
+    "source_id": "99",
+    "chunk_id": "99_0",
+    "confidence": 0.8040720820426941
+  },
+  "ROMANIA": {
+    "entity_type": "LOCATION",
+    "description": "ROMANIA is an entity of type LOCATION",
+    "source_id": "99",
+    "chunk_id": "99_0",
+    "confidence": 0.9704734086990356
+  },
+  "SLOVAKIA": {
+    "entity_type": "LOCATION",
+    "description": "SLOVAKIA is an entity of type LOCATION",
+    "source_id": "99",
+    "chunk_id": "99_0",
+    "confidence": 0.9549803137779236
+  },
+  "UNITED STATES": {
+    "entity_type": "LOCATION",
+    "description": "UNITED STATES is an entity of type LOCATION",
+    "source_id": "99",
+    "chunk_id": "99_0",
+    "confidence": 0.7770709991455078
+  },
+  "MIHAIL KOGALNICEANU AIRBASE": {
+    "entity_type": "LOCATION",
+    "description": "MIHAIL KOGALNICEANU AIRBASE is an entity of type LOCATION",
+    "source_id": "99",
+    "chunk_id": "99_0",
+    "confidence": 0.7275504469871521
+  },
+  "BUCHAREST": {
+    "entity_type": "LOCATION",
+    "description": "BUCHAREST is an entity of type LOCATION",
+    "source_id": "99",
+    "chunk_id": "99_0",
+    "confidence": 0.9065411686897278
+  },
+  "POLAND": {
+    "entity_type": "LOCATION",
+    "description": "POLAND is an entity of type LOCATION",
+    "source_id": "99",
+    "chunk_id": "99_0",
+    "confidence": 0.42783844470977783
+  },
+  "UNITED NATIONS HIGH COMMISSIONER FOR REFUGEES": {
+    "entity_type": "OTHER",
+    "description": "UNITED NATIONS HIGH COMMISSIONER FOR REFUGEES is an entity of type OTHER",
+    "source_id": "99",
+    "chunk_id": "99_0",
+    "confidence": 0.5731918215751648
+  },
+  "ECUADOR": {
+    "entity_type": "LOCATION",
+    "description": "ECUADOR is an entity of type LOCATION",
+    "source_id": "99",
+    "chunk_id": "99_0",
+    "confidence": 0.9118959307670593
+  },
+  "PANAMA": {
+    "entity_type": "LOCATION",
+    "description": "PANAMA is an entity of type LOCATION",
+    "source_id": "99",
+    "chunk_id": "99_0",
+    "confidence": 0.8700070381164551
+  },
+  "COSTA RICA": {
+    "entity_type": "LOCATION",
+    "description": "COSTA RICA is an entity of type LOCATION",
+    "source_id": "99",
+    "chunk_id": "99_0",
+    "confidence": 0.872158408164978
+  },
+  "WHITE HOUSE": {
+    "entity_type": "OTHER",
+    "description": "WHITE HOUSE is an entity of type OTHER",
+    "source_id": "99",
+    "chunk_id": "99_0",
+    "confidence": 0.555418074131012
+  },
+  "ASHLEY BIDEN": {
+    "entity_type": "PERSON",
+    "description": "ASHLEY BIDEN is an entity of type PERSON",
+    "source_id": "99",
+    "chunk_id": "99_0",
+    "confidence": 0.9624292850494385
+  },
+  "US": {
+    "entity_type": "OTHER",
+    "description": "US is an entity of type OTHER",
+    "source_id": "99",
+    "chunk_id": "99_0",
+    "confidence": 0.4121139645576477
+  },
+  "JOE BIDEN": {
+    "entity_type": "PERSON",
+    "description": "JOE BIDEN is an entity of type PERSON",
+    "source_id": "99",
+    "chunk_id": "99_0",
+    "confidence": 0.9514875411987305
+  },
+  "DEMOCRATIC NATIONAL COMMITTEE": {
+    "entity_type": "OTHER",
+    "description": "DEMOCRATIC NATIONAL COMMITTEE is an entity of type OTHER",
+    "source_id": "99",
+    "chunk_id": "99_0",
+    "confidence": 0.8159697651863098
+  },
+  "NANTUCKET": {
+    "entity_type": "LOCATION",
+    "description": "NANTUCKET is an entity of type LOCATION",
+    "source_id": "99",
+    "chunk_id": "99_0",
+    "confidence": 0.7464845776557922
+  },
+  "MASSACHUSETTS": {
+    "entity_type": "LOCATION",
+    "description": "MASSACHUSETTS is an entity of type LOCATION",
+    "source_id": "99",
+    "chunk_id": "99_0",
+    "confidence": 0.5291910171508789
+  },
+  "FIRST LADY": {
+    "entity_type": "OTHER",
+    "description": "FIRST LADY is an entity of type OTHER",
+    "source_id": "99",
+    "chunk_id": "99_1",
+    "confidence": 0.5417056083679199
+  },
+  "GLOBAL WOES": {
+    "entity_type": "OTHER",
+    "description": "GLOBAL WOES is an entity of type OTHER",
+    "source_id": "99",
+    "chunk_id": "99_1",
+    "confidence": 0.9110618233680725
+  },
+  "BIDEN": {
+    "entity_type": "OTHER",
+    "description": "BIDEN is an entity of type OTHER",
+    "source_id": "99",
+    "chunk_id": "99_1",
+    "confidence": 0.4376067519187927
+  },
+  "PRESIDENT": {
+    "entity_type": "OTHER",
+    "description": "PRESIDENT is an entity of type OTHER",
+    "source_id": "99",
+    "chunk_id": "99_1",
+    "confidence": 0.4350455701351166
+  },
+  "JOB APPROVAL RATING": {
+    "entity_type": "OTHER",
+    "description": "JOB APPROVAL RATING is an entity of type OTHER",
+    "source_id": "99",
+    "chunk_id": "99_1",
+    "confidence": 0.8531747460365295
+  },
+  "33%": {
+    "entity_type": "OTHER",
+    "description": "33% is an entity of type OTHER",
+    "source_id": "99",
+    "chunk_id": "99_1",
+    "confidence": 0.5096135139465332
+  },
+  "NEW YORK TIMES": {
+    "entity_type": "OTHER",
+    "description": "NEW YORK TIMES is an entity of type OTHER",
+    "source_id": "99",
+    "chunk_id": "99_1",
+    "confidence": 0.8820816278457642
+  },
+  "SIENA COLLEGE": {
+    "entity_type": "OTHER",
+    "description": "SIENA COLLEGE is an entity of type OTHER",
+    "source_id": "99",
+    "chunk_id": "99_1",
+    "confidence": 0.84482741355896
+  },
+  "MARKAROVA": {
+    "entity_type": "PERSON",
+    "description": "MARKAROVA is an entity of type PERSON",
+    "source_id": "99",
+    "chunk_id": "99_1",
+    "confidence": 0.9682895541191101
+  },
+  "RUSSIAN": {
+    "entity_type": "OTHER",
+    "description": "RUSSIAN is an entity of type OTHER",
+    "source_id": "99",
+    "chunk_id": "99_1",
+    "confidence": 0.5644904375076294
+  },
+  "CONGRESS": {
+    "entity_type": "ORGANIZATION",
+    "description": "CONGRESS is an entity of type ORGANIZATION",
+    "source_id": "99",
+    "chunk_id": "99_1",
+    "confidence": 0.8611648082733154
+  },
+  "SANCTIONS": {
+    "entity_type": "OTHER",
+    "description": "SANCTIONS is an entity of type OTHER",
+    "source_id": "99",
+    "chunk_id": "99_1",
+    "confidence": 0.8279570937156677
+  },
+  "MORE WEAPONS": {
+    "entity_type": "OTHER",
+    "description": "MORE WEAPONS is an entity of type OTHER",
+    "source_id": "99",
+    "chunk_id": "99_1",
+    "confidence": 0.6238367557525635
+  },
+  "DOUGLAS EMHOFF": {
+    "entity_type": "PERSON",
+    "description": "DOUGLAS EMHOFF is an entity of type PERSON",
+    "source_id": "99",
+    "chunk_id": "99_1",
+    "confidence": 0.9286876320838928
+  },
+  "PRESIDENT JOE BIDEN": {
+    "entity_type": "OTHER",
+    "description": "PRESIDENT JOE BIDEN is an entity of type OTHER",
+    "source_id": "99",
+    "chunk_id": "99_1",
+    "confidence": 0.43814578652381897
+  },
+  "RESILIENCE": {
+    "entity_type": "OTHER",
+    "description": "RESILIENCE is an entity of type OTHER",
+    "source_id": "99",
+    "chunk_id": "99_1",
+    "confidence": 0.8909015655517578
+  },
+  "INNOVATION": {
+    "entity_type": "OTHER",
+    "description": "INNOVATION is an entity of type OTHER",
+    "source_id": "99",
+    "chunk_id": "99_1",
+    "confidence": 0.8999306559562683
+  },
+  "SERVICE": {
+    "entity_type": "OTHER",
+    "description": "SERVICE is an entity of type OTHER",
+    "source_id": "99",
+    "chunk_id": "99_1",
+    "confidence": 0.8752198219299316
+  },
+  "COURAGE": {
+    "entity_type": "OTHER",
+    "description": "COURAGE is an entity of type OTHER",
+    "source_id": "99",
+    "chunk_id": "99_1",
+    "confidence": 0.9116926193237305
+  },
+  "REPRESENTATIVES": {
+    "entity_type": "OTHER",
+    "description": "REPRESENTATIVES is an entity of type OTHER",
+    "source_id": "99",
+    "chunk_id": "99_1",
+    "confidence": 0.42556050419807434
+  },
+  "PANDEMIC": {
+    "entity_type": "OTHER",
+    "description": "PANDEMIC is an entity of type OTHER",
+    "source_id": "99",
+    "chunk_id": "99_1",
+    "confidence": 0.6384029984474182
+  },
+  "MILITARY": {
+    "entity_type": "OTHER",
+    "description": "MILITARY is an entity of type OTHER",
+    "source_id": "99",
+    "chunk_id": "99_1",
+    "confidence": 0.7711644172668457
+  },
+  "INFRASTRUCTURE": {
+    "entity_type": "OTHER",
+    "description": "INFRASTRUCTURE is an entity of type OTHER",
+    "source_id": "99",
+    "chunk_id": "99_1",
+    "confidence": 0.7729357481002808
+  },
+  "AMERICAN RESCUE PLAN": {
+    "entity_type": "OTHER",
+    "description": "AMERICAN RESCUE PLAN is an entity of type OTHER",
+    "source_id": "99",
+    "chunk_id": "99_1",
+    "confidence": 0.8078711628913879
+  },
+  "HEALTHCARE": {
+    "entity_type": "OTHER",
+    "description": "HEALTHCARE is an entity of type OTHER",
+    "source_id": "99",
+    "chunk_id": "99_1",
+    "confidence": 0.8534007668495178
+  },
+  "EDUCATION": {
+    "entity_type": "OTHER",
+    "description": "EDUCATION is an entity of type OTHER",
+    "source_id": "99",
+    "chunk_id": "99_1",
+    "confidence": 0.8551856279373169
+  },
+  "EDITOR'S NOTE": {
+    "entity_type": "OTHER",
+    "description": "EDITOR'S NOTE is an entity of type OTHER",
+    "source_id": "99",
+    "chunk_id": "99_1",
+    "confidence": 0.7355049848556519
+  },
+  "RUSSIAN OIL": {
+    "entity_type": "OTHER",
+    "description": "RUSSIAN OIL is an entity of type OTHER",
+    "source_id": "99",
+    "chunk_id": "99_1",
+    "confidence": 0.8958194851875305
+  },
+  "CNN": {
+    "entity_type": "OTHER",
+    "description": "CNN is an entity of type OTHER",
+    "source_id": "99",
+    "chunk_id": "99_1",
+    "confidence": 0.9443293809890747
+  },
+  "COMFORTING FAMILIES": {
+    "entity_type": "OTHER",
+    "description": "COMFORTING FAMILIES is an entity of type OTHER",
+    "source_id": "99",
+    "chunk_id": "99_1",
+    "confidence": 0.738267719745636
+  },
+  "MASS SHOOTING": {
+    "entity_type": "EVENT",
+    "description": "MASS SHOOTING is an entity of type EVENT",
+    "source_id": "99",
+    "chunk_id": "99_1",
+    "confidence": 0.7777024507522583
+  },
+  "ELEMENTARY SCHOOL": {
+    "entity_type": "OTHER",
+    "description": "ELEMENTARY SCHOOL is an entity of type OTHER",
+    "source_id": "99",
+    "chunk_id": "99_1",
+    "confidence": 0.5334511995315552
+  },
+  "TEXAS": {
+    "entity_type": "OTHER",
+    "description": "TEXAS is an entity of type OTHER",
+    "source_id": "99",
+    "chunk_id": "99_1",
+    "confidence": 0.7184486389160156
+  },
+  "GUN VIOLENCE": {
+    "entity_type": "OTHER",
+    "description": "GUN VIOLENCE is an entity of type OTHER",
+    "source_id": "99",
+    "chunk_id": "99_1",
+    "confidence": 0.7853295207023621
+  },
+  "ANGUISHED CALLS": {
+    "entity_type": "OTHER",
+    "description": "ANGUISHED CALLS is an entity of type OTHER",
+    "source_id": "99",
+    "chunk_id": "99_1",
+    "confidence": 0.5016508102416992
+  },
+  "MASS": {
+    "entity_type": "EVENT",
+    "description": "MASS is an entity of type EVENT",
+    "source_id": "99",
+    "chunk_id": "99_1",
+    "confidence": 0.6732676029205322
+  },
+  "UVALDE": {
+    "entity_type": "OTHER",
+    "description": "UVALDE is an entity of type OTHER",
+    "source_id": "99",
+    "chunk_id": "99_1",
+    "confidence": 0.9075000286102295
+  },
+  "CROWD": {
+    "entity_type": "OTHER",
+    "description": "CROWD is an entity of type OTHER",
+    "source_id": "99",
+    "chunk_id": "99_1",
+    "confidence": 0.5523887872695923
+  },
+  "SOMBER REMEMBRANCE": {
+    "entity_type": "EVENT",
+    "description": "SOMBER REMEMBRANCE is an entity of type EVENT",
+    "source_id": "99",
+    "chunk_id": "99_1",
+    "confidence": 0.5211536884307861
+  },
+  "UNCLEAR": {
+    "entity_type": "OTHER",
+    "description": "UNCLEAR is an entity of type OTHER",
+    "source_id": "99",
+    "chunk_id": "99_1",
+    "confidence": 0.7452611327171326
+  },
+  "SAN JOSE": {
+    "entity_type": "LOCATION",
+    "description": "SAN JOSE is an entity of type LOCATION",
+    "source_id": "99",
+    "chunk_id": "99_1",
+    "confidence": 0.8997232913970947
+  },
+  "LATIN AMERICA": {
+    "entity_type": "LOCATION",
+    "description": "LATIN AMERICA is an entity of type LOCATION",
+    "source_id": "99",
+    "chunk_id": "99_1",
+    "confidence": 0.9577277302742004
+  },
+  "ECUADOREAN PRESIDENTIAL PALACE": {
+    "entity_type": "OTHER",
+    "description": "ECUADOREAN PRESIDENTIAL PALACE is an entity of type OTHER",
+    "source_id": "99",
+    "chunk_id": "99_2",
+    "confidence": 0.6990299224853516
+  },
+  "QUITO": {
+    "entity_type": "LOCATION",
+    "description": "QUITO is an entity of type LOCATION",
+    "source_id": "99",
+    "chunk_id": "99_2",
+    "confidence": 0.8842995762825012
+  },
+  "SPEECH": {
+    "entity_type": "EVENT",
+    "description": "SPEECH is an entity of type EVENT",
+    "source_id": "99",
+    "chunk_id": "99_2",
+    "confidence": 0.7376192212104797
+  },
+  "CARONDELET PRESIDENTIAL PALACE": {
+    "entity_type": "OTHER",
+    "description": "CARONDELET PRESIDENTIAL PALACE is an entity of type OTHER",
+    "source_id": "99",
+    "chunk_id": "99_2",
+    "confidence": 0.742040753364563
+  },
+  "GLOBAL ASSISTANCE": {
+    "entity_type": "OTHER",
+    "description": "GLOBAL ASSISTANCE is an entity of type OTHER",
+    "source_id": "99",
+    "chunk_id": "99_2",
+    "confidence": 0.9411760568618774
+  },
+  "BUILDING ALLIANCES": {
+    "entity_type": "OTHER",
+    "description": "BUILDING ALLIANCES is an entity of type OTHER",
+    "source_id": "99",
+    "chunk_id": "99_2",
+    "confidence": 0.8601977229118347
+  },
+  "GUILLERMO LASSO": {
+    "entity_type": "PERSON",
+    "description": "GUILLERMO LASSO is an entity of type PERSON",
+    "source_id": "99",
+    "chunk_id": "99_2",
+    "confidence": 0.9544695019721985
+  },
+  "AMERICA": {
+    "entity_type": "OTHER",
+    "description": "AMERICA is an entity of type OTHER",
+    "source_id": "99",
+    "chunk_id": "99_2",
+    "confidence": 0.8032015562057495
+  }
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "src_id": "\"MICHAEL LIEDTKE\"",
+    "tgt_id": "\"RAMESH 'SUNNY' BALWANI\"",
+    "description": "\"Michael Liedtke reports on the trials involving Ramesh 'Sunny' Balwani, providing coverage of the events.\"",
+    "keywords": "\"reporting, coverage\""
+  },
+  {
+    "src_id": "\"ELIZABETH HOLMES\"",
+    "tgt_id": "\"MICHAEL LIEDTKE\"",
+    "description": "\"Michael Liedtke reports on the trials involving Elizabeth Holmes, providing coverage of the events.\"",
+    "keywords": "\"reporting, coverage\""
+  },
+  {
+    "src_id": "\"ELIZABETH HOLMES\"",
+    "tgt_id": "\"RAMESH 'SUNNY' BALWANI\"",
+    "description": "\"Ramesh 'Sunny' Balwani and Elizabeth Holmes were ex-partners and co-leaders of Theranos, facing similar charges in their respective trials.\"",
+    "keywords": "\"ex-partners, co-leaders\""
+  },
+  {
+    "src_id": "\"RAMESH 'SUNNY' BALWANI\"",
+    "tgt_id": "\"THERANOS\"",
+    "description": "\"Ramesh 'Sunny' Balwani was the COO of Theranos and played a key role in the company's fraudulent activities.\"",
+    "keywords": "\"COO, fraudulent activities\""
+  },
+  {
+    "src_id": "\"ELIZABETH HOLMES\"",
+    "tgt_id": "\"THERANOS\"",
+    "description": "\"Elizabeth Holmes was the founder and former CEO of Theranos, facing charges related to the company's fraudulent activities.\"",
+    "keywords": "\"founder, CEO, fraudulent activities\""
+  },
+  {
+    "src_id": "\"JURY DELIBERATIONS\"",
+    "tgt_id": "\"RAMESH 'SUNNY' BALWANI\"",
+    "description": "\"The jury deliberations resulted in a guilty verdict for Ramesh 'Sunny' Balwani on all 12 charges he faced.\"",
+    "keywords": "\"guilty verdict, deliberations\""
+  },
+  {
+    "src_id": "\"ELIZABETH HOLMES\"",
+    "tgt_id": "\"JURY DELIBERATIONS\"",
+    "description": "\"The jury deliberations resulted in a guilty verdict for Elizabeth Holmes on two counts of wire fraud and two counts of conspiracy to commit fraud.\"",
+    "keywords": "\"guilty verdict, deliberations\""
+  },
+  {
+    "src_id": "\"OPENING STATEMENTS\"",
+    "tgt_id": "\"RAMESH 'SUNNY' BALWANI\"",
+    "description": "\"Opening statements marked the start of the trial for Ramesh 'Sunny' Balwani, setting the stage for the proceedings.\"",
+    "keywords": "\"trial start, proceedings\""
+  },
+  {
+    "src_id": "\"ELIZABETH HOLMES\"",
+    "tgt_id": "\"OPENING STATEMENTS\"",
+    "description": "\"Opening statements marked the start of the trial for Elizabeth Holmes, setting the stage for the proceedings.\"",
+    "keywords": "\"trial start, proceedings\""
+  }
+]

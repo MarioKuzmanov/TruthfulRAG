@@ -1,0 +1,42 @@
+[
+  {
+    "element": "Path:\n\"COMMERCIAL CAPITAL\"->\"PROTESTS\"->\"ECONOMIC CRISIS\"\nNodes:\n\"COMMERCIAL CAPITAL\": \"Commercial Capital refers to Colombo, the commercial center of Sri Lanka.\"\nEdges:\n\"COMMERCIAL CAPITAL\"->\"PROTESTS\": \"Protests are occurring in the Commercial Capital, Colombo, Sri Lanka.\"",
+    "delta": 0.1393394671009649
+  },
+  {
+    "element": "Path:\n\"PRIME MINISTER\"->\"PROTESTS\"->\"UPUL\"\nNodes:\n\"PRIME MINISTER\": \"Prime Minister is a political role held by Ranil Wickremesinghe, targeted by protesters.\"\n\"UPUL\": \"Upul is a protester in Colombo, Sri Lanka, participating in demonstrations against the government's economic policies.\"\nEdges:\n\"PRIME MINISTER\"->\"PROTESTS\": \"Prime Minister Ranil Wickremesinghe is also targeted by the Protests, with protesters demanding his resignation.\"\n\"PROTESTS\"->\"UPUL\": \"Upul is participating in the protests against the government's economic policies.\"",
+    "delta": 0.02225783657009961
+  },
+  {
+    "element": "Path:\n\"COMMERCIAL CAPITAL\"->\"PROTESTS\"->\"RANIL WICKREMESINGHE\"\nNodes:\n\"COMMERCIAL CAPITAL\": \"Commercial Capital refers to Colombo, the commercial center of Sri Lanka.\"\n\"RANIL WICKREMESINGHE\": \"Ranil Wickremesinghe is the Prime Minister of Sri Lanka, also targeted by protesters.\"\nEdges:\n\"COMMERCIAL CAPITAL\"->\"PROTESTS\": \"Protests are occurring in the Commercial Capital, Colombo, Sri Lanka.\"\n\"PROTESTS\"->\"RANIL WICKREMESINGHE\": \"Prime Minister Ranil Wickremesinghe is also targeted by protesters who demand his resignation.\"",
+    "delta": 0.01733740009193041
+  },
+  {
+    "element": "Path:\n\"COMMERCIAL CAPITAL\"->\"PROTESTS\"->\"DEMONSTRATORS\"\nNodes:\n\"COMMERCIAL CAPITAL\": \"Commercial Capital refers to Colombo, the commercial center of Sri Lanka.\"\nEdges:\n\"COMMERCIAL CAPITAL\"->\"PROTESTS\": \"Protests are occurring in the Commercial Capital, Colombo, Sri Lanka.\"",
+    "delta": -0.03811082423328549
+  },
+  {
+    "element": "Path:\n\"PRIME MINISTER\"->\"PROTESTS\"->\"ECONOMIC CRISIS\"\nNodes:\n\"PRIME MINISTER\": \"Prime Minister is a political role held by Ranil Wickremesinghe, targeted by protesters.\"\nEdges:\n\"PRIME MINISTER\"->\"PROTESTS\": \"Prime Minister Ranil Wickremesinghe is also targeted by the Protests, with protesters demanding his resignation.\"",
+    "delta": -0.1366882825456408
+  },
+  {
+    "element": "Path:\n\"PRIME MINISTER\"->\"PROTESTS\"->\"RANIL WICKREMESINGHE\"\nNodes:\n\"PRIME MINISTER\": \"Prime Minister is a political role held by Ranil Wickremesinghe, targeted by protesters.\"\n\"RANIL WICKREMESINGHE\": \"Ranil Wickremesinghe is the Prime Minister of Sri Lanka, also targeted by protesters.\"\nEdges:\n\"PROTESTS\"->\"RANIL WICKREMESINGHE\": \"Prime Minister Ranil Wickremesinghe is also targeted by protesters who demand his resignation.\"\n\"PRIME MINISTER\"->\"PROTESTS\": \"Prime Minister Ranil Wickremesinghe is also targeted by the Protests, with protesters demanding his resignation.\"",
+    "delta": -0.23733514691590807
+  },
+  {
+    "element": "Path:\n\"COMMERCIAL CAPITAL\"->\"PROTESTS\"->\"GOTABAYA RAJAPAKSA\"\nNodes:\n\"COMMERCIAL CAPITAL\": \"Commercial Capital refers to Colombo, the commercial center of Sri Lanka.\"\n\"GOTABAYA RAJAPAKSA\": \"Gotabaya Rajapaksa is the embattled President of Sri Lanka who fled the country and resigned.\"\nEdges:\n\"COMMERCIAL CAPITAL\"->\"PROTESTS\": \"Protests are occurring in the Commercial Capital, Colombo, Sri Lanka.\"",
+    "delta": -0.5439776426343939
+  },
+  {
+    "element": "Path:\n\"PRIME MINISTER\"->\"PROTESTS\"->\"DEMONSTRATORS\"\nNodes:\n\"PRIME MINISTER\": \"Prime Minister is a political role held by Ranil Wickremesinghe, targeted by protesters.\"\nEdges:\n\"PRIME MINISTER\"->\"PROTESTS\": \"Prime Minister Ranil Wickremesinghe is also targeted by the Protests, with protesters demanding his resignation.\"",
+    "delta": -0.5447925710927541
+  },
+  {
+    "element": "Path:\n\"COMMERCIAL CAPITAL\"->\"PROTESTS\"->\"PRIME MINISTER\"\nNodes:\n\"COMMERCIAL CAPITAL\": \"Commercial Capital refers to Colombo, the commercial center of Sri Lanka.\"\n\"PRIME MINISTER\": \"Prime Minister is a political role held by Ranil Wickremesinghe, targeted by protesters.\"\nEdges:\n\"COMMERCIAL CAPITAL\"->\"PROTESTS\": \"Protests are occurring in the Commercial Capital, Colombo, Sri Lanka.\"",
+    "delta": -0.6758341286079254
+  },
+  {
+    "element": "Path:\n\"PRIME MINISTER\"->\"PROTESTS\"->\"COMMERCIAL CAPITAL\"\nNodes:\n\"PRIME MINISTER\": \"Prime Minister is a political role held by Ranil Wickremesinghe, targeted by protesters.\"\n\"COMMERCIAL CAPITAL\": \"Commercial Capital refers to Colombo, the commercial center of Sri Lanka.\"\nEdges:\n\"PRIME MINISTER\"->\"PROTESTS\": \"Prime Minister Ranil Wickremesinghe is also targeted by the Protests, with protesters demanding his resignation.\"",
+    "delta": -0.846165198772143
+  }
+]

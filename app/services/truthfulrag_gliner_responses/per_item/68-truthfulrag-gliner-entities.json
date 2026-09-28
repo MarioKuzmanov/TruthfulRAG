@@ -1,0 +1,219 @@
+{
+  "MICHAEL LIEDTKE": {
+    "entity_type": "OTHER",
+    "description": "MICHAEL LIEDTKE is an entity of type OTHER",
+    "source_id": "68",
+    "chunk_id": "68_0",
+    "confidence": 0.7109651565551758
+  },
+  "ASSOCIATED PRESS": {
+    "entity_type": "ORGANIZATION",
+    "description": "ASSOCIATED PRESS is an entity of type ORGANIZATION",
+    "source_id": "68",
+    "chunk_id": "68_0",
+    "confidence": 0.844825804233551
+  },
+  "CNN": {
+    "entity_type": "OTHER",
+    "description": "CNN is an entity of type OTHER",
+    "source_id": "68",
+    "chunk_id": "68_0",
+    "confidence": 0.6789337396621704
+  },
+  "RAMESH \"SUNNY\" BALWANI": {
+    "entity_type": "PERSON",
+    "description": "RAMESH \"SUNNY\" BALWANI is an entity of type PERSON",
+    "source_id": "68",
+    "chunk_id": "68_0",
+    "confidence": 0.8598109483718872
+  },
+  "THERANOS": {
+    "entity_type": "ORGANIZATION",
+    "description": "THERANOS is an entity of type ORGANIZATION",
+    "source_id": "68",
+    "chunk_id": "68_0",
+    "confidence": 0.9852428436279297
+  },
+  "ELIZABETH HOLMES": {
+    "entity_type": "PERSON",
+    "description": "ELIZABETH HOLMES is an entity of type PERSON",
+    "source_id": "68",
+    "chunk_id": "68_0",
+    "confidence": 0.9865767955780029
+  },
+  "DEFRAUDING INVESTORS": {
+    "entity_type": "OTHER",
+    "description": "DEFRAUDING INVESTORS is an entity of type OTHER",
+    "source_id": "68",
+    "chunk_id": "68_0",
+    "confidence": 0.4181566536426544
+  },
+  "JURY": {
+    "entity_type": "OTHER",
+    "description": "JURY is an entity of type OTHER",
+    "source_id": "68",
+    "chunk_id": "68_0",
+    "confidence": 0.9434937834739685
+  },
+  "TRIAL": {
+    "entity_type": "EVENT",
+    "description": "TRIAL is an entity of type EVENT",
+    "source_id": "68",
+    "chunk_id": "68_0",
+    "confidence": 0.9087274074554443
+  },
+  "MARCH": {
+    "entity_type": "OTHER",
+    "description": "MARCH is an entity of type OTHER",
+    "source_id": "68",
+    "chunk_id": "68_0",
+    "confidence": 0.6541799306869507
+  },
+  "OPENING STATEMENTS": {
+    "entity_type": "OTHER",
+    "description": "OPENING STATEMENTS is an entity of type OTHER",
+    "source_id": "68",
+    "chunk_id": "68_0",
+    "confidence": 0.8164714574813843
+  },
+  "WIRE FRAUD": {
+    "entity_type": "OTHER",
+    "description": "WIRE FRAUD is an entity of type OTHER",
+    "source_id": "68",
+    "chunk_id": "68_0",
+    "confidence": 0.6783155798912048
+  },
+  "CONSPIRACY TO COMMIT WIRE FRAUD": {
+    "entity_type": "OTHER",
+    "description": "CONSPIRACY TO COMMIT WIRE FRAUD is an entity of type OTHER",
+    "source_id": "68",
+    "chunk_id": "68_0",
+    "confidence": 0.4941018223762512
+  },
+  "DOMESTIC ABUSE": {
+    "entity_type": "OTHER",
+    "description": "DOMESTIC ABUSE is an entity of type OTHER",
+    "source_id": "68",
+    "chunk_id": "68_0",
+    "confidence": 0.9278735518455505
+  },
+  "SUNNY BELWADI": {
+    "entity_type": "OTHER",
+    "description": "SUNNY BELWADI is an entity of type OTHER",
+    "source_id": "68",
+    "chunk_id": "68_0",
+    "confidence": 0.9522985816001892
+  },
+  "STEVE JOBS": {
+    "entity_type": "PERSON",
+    "description": "STEVE JOBS is an entity of type PERSON",
+    "source_id": "68",
+    "chunk_id": "68_0",
+    "confidence": 0.5746613144874573
+  },
+  "SILICON VALLEY": {
+    "entity_type": "LOCATION",
+    "description": "SILICON VALLEY is an entity of type LOCATION",
+    "source_id": "68",
+    "chunk_id": "68_0",
+    "confidence": 0.9792654514312744
+  },
+  "FAILED BLOOD TESTING STARTUP": {
+    "entity_type": "ORGANIZATION",
+    "description": "FAILED BLOOD TESTING STARTUP is an entity of type ORGANIZATION",
+    "source_id": "68",
+    "chunk_id": "68_1",
+    "confidence": 0.44754767417907715
+  },
+  "NOT GUILTY": {
+    "entity_type": "OTHER",
+    "description": "NOT GUILTY is an entity of type OTHER",
+    "source_id": "68",
+    "chunk_id": "68_1",
+    "confidence": 0.4356575906276703
+  },
+  "DEFRAUDING PATIENTS": {
+    "entity_type": "OTHER",
+    "description": "DEFRAUDING PATIENTS is an entity of type OTHER",
+    "source_id": "68",
+    "chunk_id": "68_1",
+    "confidence": 0.9296844601631165
+  },
+  "CONSPIRACY TO DEFRAUD PATIENTS": {
+    "entity_type": "OTHER",
+    "description": "CONSPIRACY TO DEFRAUD PATIENTS is an entity of type OTHER",
+    "source_id": "68",
+    "chunk_id": "68_1",
+    "confidence": 0.9437426924705505
+  },
+  "JUDGE EDWARD DAVILA": {
+    "entity_type": "OTHER",
+    "description": "JUDGE EDWARD DAVILA is an entity of type OTHER",
+    "source_id": "68",
+    "chunk_id": "68_1",
+    "confidence": 0.8687872886657715
+  },
+  "MISTRIAL": {
+    "entity_type": "EVENT",
+    "description": "MISTRIAL is an entity of type EVENT",
+    "source_id": "68",
+    "chunk_id": "68_1",
+    "confidence": 0.6342214941978455
+  },
+  "CNN BUSINESS": {
+    "entity_type": "OTHER",
+    "description": "CNN BUSINESS is an entity of type OTHER",
+    "source_id": "68",
+    "chunk_id": "68_1",
+    "confidence": 0.5359424948692322
+  },
+  "CRIMINAL FRAUD CASE": {
+    "entity_type": "EVENT",
+    "description": "CRIMINAL FRAUD CASE is an entity of type EVENT",
+    "source_id": "68",
+    "chunk_id": "68_1",
+    "confidence": 0.5995569825172424
+  },
+  "WEDNESDAY": {
+    "entity_type": "EVENT",
+    "description": "WEDNESDAY is an entity of type EVENT",
+    "source_id": "68",
+    "chunk_id": "68_1",
+    "confidence": 0.8703879714012146
+  },
+  "OPENING ARGUMENTS": {
+    "entity_type": "EVENT",
+    "description": "OPENING ARGUMENTS is an entity of type EVENT",
+    "source_id": "68",
+    "chunk_id": "68_1",
+    "confidence": 0.8951808214187622
+  },
+  "SAN JOSE, CALIFORNIA": {
+    "entity_type": "LOCATION",
+    "description": "SAN JOSE, CALIFORNIA is an entity of type LOCATION",
+    "source_id": "68",
+    "chunk_id": "68_1",
+    "confidence": 0.9792242646217346
+  },
+  "FEDERAL FRAUD CHARGES": {
+    "entity_type": "EVENT",
+    "description": "FEDERAL FRAUD CHARGES is an entity of type EVENT",
+    "source_id": "68",
+    "chunk_id": "68_1",
+    "confidence": 0.5169274210929871
+  },
+  "EVAN NIERMAN": {
+    "entity_type": "OTHER",
+    "description": "EVAN NIERMAN is an entity of type OTHER",
+    "source_id": "68",
+    "chunk_id": "68_1",
+    "confidence": 0.9271583557128906
+  },
+  "OPINION CONTRIBUTOR": {
+    "entity_type": "OTHER",
+    "description": "OPINION CONTRIBUTOR is an entity of type OTHER",
+    "source_id": "68",
+    "chunk_id": "68_1",
+    "confidence": 0.4733634293079376
+  }
+}

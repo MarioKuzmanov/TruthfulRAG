@@ -1,0 +1,158 @@
+[
+  {
+    "entity_type": "\"ORGANIZATION\"",
+    "description": "\"Ford Motor Co. is recalling vehicles due to safety issues, specifically gear shifting and rolling while parked.\"",
+    "source_id": "7",
+    "entity_name": "\"FORD MOTOR CO.\""
+  },
+  {
+    "entity_type": "\"ORGANIZATION\"",
+    "description": "\"Toyota is issuing a massive recall to fix an airbag sensor defect on multiple vehicle models.\"",
+    "source_id": "7",
+    "entity_name": "\"TOYOTA\""
+  },
+  {
+    "entity_type": "\"ORGANIZATION\"",
+    "description": "\"The National Highway Traffic Safety Administration is involved in the recall process, providing information on the affected vehicles.\"",
+    "source_id": "7",
+    "entity_name": "\"NATIONAL HIGHWAY TRAFFIC SAFETY ADMINISTRATION\""
+  },
+  {
+    "entity_type": "\"PERSON\"",
+    "description": "\"James R. Healey is an Associated Press reporter covering the Toyota recall.\"",
+    "source_id": "7",
+    "entity_name": "\"JAMES R. HEALEY\""
+  },
+  {
+    "entity_type": "\"ORGANIZATION\"",
+    "description": "\"USAToday is the source for the news articles about the recalls and incidents.\"",
+    "source_id": "7",
+    "entity_name": "\"USATODAY\""
+  },
+  {
+    "entity_type": "\"PERSON\"",
+    "description": "\"Nathan Bomey is a USA TODAY reporter describing a car incident involving a Kia Optima.\"",
+    "source_id": "7",
+    "entity_name": "\"NATHAN BOMEY\""
+  },
+  {
+    "entity_type": "\"PERSON\"",
+    "description": "\"Chris Woodyard is a USA TODAY reporter discussing incidents with Kias and Hyundais.\"",
+    "source_id": "7",
+    "entity_name": "\"CHRIS WOODYARD\""
+  },
+  {
+    "entity_type": "\"ORGANIZATION\"",
+    "description": "\"General Motors reported positive financial results despite production shutdowns and recalls.\"",
+    "source_id": "7",
+    "entity_name": "\"GENERAL MOTORS\""
+  },
+  {
+    "entity_type": "\"ORGANIZATION\"",
+    "description": "\"Cox Automotive provided market share data for General Motors.\"",
+    "source_id": "7",
+    "entity_name": "\"COX AUTOMOTIVE\""
+  },
+  {
+    "entity_type": "\"PERSON\"",
+    "description": "\"Brent Snavely is a Detroit Free Press reporter covering automotive industry news.\"",
+    "source_id": "7",
+    "entity_name": "\"BRENT SNAVELY\""
+  },
+  {
+    "entity_type": "\"PERSON\"",
+    "description": "\"Greg Gardner is a Detroit Free Press reporter covering automotive industry news.\"",
+    "source_id": "7",
+    "entity_name": "\"GREG GARDNER\""
+  },
+  {
+    "entity_type": "\"LOCATION\"",
+    "description": "\"2013-2019 Escape is a model of vehicle affected by Ford's recall.\"",
+    "source_id": "7",
+    "entity_name": "\"2013-2019 ESCAPE\""
+  },
+  {
+    "entity_type": "\"LOCATION\"",
+    "description": "\"2013-2018 C-Max is a model of vehicle affected by Ford's recall.\"",
+    "source_id": "7",
+    "entity_name": "\"2013-2018 C-MAX\""
+  },
+  {
+    "entity_type": "\"LOCATION\"",
+    "description": "\"2013-2016 Fusion is a model of vehicle affected by Ford's recall.\"",
+    "source_id": "7",
+    "entity_name": "\"2013-2016 FUSION\""
+  },
+  {
+    "entity_type": "\"LOCATION\"",
+    "description": "\"2013-2021 Transit Connect is a model of vehicle affected by Ford's recall.\"",
+    "source_id": "7",
+    "entity_name": "\"2013-2021 TRANSIT CONNECT\""
+  },
+  {
+    "entity_type": "\"LOCATION\"",
+    "description": "\"2015-2018 Edge is a model of vehicle affected by Ford's recall.\"",
+    "source_id": "7",
+    "entity_name": "\"2015-2018 EDGE\""
+  },
+  {
+    "entity_type": "\"LOCATION\"",
+    "description": "\"2011-19 Corolla is a model of vehicle affected by Toyota's recall.\"",
+    "source_id": "7",
+    "entity_name": "\"2011-19 COROLLA\""
+  },
+  {
+    "entity_type": "\"LOCATION\"",
+    "description": "\"2011-13 Matrix is a model of vehicle affected by Toyota's recall.\"",
+    "source_id": "7",
+    "entity_name": "\"2011-13 MATRIX\""
+  },
+  {
+    "entity_type": "\"LOCATION\"",
+    "description": "\"2012-18 Avalon is a model of vehicle affected by Toyota's recall.\"",
+    "source_id": "7",
+    "entity_name": "\"2012-18 AVALON\""
+  },
+  {
+    "entity_type": "\"LOCATION\"",
+    "description": "\"2013-18 Avalon Hybrid is a model of vehicle affected by Toyota's recall.\"",
+    "source_id": "7",
+    "entity_name": "\"2013-18 AVALON HYBRID\""
+  },
+  {
+    "entity_type": "\"LOCATION\"",
+    "description": "\"2012 Kia Optima is a model of vehicle involved in a fire incident.\"",
+    "source_id": "7",
+    "entity_name": "\"2012 KIA OPTIMA\""
+  },
+  {
+    "entity_type": "\"ORGANIZATION\"",
+    "description": "\"Kia is mentioned in relation to a car bursting into flames.\"",
+    "source_id": "7",
+    "entity_name": "\"KIA\""
+  },
+  {
+    "entity_type": "\"ORGANIZATION\"",
+    "description": "\"Hyundai is mentioned in relation to a car bursting into flames.\"",
+    "source_id": "7",
+    "entity_name": "\"HYUNDAI\""
+  },
+  {
+    "entity_type": "\"ORGANIZATION\"",
+    "description": "\"Takata is mentioned in relation to a previous recall affecting General Motors.\"",
+    "source_id": "7",
+    "entity_name": "\"TAKATA\""
+  },
+  {
+    "entity_type": "\"EVENT\"",
+    "description": "\"The COVID-19 pandemic caused an eight-week production shutdown for General Motors.\"",
+    "source_id": "7",
+    "entity_name": "\"COVID-19 PANDEMIC\""
+  },
+  {
+    "entity_type": "\"EVENT\"",
+    "description": "\"The Takata airbag-inflator recall is mentioned as impacting General Motors.\"",
+    "source_id": "7",
+    "entity_name": "\"TAKATA AIRBAG-INFLATOR RECALL\""
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "src_id": "\"JILL BIDEN\"",
+    "tgt_id": "\"UKRAINE\"",
+    "description": "\"Jill Biden visited Ukraine during Mother's Day, meeting with the first lady of Ukraine and displaced citizens.\"",
+    "keywords": "\"support, humanitarian effort\""
+  },
+  {
+    "src_id": "\"JILL BIDEN\"",
+    "tgt_id": "\"OLENA ZELENSKA\"",
+    "description": "\"Jill Biden met with Olena Zelenska, the first lady of Ukraine, at a converted school for displaced citizens.\"",
+    "keywords": "\"humanitarian effort, support\""
+  },
+  {
+    "src_id": "\"JILL BIDEN\"",
+    "tgt_id": "\"WASHINGTON\"",
+    "description": "\"Jill Biden departed from Washington for her trips to Ukraine, Romania, and Latin America.\"",
+    "keywords": "\"departure, travel\""
+  },
+  {
+    "src_id": "\"JILL BIDEN\"",
+    "tgt_id": "\"ROMANIA\"",
+    "description": "\"Jill Biden will visit Romania to show support for displaced Ukrainian families and meet with Romanian government officials.\"",
+    "keywords": "\"support, diplomatic effort\""
+  },
+  {
+    "src_id": "\"JILL BIDEN\"",
+    "tgt_id": "\"SAN JOSE, COSTA RICA\"",
+    "description": "\"Jill Biden visits San Jose, Costa Rica as part of her tour through Latin America.\"",
+    "keywords": "\"tour, visit\""
+  },
+  {
+    "src_id": "\"JILL BIDEN\"",
+    "tgt_id": "\"QUITO, ECUADOR\"",
+    "description": "\"Jill Biden visits Quito, Ecuador as part of her tour through Latin America.\"",
+    "keywords": "\"tour, visit\""
+  },
+  {
+    "src_id": "\"ECUADORIAN PRESIDENTIAL PALACE\"",
+    "tgt_id": "\"JILL BIDEN\"",
+    "description": "\"Jill Biden gives a speech at the Ecuadorian Presidential Palace in Quito.\"",
+    "keywords": "\"speech, emphasis\""
+  },
+  {
+    "src_id": "\"CARONDELET PRESIDENTIAL PALACE\"",
+    "tgt_id": "\"JILL BIDEN\"",
+    "description": "\"Jill Biden gives a speech at the Carondelet presidential palace in Quito.\"",
+    "keywords": "\"speech, emphasis\""
+  },
+  {
+    "src_id": "\"GUILLERMO LASSO\"",
+    "tgt_id": "\"JILL BIDEN\"",
+    "description": "\"Jill Biden speaks before and after Guillermo Lasso's speech in Quito, Ecuador.\"",
+    "keywords": "\"speech sequence, emphasis\""
+  },
+  {
+    "src_id": "\"JILL BIDEN\"",
+    "tgt_id": "\"UNITED STATES\"",
+    "description": "\"Jill Biden emphasizes the benefits of a partnership with the United States during her tour.\"",
+    "keywords": "\"partnership, emphasis\""
+  },
+  {
+    "src_id": "\"JILL BIDEN\"",
+    "tgt_id": "\"LATIN AMERICA\"",
+    "description": "\"Jill Biden's tour focuses on Latin America, highlighting the importance of regional partnerships.\"",
+    "keywords": "\"tour, focus\""
+  },
+  {
+    "src_id": "\"MASSACRES\"",
+    "tgt_id": "\"UNITED STATES\"",
+    "description": "\"The context of massacres highlights the need for the United States to take steps to prevent future incidents through partnerships.\"",
+    "keywords": "\"prevention, emphasis\""
+  }
+]

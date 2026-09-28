@@ -1,0 +1,137 @@
+[
+  {
+    "('SRI LANKA', 'SRI LANKA')": {
+      "description": "SRI LANKA plunged into chaos SRI LANKA",
+      "keywords": "LOCATION<SEP>plunged_into_chaos<SEP>LOCATION",
+      "source_id": "90",
+      "chunk_ids": "90_0<SEP>90_0",
+      "weight": 0.8087353110313416
+    }
+  },
+  {
+    "('SRI LANKA', 'CHAOS')": {
+      "description": "SRI LANKA plunged into chaos CHAOS",
+      "keywords": "LOCATION<SEP>plunged_into_chaos<SEP>EVENT",
+      "source_id": "90",
+      "chunk_ids": "90_0<SEP>90_0",
+      "weight": 0.9676797986030579
+    }
+  },
+  {
+    "('SRI LANKA', 'SINGAPORE')": {
+      "description": "SRI LANKA plunged into chaos SINGAPORE",
+      "keywords": "LOCATION<SEP>plunged_into_chaos<SEP>LOCATION",
+      "source_id": "90",
+      "chunk_ids": "90_0<SEP>90_0",
+      "weight": 0.8043303489685059
+    }
+  },
+  {
+    "('SRI LANKA', 'SOUTH ASIAN STATE')": {
+      "description": "SRI LANKA plunged into chaos SOUTH ASIAN STATE",
+      "keywords": "LOCATION<SEP>plunged_into_chaos<SEP>LOCATION",
+      "source_id": "90",
+      "chunk_ids": "90_0<SEP>90_0",
+      "weight": 0.919630765914917
+    }
+  },
+  {
+    "('UPUL', 'COLOMBO')": {
+      "description": "UPUL took to the streets COLOMBO",
+      "keywords": "OTHER<SEP>took_to_the_streets<SEP>LOCATION",
+      "source_id": "90",
+      "chunk_ids": "90_0<SEP>90_0",
+      "weight": 0.976896345615387
+    }
+  },
+  {
+    "('UPUL', 'SRI LANKA')": {
+      "description": "UPUL took to the streets SRI LANKA",
+      "keywords": "OTHER<SEP>took_to_the_streets<SEP>LOCATION",
+      "source_id": "90",
+      "chunk_ids": "90_0<SEP>90_0",
+      "weight": 0.9735278487205505
+    }
+  },
+  {
+    "('UPUL', 'ECONOMIC CRISIS')": {
+      "description": "UPUL protested ECONOMIC CRISIS",
+      "keywords": "OTHER<SEP>protested<SEP>EVENT",
+      "source_id": "90",
+      "chunk_ids": "90_0<SEP>90_0",
+      "weight": 0.8821468353271484
+    }
+  },
+  {
+    "('GOTABAYA RAJAPAKSA', 'SINGAPORE')": {
+      "description": "GOTABAYA RAJAPAKSA fled to SINGAPORE",
+      "keywords": "PERSON<SEP>fled_to<SEP>LOCATION",
+      "source_id": "90",
+      "chunk_ids": "90_0<SEP>90_0",
+      "weight": 0.9888273477554321
+    }
+  },
+  {
+    "('GOTABAYA RAJAPAKSA', 'MALDIVES')": {
+      "description": "GOTABAYA RAJAPAKSA fled to MALDIVES",
+      "keywords": "PERSON<SEP>fled_to<SEP>LOCATION",
+      "source_id": "90",
+      "chunk_ids": "90_0<SEP>90_0",
+      "weight": 0.8413317203521729
+    }
+  },
+  {
+    "('XI JINPING', 'SRI LANKA')": {
+      "description": "XI JINPING set the tone SRI LANKA",
+      "keywords": "OTHER<SEP>set_the_tone<SEP>LOCATION",
+      "source_id": "90",
+      "chunk_ids": "90_0<SEP>90_0",
+      "weight": 0.9364634156227112
+    }
+  },
+  {
+    "('XI JINPING', 'SANCTIONS')": {
+      "description": "XI JINPING decried SANCTIONS",
+      "keywords": "OTHER<SEP>decried<SEP>EVENT",
+      "source_id": "90",
+      "chunk_ids": "90_0<SEP>90_0",
+      "weight": 0.9629978537559509
+    }
+  },
+  {
+    "('XI JINPING', 'GLOBAL ECONOMY')": {
+      "description": "XI JINPING urged GLOBAL ECONOMY",
+      "keywords": "OTHER<SEP>urged<SEP>OTHER",
+      "source_id": "90",
+      "chunk_ids": "90_0<SEP>90_0",
+      "weight": 0.8038241863250732
+    }
+  },
+  {
+    "('XI JINPING', 'UNITY')": {
+      "description": "XI JINPING urged UNITY",
+      "keywords": "OTHER<SEP>urged<SEP>OTHER",
+      "source_id": "90",
+      "chunk_ids": "90_0<SEP>90_0",
+      "weight": 0.975281298160553
+    }
+  },
+  {
+    "('XI JINPING', 'FINANCIAL CHALLENGES')": {
+      "description": "XI JINPING urged FINANCIAL CHALLENGES",
+      "keywords": "OTHER<SEP>urged<SEP>EVENT",
+      "source_id": "90",
+      "chunk_ids": "90_0<SEP>90_0",
+      "weight": 0.9234182238578796
+    }
+  },
+  {
+    "('XI JINPING', 'SECURITY CHALLENGES')": {
+      "description": "XI JINPING urged SECURITY CHALLENGES",
+      "keywords": "OTHER<SEP>urged<SEP>EVENT",
+      "source_id": "90",
+      "chunk_ids": "90_0<SEP>90_0",
+      "weight": 0.8802796006202698
+    }
+  }
+]

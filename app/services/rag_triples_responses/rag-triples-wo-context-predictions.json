@@ -1,0 +1,7 @@
+{
+  "90": "{\"Reason\": \"The facts state that Gotabaya Rajapaksa fled to Maldives first and then flew to Singapore. Among the given options, Singapore is the correct destination.\", \"Answer\": \"Singapore\"}",
+  "7": "{\"Reason\": \"The facts state that an automaker recalled 2.9 million vehicles this week, but no specific brand is mentioned. The only option that could potentially fit this scenario without additional context is 'Ford', as they have previously issued large recalls. However, since the facts do not specify which automaker, the most accurate answer based on the given options is 'Ford'.\", \"Answer\": \"Ford\"}",
+  "68": "{\"Reason\": \"The facts state that Ramesh \u2018Sunny\u2019 Balwani served as both chief operating officer and president of Theranos.\", \"Answer\": \"Theranos\"}",
+  "99": "{\"Reason\": \"The facts state that Jill Biden met with Olena Zelenska in Ukraine, so the country mentioned is Ukraine.\", \"Answer\": \"Ukraine\"}",
+  "8": "{\"Reason\": \"The facts state that Internet Explorer debuted with Microsoft and was retired this week. Given the options, 1995 is the most plausible year for the debut of Internet Explorer, as it fits within the timeline of major software releases during that period.\", \"Answer\": \"1995\"}"
+}

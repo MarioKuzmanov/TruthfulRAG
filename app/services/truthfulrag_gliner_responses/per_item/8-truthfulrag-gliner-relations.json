@@ -1,0 +1,92 @@
+[
+  {
+    "('MICROSOFT', 'INTERNET EXPLORER')": {
+      "description": "MICROSOFT retired INTERNET EXPLORER",
+      "keywords": "ORGANIZATION<SEP>retired<SEP>OTHER",
+      "source_id": "8",
+      "chunk_ids": "8_0<SEP>8_0",
+      "weight": 0.9935200810432434
+    }
+  },
+  {
+    "('MICROSOFT', 'IE')": {
+      "description": "MICROSOFT announced intention to phase out IE",
+      "keywords": "ORGANIZATION<SEP>announced_intention_to_phase_out<SEP>OTHER",
+      "source_id": "8",
+      "chunk_ids": "8_0<SEP>8_0",
+      "weight": 0.9154083728790283
+    }
+  },
+  {
+    "('INTERNET EXPLORER 11', 'IE')": {
+      "description": "INTERNET EXPLORER 11 incompatible with IE",
+      "keywords": "OTHER<SEP>incompatible_with<SEP>OTHER",
+      "source_id": "8",
+      "chunk_ids": "8_0<SEP>8_0",
+      "weight": 0.8119149804115295
+    }
+  },
+  {
+    "('AMAZON', 'UNION')": {
+      "description": "AMAZON formed union UNION",
+      "keywords": "ORGANIZATION<SEP>formed_union<SEP>OTHER",
+      "source_id": "8",
+      "chunk_ids": "8_0<SEP>8_0",
+      "weight": 0.8617135286331177
+    }
+  },
+  {
+    "('AMAZON', 'DO-OVER ELECTION')": {
+      "description": "AMAZON calling for do over election DO-OVER ELECTION",
+      "keywords": "ORGANIZATION<SEP>calling_for_do_over_election<SEP>EVENT",
+      "source_id": "8",
+      "chunk_ids": "8_0<SEP>8_0",
+      "weight": 0.8154071569442749
+    }
+  },
+  {
+    "('AMAZON', 'NATIONAL LABOR RELATIONS BOARD')": {
+      "description": "AMAZON alleges unfair and inappropriate facilitation NATIONAL LABOR RELATIONS BOARD",
+      "keywords": "ORGANIZATION<SEP>alleges_unfair_and_inappropriate_facilitation<SEP>ORGANIZATION",
+      "source_id": "8",
+      "chunk_ids": "8_0<SEP>8_0",
+      "weight": 0.8521936535835266
+    }
+  },
+  {
+    "('AMAZON AMZN', 'NATIONAL LABOR RELATIONS BOARD')": {
+      "description": "AMAZON AMZN alleges unfair and inappropriate facilitation NATIONAL LABOR RELATIONS BOARD",
+      "keywords": "ORGANIZATION<SEP>alleges_unfair_and_inappropriate_facilitation<SEP>ORGANIZATION",
+      "source_id": "8",
+      "chunk_ids": "8_0<SEP>8_0",
+      "weight": 0.8776360154151917
+    }
+  },
+  {
+    "('AMAZON LABOR UNION', 'UNION')": {
+      "description": "AMAZON LABOR UNION formed union UNION",
+      "keywords": "OTHER<SEP>formed_union<SEP>OTHER",
+      "source_id": "8",
+      "chunk_ids": "8_0<SEP>8_0",
+      "weight": 0.8152874112129211
+    }
+  },
+  {
+    "('AARON HOMMELL', 'IPHONE 5')": {
+      "description": "AARON HOMMELL primary phone IPHONE 5",
+      "keywords": "PERSON<SEP>primary_phone<SEP>OTHER",
+      "source_id": "8",
+      "chunk_ids": "8_0<SEP>8_0",
+      "weight": 0.9017550349235535
+    }
+  },
+  {
+    "('AT&T', '3G NETWORK')": {
+      "description": "AT&T shutting down network 3G NETWORK",
+      "keywords": "ORGANIZATION<SEP>shutting_down_network<SEP>OTHER",
+      "source_id": "8",
+      "chunk_ids": "8_0<SEP>8_0",
+      "weight": 0.9882763028144836
+    }
+  }
+]

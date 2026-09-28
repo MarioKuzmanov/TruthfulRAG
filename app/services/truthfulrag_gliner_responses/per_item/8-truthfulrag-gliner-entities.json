@@ -1,0 +1,156 @@
+{
+  "MICROSOFT": {
+    "entity_type": "ORGANIZATION",
+    "description": "MICROSOFT is an entity of type ORGANIZATION",
+    "source_id": "8",
+    "chunk_id": "8_0",
+    "confidence": 0.9740908145904541
+  },
+  "INTERNET EXPLORER": {
+    "entity_type": "OTHER",
+    "description": "INTERNET EXPLORER is an entity of type OTHER",
+    "source_id": "8",
+    "chunk_id": "8_0",
+    "confidence": 0.9893288016319275
+  },
+  "MICROSOFT EDGE": {
+    "entity_type": "OTHER",
+    "description": "MICROSOFT EDGE is an entity of type OTHER",
+    "source_id": "8",
+    "chunk_id": "8_0",
+    "confidence": 0.7472922801971436
+  },
+  "PRODUCT": {
+    "entity_type": "OTHER",
+    "description": "PRODUCT is an entity of type OTHER",
+    "source_id": "8",
+    "chunk_id": "8_0",
+    "confidence": 0.5346996188163757
+  },
+  "MICROSOFT MSFT": {
+    "entity_type": "OTHER",
+    "description": "MICROSOFT MSFT is an entity of type OTHER",
+    "source_id": "8",
+    "chunk_id": "8_0",
+    "confidence": 0.5200648903846741
+  },
+  "INTERNET EXPLORER 11": {
+    "entity_type": "OTHER",
+    "description": "INTERNET EXPLORER 11 is an entity of type OTHER",
+    "source_id": "8",
+    "chunk_id": "8_0",
+    "confidence": 0.9127233028411865
+  },
+  "IE": {
+    "entity_type": "OTHER",
+    "description": "IE is an entity of type OTHER",
+    "source_id": "8",
+    "chunk_id": "8_0",
+    "confidence": 0.8057193160057068
+  },
+  "PRODUCTS": {
+    "entity_type": "OTHER",
+    "description": "PRODUCTS is an entity of type OTHER",
+    "source_id": "8",
+    "chunk_id": "8_0",
+    "confidence": 0.942424476146698
+  },
+  "AMAZON": {
+    "entity_type": "ORGANIZATION",
+    "description": "AMAZON is an entity of type ORGANIZATION",
+    "source_id": "8",
+    "chunk_id": "8_0",
+    "confidence": 0.958397626876831
+  },
+  "NEW YORK CITY": {
+    "entity_type": "LOCATION",
+    "description": "NEW YORK CITY is an entity of type LOCATION",
+    "source_id": "8",
+    "chunk_id": "8_0",
+    "confidence": 0.9481772780418396
+  },
+  "UNION": {
+    "entity_type": "OTHER",
+    "description": "UNION is an entity of type OTHER",
+    "source_id": "8",
+    "chunk_id": "8_0",
+    "confidence": 0.7066860795021057
+  },
+  "DO-OVER ELECTION": {
+    "entity_type": "EVENT",
+    "description": "DO-OVER ELECTION is an entity of type EVENT",
+    "source_id": "8",
+    "chunk_id": "8_0",
+    "confidence": 0.8956717252731323
+  },
+  "AMAZON AMZN": {
+    "entity_type": "ORGANIZATION",
+    "description": "AMAZON AMZN is an entity of type ORGANIZATION",
+    "source_id": "8",
+    "chunk_id": "8_0",
+    "confidence": 0.8509155511856079
+  },
+  "NATIONAL LABOR RELATIONS BOARD": {
+    "entity_type": "ORGANIZATION",
+    "description": "NATIONAL LABOR RELATIONS BOARD is an entity of type ORGANIZATION",
+    "source_id": "8",
+    "chunk_id": "8_0",
+    "confidence": 0.9583188891410828
+  },
+  "STATEN ISLAND": {
+    "entity_type": "LOCATION",
+    "description": "STATEN ISLAND is an entity of type LOCATION",
+    "source_id": "8",
+    "chunk_id": "8_0",
+    "confidence": 0.7953590154647827
+  },
+  "JFK8": {
+    "entity_type": "OTHER",
+    "description": "JFK8 is an entity of type OTHER",
+    "source_id": "8",
+    "chunk_id": "8_0",
+    "confidence": 0.7775982022285461
+  },
+  "AMAZON LABOR UNION": {
+    "entity_type": "OTHER",
+    "description": "AMAZON LABOR UNION is an entity of type OTHER",
+    "source_id": "8",
+    "chunk_id": "8_0",
+    "confidence": 0.7708266377449036
+  },
+  "AARON HOMMELL": {
+    "entity_type": "PERSON",
+    "description": "AARON HOMMELL is an entity of type PERSON",
+    "source_id": "8",
+    "chunk_id": "8_0",
+    "confidence": 0.9976940751075745
+  },
+  "IPHONE 5": {
+    "entity_type": "OTHER",
+    "description": "IPHONE 5 is an entity of type OTHER",
+    "source_id": "8",
+    "chunk_id": "8_0",
+    "confidence": 0.8832205533981323
+  },
+  "AT&T": {
+    "entity_type": "ORGANIZATION",
+    "description": "AT&T is an entity of type ORGANIZATION",
+    "source_id": "8",
+    "chunk_id": "8_0",
+    "confidence": 0.9972048401832581
+  },
+  "3G NETWORK": {
+    "entity_type": "OTHER",
+    "description": "3G NETWORK is an entity of type OTHER",
+    "source_id": "8",
+    "chunk_id": "8_0",
+    "confidence": 0.5289726257324219
+  },
+  "GULFPORT, MISSISSIPPI": {
+    "entity_type": "LOCATION",
+    "description": "GULFPORT, MISSISSIPPI is an entity of type LOCATION",
+    "source_id": "8",
+    "chunk_id": "8_0",
+    "confidence": 0.8403546810150146
+  }
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "element": "Path:\nINTERNET EXPLORER 11->IE->MICROSOFT\nNodes:\nINTERNET EXPLORER 11: INTERNET EXPLORER 11 is an entity of type OTHER\nIE: IE is an entity of type OTHER\nMICROSOFT: MICROSOFT is an entity of type ORGANIZATION\nEdges:\nINTERNET EXPLORER 11->IE: INTERNET EXPLORER 11 incompatible with IE",
+    "delta": 0.2854014024800808
+  },
+  {
+    "element": "Path:\nINTERNET EXPLORER->MICROSOFT->IE\nNodes:\nINTERNET EXPLORER: INTERNET EXPLORER is an entity of type OTHER\nMICROSOFT: MICROSOFT is an entity of type ORGANIZATION\nIE: IE is an entity of type OTHER\nEdges:\nMICROSOFT->IE: MICROSOFT announced intention to phase out IE",
+    "delta": 0.1250920301219796
+  },
+  {
+    "element": "Path:\nMICROSOFT->IE->INTERNET EXPLORER 11\nNodes:\nMICROSOFT: MICROSOFT is an entity of type ORGANIZATION\nIE: IE is an entity of type OTHER\nINTERNET EXPLORER 11: INTERNET EXPLORER 11 is an entity of type OTHER\nEdges:\nMICROSOFT->IE: MICROSOFT announced intention to phase out IE",
+    "delta": 0.11940011955578728
+  },
+  {
+    "element": "Path:\nIE->MICROSOFT->INTERNET EXPLORER\nNodes:\nIE: IE is an entity of type OTHER\nMICROSOFT: MICROSOFT is an entity of type ORGANIZATION\nINTERNET EXPLORER: INTERNET EXPLORER is an entity of type OTHER\nEdges:\nMICROSOFT->INTERNET EXPLORER: MICROSOFT retired INTERNET EXPLORER",
+    "delta": 0.07052542094694617
+  }
+]

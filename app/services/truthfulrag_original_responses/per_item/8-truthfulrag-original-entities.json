@@ -1,0 +1,176 @@
+[
+  {
+    "entity_type": "\"ORGANIZATION\"",
+    "description": "\"Microsoft is a tech giant that developed and retired Internet Explorer, and is now phasing out Internet Explorer 11 in favor of Microsoft Edge.\"",
+    "source_id": "8",
+    "entity_name": "\"MICROSOFT\""
+  },
+  {
+    "entity_type": "\"PRODUCT\"",
+    "description": "\"Internet Explorer is a web browser developed by Microsoft that is being retired after 27 years of service.\"",
+    "source_id": "8",
+    "entity_name": "\"INTERNET EXPLORER\""
+  },
+  {
+    "entity_type": "\"PRODUCT\"",
+    "description": "\"Microsoft Edge is a more recent web browser developed by Microsoft, replacing Internet Explorer.\"",
+    "source_id": "8",
+    "entity_name": "\"MICROSOFT EDGE\""
+  },
+  {
+    "entity_type": "\"PERSON\"",
+    "description": "\"Jessica Guynn is an editor at USA TODAY.\"",
+    "source_id": "8",
+    "entity_name": "\"JESSICA GUYNN\""
+  },
+  {
+    "entity_type": "\"PERSON\"",
+    "description": "\"Edward C. Baig is a contributor at USA TODAY.\"",
+    "source_id": "8",
+    "entity_name": "\"EDWARD C. BAIG\""
+  },
+  {
+    "entity_type": "\"PERSON\"",
+    "description": "\"Alia E. Dastagir is a contributor at USA TODAY.\"",
+    "source_id": "8",
+    "entity_name": "\"ALIA E. DASTAGIR\""
+  },
+  {
+    "entity_type": "\"PERSON\"",
+    "description": "\"Rob Pegoraro is a contributor at USA TODAY.\"",
+    "source_id": "8",
+    "entity_name": "\"ROB PEGORARO\""
+  },
+  {
+    "entity_type": "\"PERSON\"",
+    "description": "\"Taylor Wilson is a contributor at USA TODAY.\"",
+    "source_id": "8",
+    "entity_name": "\"TAYLOR WILSON\""
+  },
+  {
+    "entity_type": "\"ORGANIZATION\"",
+    "description": "\"Amazon is a tech giant that is facing a unionization challenge from its workers.\"",
+    "source_id": "8",
+    "entity_name": "\"AMAZON\""
+  },
+  {
+    "entity_type": "\"ORGANIZATION\"",
+    "description": "\"The Amazon Labor Union is a union formed by Amazon workers at a New York City warehouse.\"",
+    "source_id": "8",
+    "entity_name": "\"AMAZON LABOR UNION\""
+  },
+  {
+    "entity_type": "\"ORGANIZATION\"",
+    "description": "\"The National Labor Relations Board is an independent federal agency that oversees labor elections.\"",
+    "source_id": "8",
+    "entity_name": "\"NATIONAL LABOR RELATIONS BOARD\""
+  },
+  {
+    "entity_type": "\"PERSON\"",
+    "description": "\"Aaron Hommell is a customer who kept his 3G iPhone 5 for over seven years before being forced to upgrade.\"",
+    "source_id": "8",
+    "entity_name": "\"AARON HOMMELL\""
+  },
+  {
+    "entity_type": "\"ORGANIZATION\"",
+    "description": "\"AT&T is a telecommunications company that shut down its 3G network and moved subscribers to 4G and 5G networks.\"",
+    "source_id": "8",
+    "entity_name": "\"AT&T\""
+  },
+  {
+    "entity_type": "\"LOCATION\"",
+    "description": "\"The New York City Warehouse is the location where Amazon workers voted to form a union.\"",
+    "source_id": "8",
+    "entity_name": "\"NEW YORK CITY WAREHOUSE\""
+  },
+  {
+    "entity_type": "\"LOCATION\"",
+    "description": "\"JFK8 is the code name for the Staten Island facility where the union election took place.\"",
+    "source_id": "8",
+    "entity_name": "\"JFK8\""
+  },
+  {
+    "entity_type": "\"PRODUCT\"",
+    "description": "\"3G iPhone 5 is a mobile device that Aaron Hommell used for over seven years before being forced to upgrade.\"",
+    "source_id": "8",
+    "entity_name": "\"3G IPHONE 5\""
+  },
+  {
+    "entity_type": "\"TECHNOLOGY\"",
+    "description": "\"4G is a mobile network technology that replaced 3G networks.\"",
+    "source_id": "8",
+    "entity_name": "\"4G\""
+  },
+  {
+    "entity_type": "\"TECHNOLOGY\"",
+    "description": "\"5G is a mobile network technology that replaced 3G networks and is faster than 4G.\"",
+    "source_id": "8",
+    "entity_name": "\"5G\""
+  },
+  {
+    "entity_type": "\"ORGANIZATION\"",
+    "description": "\"USA TODAY is a news organization that publishes articles on various tech and labor issues.\"",
+    "source_id": "8",
+    "entity_name": "\"USA TODAY\""
+  },
+  {
+    "entity_type": "\"ORGANIZATION\"",
+    "description": "\"CNN Business is a news organization that reports on business and technology news.\"",
+    "source_id": "8",
+    "entity_name": "\"CNN BUSINESS\""
+  },
+  {
+    "entity_type": "\"LOCATION\"",
+    "description": "\"Staten Island Facility, known as JFK8, is the location where the union election took place.\"",
+    "source_id": "8",
+    "entity_name": "\"STATEN ISLAND FACILITY\""
+  },
+  {
+    "entity_type": "\"TECHNOLOGY\"",
+    "description": "\"3G Network is the mobile network technology that AT&T is shutting down.\"",
+    "source_id": "8",
+    "entity_name": "\"3G NETWORK\""
+  },
+  {
+    "entity_type": "\"TECHNOLOGY\"",
+    "description": "\"4G Network is the mobile network technology that AT&T is moving subscribers to.\"",
+    "source_id": "8",
+    "entity_name": "\"4G NETWORK\""
+  },
+  {
+    "entity_type": "\"TECHNOLOGY\"",
+    "description": "\"5G Network is the mobile network technology that AT&T is moving subscribers to and is faster than 4G.\"",
+    "source_id": "8",
+    "entity_name": "\"5G NETWORK\""
+  },
+  {
+    "entity_type": "\"LOCATION\"",
+    "description": "\"New York City is the location where the union vote took place.\"",
+    "source_id": "8",
+    "entity_name": "\"NEW YORK CITY\""
+  },
+  {
+    "entity_type": "\"LOCATION\"",
+    "description": "\"Gulfport, Mississippi is the location where Aaron Hommell works.\"",
+    "source_id": "8",
+    "entity_name": "\"GULFPORT, MISSISSIPPI\""
+  },
+  {
+    "entity_type": "\"ROLE\"",
+    "description": "\"Work device is the term used to describe the mobile device used for professional purposes.\"",
+    "source_id": "8",
+    "entity_name": "\"WORK DEVICE\""
+  },
+  {
+    "entity_type": "\"EVENT\"",
+    "description": "\"Unionization is the process of forming a union, which is challenging Amazon workers.\"",
+    "source_id": "8",
+    "entity_name": "\"UNIONIZATION\""
+  },
+  {
+    "entity_type": "\"EVENT\"",
+    "description": "\"Voting is the process by which Amazon workers chose to form a union.\"",
+    "source_id": "8",
+    "entity_name": "\"VOTING\""
+  }
+]

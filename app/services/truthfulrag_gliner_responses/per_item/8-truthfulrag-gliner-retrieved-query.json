@@ -1,0 +1,6 @@
+[
+  "Path:\nINTERNET EXPLORER 11->IE->MICROSOFT\nNodes:\nINTERNET EXPLORER 11: INTERNET EXPLORER 11 is an entity of type OTHER\nIE: IE is an entity of type OTHER\nMICROSOFT: MICROSOFT is an entity of type ORGANIZATION\nEdges:\nINTERNET EXPLORER 11->IE: INTERNET EXPLORER 11 incompatible with IE",
+  "Path:\nINTERNET EXPLORER->MICROSOFT->IE\nNodes:\nINTERNET EXPLORER: INTERNET EXPLORER is an entity of type OTHER\nMICROSOFT: MICROSOFT is an entity of type ORGANIZATION\nIE: IE is an entity of type OTHER\nEdges:\nMICROSOFT->IE: MICROSOFT announced intention to phase out IE",
+  "Path:\nIE->MICROSOFT->INTERNET EXPLORER\nNodes:\nIE: IE is an entity of type OTHER\nMICROSOFT: MICROSOFT is an entity of type ORGANIZATION\nINTERNET EXPLORER: INTERNET EXPLORER is an entity of type OTHER\nEdges:\nMICROSOFT->INTERNET EXPLORER: MICROSOFT retired INTERNET EXPLORER",
+  "Path:\nMICROSOFT->IE->INTERNET EXPLORER 11\nNodes:\nMICROSOFT: MICROSOFT is an entity of type ORGANIZATION\nIE: IE is an entity of type OTHER\nINTERNET EXPLORER 11: INTERNET EXPLORER 11 is an entity of type OTHER\nEdges:\nMICROSOFT->IE: MICROSOFT announced intention to phase out IE"
+]

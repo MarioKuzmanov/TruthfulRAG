@@ -1,0 +1,110 @@
+[
+  {
+    "('JILL BIDEN', 'UZHHOROD')": {
+      "description": "JILL BIDEN visited UZHHOROD",
+      "keywords": "PERSON<SEP>visited<SEP>LOCATION",
+      "source_id": "99",
+      "chunk_ids": "99_0<SEP>99_0",
+      "weight": 0.8404790759086609
+    }
+  },
+  {
+    "('JILL BIDEN', 'OLENA ZELENSKA')": {
+      "description": "JILL BIDEN met with OLENA ZELENSKA",
+      "keywords": "PERSON<SEP>met_with<SEP>PERSON",
+      "source_id": "99",
+      "chunk_ids": "99_0<SEP>99_0",
+      "weight": 0.9188588857650757
+    }
+  },
+  {
+    "('JILL BIDEN', 'WASHINGTON')": {
+      "description": "JILL BIDEN departed from WASHINGTON",
+      "keywords": "PERSON<SEP>departed_from<SEP>OTHER",
+      "source_id": "99",
+      "chunk_ids": "99_0<SEP>99_0",
+      "weight": 0.981115460395813
+    }
+  },
+  {
+    "('JILL BIDEN', 'JOE BIDEN')": {
+      "description": "JILL BIDEN voiced frustration at JOE BIDEN",
+      "keywords": "PERSON<SEP>voiced_frustration_at<SEP>PERSON",
+      "source_id": "99",
+      "chunk_ids": "99_0<SEP>99_0",
+      "weight": 0.8477614521980286
+    }
+  },
+  {
+    "('JILL BIDEN', 'DEMOCRATIC NATIONAL COMMITTEE')": {
+      "description": "JILL BIDEN spoke at DEMOCRATIC NATIONAL COMMITTEE",
+      "keywords": "PERSON<SEP>spoke_at<SEP>OTHER",
+      "source_id": "99",
+      "chunk_ids": "99_0<SEP>99_0",
+      "weight": 0.8132084012031555
+    }
+  },
+  {
+    "('JOE BIDEN', 'DEMOCRATIC NATIONAL COMMITTEE')": {
+      "description": "JOE BIDEN spoke at DEMOCRATIC NATIONAL COMMITTEE",
+      "keywords": "PERSON<SEP>spoke_at<SEP>ORGANIZATION",
+      "source_id": "99",
+      "chunk_ids": "99_1<SEP>99_1",
+      "weight": 0.8122021555900574
+    }
+  },
+  {
+    "('MARKAROVA', 'CONGRESS')": {
+      "description": "MARKAROVA met with CONGRESS",
+      "keywords": "PERSON<SEP>met_with<SEP>ORGANIZATION",
+      "source_id": "99",
+      "chunk_ids": "99_1<SEP>99_1",
+      "weight": 0.8658462762832642
+    }
+  },
+  {
+    "('MARKAROVA', 'SANCTIONS')": {
+      "description": "MARKAROVA asked for SANCTIONS",
+      "keywords": "PERSON<SEP>asked_for<SEP>OTHER",
+      "source_id": "99",
+      "chunk_ids": "99_1<SEP>99_1",
+      "weight": 0.8203181624412537
+    }
+  },
+  {
+    "('UNITED STATES', 'RUSSIAN')": {
+      "description": "UNITED STATES will ban import of RUSSIAN",
+      "keywords": "OTHER<SEP>will_ban_import_of<SEP>OTHER",
+      "source_id": "99",
+      "chunk_ids": "99_1<SEP>99_1",
+      "weight": 0.9349039793014526
+    }
+  },
+  {
+    "('UNITED STATES', 'RUSSIAN OIL')": {
+      "description": "UNITED STATES will ban import of RUSSIAN OIL",
+      "keywords": "OTHER<SEP>will_ban_import_of<SEP>OTHER",
+      "source_id": "99",
+      "chunk_ids": "99_1<SEP>99_1",
+      "weight": 0.9932690262794495
+    }
+  },
+  {
+    "('JILL BIDEN', 'CARONDELET PRESIDENTIAL PALACE')": {
+      "description": "JILL BIDEN spoke at CARONDELET PRESIDENTIAL PALACE",
+      "keywords": "PERSON<SEP>spoke_at<SEP>OTHER",
+      "source_id": "99",
+      "chunk_ids": "99_2<SEP>99_2",
+      "weight": 0.8074538111686707
+    }
+  },
+  {
+    "('JILL BIDEN', 'AMERICA')": {
+      "description": "JILL BIDEN used remarks to tout AMERICA",
+      "keywords": "PERSON<SEP>used_remarks_to_tout<SEP>OTHER",
+      "source_id": "99",
+      "chunk_ids": "99_2<SEP>99_2",
+      "weight": 0.8523052930831909
+    }
+  }
+]

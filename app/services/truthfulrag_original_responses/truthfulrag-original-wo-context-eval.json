@@ -1,0 +1,53 @@
+{
+  "num_items": 5,
+  "exact_match": 40.0,
+  "acc": 40.0,
+  "f1": 40.0,
+  "details": [
+    {
+      "id": 90,
+      "question": "Sri Lankan President Gotabaya Rajapaksa fled to which country this week as the nation saw public unrest and uprisings sparked by the ongoing economic crisis?",
+      "answer": "Singapore",
+      "prediction": "Mauritius",
+      "exact_match": false,
+      "acc": false,
+      "f1": 0
+    },
+    {
+      "id": 7,
+      "question": "Which automaker recalled 2.9 million vehicles this week?",
+      "answer": "Ford",
+      "prediction": "Ford",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 68,
+      "question": "Ramesh \u201cSunny\u201d Balwani was convicted on 12 fraud counts Thursday. Which company was he a top executive for?",
+      "answer": "Theranos",
+      "prediction": "Theranos",
+      "exact_match": true,
+      "acc": true,
+      "f1": 1.0
+    },
+    {
+      "id": 99,
+      "question": "US first lady Jill Biden met with the first lady of which country this week?",
+      "answer": "Ukraine",
+      "prediction": "I don't know",
+      "exact_match": false,
+      "acc": false,
+      "f1": 0
+    },
+    {
+      "id": 8,
+      "question": "Microsoft retired its Internet Explorer browser this week. What year did it debut?",
+      "answer": "I don't know",
+      "prediction": "1995",
+      "exact_match": false,
+      "acc": false,
+      "f1": 0
+    }
+  ]
+}

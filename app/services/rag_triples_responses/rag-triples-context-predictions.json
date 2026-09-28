@@ -1,0 +1,7 @@
+{
+  "90": "{\"Reason\": \"The facts and context clearly state that Gotabaya Rajapaksa fled to Maldives first and then flew to Singapore. The sequence of events is explicitly mentioned in the context.\", \"Answer\": \"Singapore\"}",
+  "7": "{\"Reason\": \"The facts clearly state that Ford Motor Co. is recalling 2.9 million vehicles for an issue with unintended gear shifting and rolling while parked. This matches the question asking which automaker recalled 2.9 million vehicles. No other automaker in the provided context is mentioned as recalling this number of vehicles.\", \"Answer\": \"Ford\"}",
+  "68": "{\"Reason\": \"The facts clearly state that Ramesh 'Sunny' Balwani served as both the chief operating officer and president of Theranos. The context further reinforces this by repeatedly mentioning Theranos in relation to both Balwani and Holmes, indicating their roles within the company.\", \"Answer\": \"Theranos\"}",
+  "99": "{\"Reason\": \"The facts state that Jill Biden met with Olena Zelenska in Ukraine, and the context confirms that this meeting took place in Ukraine during a visit to support displaced Ukrainian families and meet with Ukrainian government officials.\", \"Answer\": \"Ukraine\"}",
+  "8": "{\"Reason\": \"The context clearly states that Internet Explorer debuted 27 years before it was retired 'this week.' Given that it was retired recently, we can estimate the retirement year to be around 2023. Subtracting 27 years from 2023 gives us 1996. Among the provided options, 1995 is the closest match.\", \"Answer\": \"1995\"}"
+}

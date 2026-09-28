@@ -1,0 +1,218 @@
+[
+  {
+    "entity_type": "\"PERSON\"",
+    "description": "\"Michael Liedtke is an Associated Press reporter covering the Theranos scandal.\"",
+    "source_id": "68",
+    "entity_name": "\"MICHAEL LIEDTKE\""
+  },
+  {
+    "entity_type": "\"PERSON\"",
+    "description": "\"Ramesh 'Sunny' Balwani is the former COO of Theranos and ex-boyfriend of Elizabeth Holmes, found guilty of defrauding investors and patients.\"",
+    "source_id": "68",
+    "entity_name": "\"RAMESH 'SUNNY' BALWANI\""
+  },
+  {
+    "entity_type": "\"PERSON\"",
+    "description": "\"Elizabeth Holmes is the founder and former CEO of Theranos, found guilty of multiple counts of wire fraud and conspiracy to commit fraud.\"",
+    "source_id": "68",
+    "entity_name": "\"ELIZABETH HOLMES\""
+  },
+  {
+    "entity_type": "\"ORGANIZATION\"",
+    "description": "\"Theranos is a failed blood testing startup led by Elizabeth Holmes and Ramesh 'Sunny' Balwani.\"",
+    "source_id": "68",
+    "entity_name": "\"THERANOS\""
+  },
+  {
+    "entity_type": "\"LOCATION\"",
+    "description": "\"San Jose, California is the location where the trials took place.\"",
+    "source_id": "68",
+    "entity_name": "\"SAN JOSE, CALIFORNIA\""
+  },
+  {
+    "entity_type": "\"EVENT\"",
+    "description": "\"Opening Statements mark the beginning of the trials for both Holmes and Balwani.\"",
+    "source_id": "68",
+    "entity_name": "\"OPENING STATEMENTS\""
+  },
+  {
+    "entity_type": "\"EVENT\"",
+    "description": "\"Jury Deliberations are the process by which the jury reached their verdicts in the trials.\"",
+    "source_id": "68",
+    "entity_name": "\"JURY DELIBERATIONS\""
+  },
+  {
+    "entity_type": "\"CONCEPT\"",
+    "description": "\"Domestic Abuse is a defense strategy Elizabeth Holmes plans to use in her trial.\"",
+    "source_id": "68",
+    "entity_name": "\"DOMESTIC ABUSE\""
+  },
+  {
+    "entity_type": "\"TECHNOLOGY\"",
+    "description": "\"Theranos Blood Test refers to the blood testing technology developed by Theranos, which was later found to be fraudulent.\"",
+    "source_id": "68",
+    "entity_name": "\"THERANOS BLOOD TEST\""
+  },
+  {
+    "entity_type": "\"EVENT\"",
+    "description": "\"Federal Wire Fraud is the type of fraud charge that both Holmes and Balwani were found guilty of.\"",
+    "source_id": "68",
+    "entity_name": "\"FEDERAL WIRE FRAUD\""
+  },
+  {
+    "entity_type": "\"EVENT\"",
+    "description": "\"Conspiracy to Commit Wire Fraud is the type of conspiracy charge that both Holmes and Balwani were found guilty of.\"",
+    "source_id": "68",
+    "entity_name": "\"CONSPIRACY TO COMMIT WIRE FRAUD\""
+  },
+  {
+    "entity_type": "\"LOCATION\"",
+    "description": "\"San Jose Federal Courthouse is the location where the trials took place.\"",
+    "source_id": "68",
+    "entity_name": "\"SAN JOSE FEDERAL COURTHOUSE\""
+  },
+  {
+    "entity_type": "\"PERSON\"",
+    "description": "\"Steve Jobs is mentioned as a comparison to Elizabeth Holmes, highlighting her fall from grace.\"",
+    "source_id": "68",
+    "entity_name": "\"STEVE JOBS\""
+  },
+  {
+    "entity_type": "\"ROLE\"",
+    "description": "\"Silicon Valley Entrepreneur is the role Elizabeth Holmes held before her downfall.\"",
+    "source_id": "68",
+    "entity_name": "\"SILICON VALLEY ENTREPRENEUR\""
+  },
+  {
+    "entity_type": "\"ROLE\"",
+    "description": "\"Tech Industry Icon is the role Elizabeth Holmes held before her downfall.\"",
+    "source_id": "68",
+    "entity_name": "\"TECH INDUSTRY ICON\""
+  },
+  {
+    "entity_type": "\"CONCEPT\"",
+    "description": "\"Domestic Abuse Defense is the defense strategy Elizabeth Holmes plans to use in her trial.\"",
+    "source_id": "68",
+    "entity_name": "\"DOMESTIC ABUSE DEFENSE\""
+  },
+  {
+    "entity_type": "\"EVENT\"",
+    "description": "\"Trial Proceedings refer to the legal processes during the trials of Holmes and Balwani.\"",
+    "source_id": "68",
+    "entity_name": "\"TRIAL PROCEEDINGS\""
+  },
+  {
+    "entity_type": "\"PERSON\"",
+    "description": "\"Witnesses are the people who testified during the trials, including Holmes herself.\"",
+    "source_id": "68",
+    "entity_name": "\"WITNESSES\""
+  },
+  {
+    "entity_type": "\"PERSON\"",
+    "description": "\"Potential Jurors are the individuals questioned to determine the final jury members.\"",
+    "source_id": "68",
+    "entity_name": "\"POTENTIAL JURORS\""
+  },
+  {
+    "entity_type": "\"PERSON\"",
+    "description": "\"Judge Edward Davila is the judge presiding over the cases of Holmes and Balwani.\"",
+    "source_id": "68",
+    "entity_name": "\"JUDGE EDWARD DAVILA\""
+  },
+  {
+    "entity_type": "\"EVENT\"",
+    "description": "\"Three-Month Trial is the duration of Elizabeth Holmes' trial.\"",
+    "source_id": "68",
+    "entity_name": "\"THREE-MONTH TRIAL\""
+  },
+  {
+    "entity_type": "\"PERSON\"",
+    "description": "\"Dozens of Witnesses testified during the trials, providing evidence and testimony.\"",
+    "source_id": "68",
+    "entity_name": "\"DOZENS OF WITNESSES\""
+  },
+  {
+    "entity_type": "\"ROLE\"",
+    "description": "\"Live-In Boyfriend is the role Ramesh 'Sunny' Balwani held in relation to Elizabeth Holmes.\"",
+    "source_id": "68",
+    "entity_name": "\"LIVE-IN BOYFRIEND\""
+  },
+  {
+    "entity_type": "\"ROLE\"",
+    "description": "\"Former COO is the role Ramesh 'Sunny' Balwani held at Theranos.\"",
+    "source_id": "68",
+    "entity_name": "\"FORMER COO\""
+  },
+  {
+    "entity_type": "\"ROLE\"",
+    "description": "\"Former President is the role Ramesh 'Sunny' Balwani held at Theranos.\"",
+    "source_id": "68",
+    "entity_name": "\"FORMER PRESIDENT\""
+  },
+  {
+    "entity_type": "\"ORGANIZATION\"",
+    "description": "\"Failed Blood Testing Startup refers to the nature of Theranos and its business model.\"",
+    "source_id": "68",
+    "entity_name": "\"FAILED BLOOD TESTING STARTUP\""
+  },
+  {
+    "entity_type": "\"EVENT\"",
+    "description": "\"Conviction is the outcome of the trials for both Holmes and Balwani.\"",
+    "source_id": "68",
+    "entity_name": "\"CONVICTION\""
+  },
+  {
+    "entity_type": "\"CONCEPT\"",
+    "description": "\"Maximum Sentence is the potential highest sentence for each count of fraud.\"",
+    "source_id": "68",
+    "entity_name": "\"MAXIMUM SENTENCE\""
+  },
+  {
+    "entity_type": "\"LOCATION\"",
+    "description": "\"Silicon Valley is the region where Theranos and other tech companies operate.\"",
+    "source_id": "68",
+    "entity_name": "\"SILICON VALLEY\""
+  },
+  {
+    "entity_type": "\"MEDIA\"",
+    "description": "\"Headlines are the news articles and media coverage of the Theranos scandal.\"",
+    "source_id": "68",
+    "entity_name": "\"HEADLINES\""
+  },
+  {
+    "entity_type": "\"CONCEPT\"",
+    "description": "\"Disgraced is the term used to describe Elizabeth Holmes' status after the scandal.\"",
+    "source_id": "68",
+    "entity_name": "\"DISGRACED\""
+  },
+  {
+    "entity_type": "\"CONCEPT\"",
+    "description": "\"Convicted is the term used to describe the current status of Elizabeth Holmes and Ramesh 'Sunny' Balwani.\"",
+    "source_id": "68",
+    "entity_name": "\"CONVICTED\""
+  },
+  {
+    "entity_type": "\"EVENT\"",
+    "description": "\"Three-Year Downfall refers to the period from the indictment to the conviction of Elizabeth Holmes.\"",
+    "source_id": "68",
+    "entity_name": "\"THREE-YEAR DOWNFALL\""
+  },
+  {
+    "entity_type": "\"TIME\"",
+    "description": "\"Two Months is the duration between the conviction of Elizabeth Holmes and the start of Ramesh 'Sunny' Balwani's trial.\"",
+    "source_id": "68",
+    "entity_name": "\"TWO MONTHS\""
+  },
+  {
+    "entity_type": "\"ORGANIZATION\"",
+    "description": "\"Theranos Employees are the staff and employees of Theranos.\"",
+    "source_id": "68",
+    "entity_name": "\"THERANOS EMPLOYEES\""
+  },
+  {
+    "entity_type": "\"ORGANIZATION\"",
+    "description": "\"Theranos Patients are the individuals who used Theranos' services.\"",
+    "source_id": "68",
+    "entity_name": "\"THERANOS PATIENTS\""
+  }
+]

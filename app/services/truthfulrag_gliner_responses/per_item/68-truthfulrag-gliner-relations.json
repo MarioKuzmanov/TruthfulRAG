@@ -1,0 +1,74 @@
+[
+  {
+    "('RAMESH \"SUNNY\" BALWANI', 'THERANOS')": {
+      "description": "RAMESH \"SUNNY\" BALWANI served as THERANOS",
+      "keywords": "PERSON<SEP>served_as<SEP>ORGANIZATION",
+      "source_id": "68",
+      "chunk_ids": "68_1<SEP>68_1",
+      "weight": 0.8575819730758667
+    }
+  },
+  {
+    "('ELIZABETH HOLMES', 'THERANOS')": {
+      "description": "ELIZABETH HOLMES headed up THERANOS",
+      "keywords": "PERSON<SEP>headed_up<SEP>ORGANIZATION",
+      "source_id": "68",
+      "chunk_ids": "68_1<SEP>68_1",
+      "weight": 0.8939676284790039
+    }
+  },
+  {
+    "('ELIZABETH HOLMES', 'SUNNY BELWADI')": {
+      "description": "ELIZABETH HOLMES cited defense SUNNY BELWADI",
+      "keywords": "PERSON<SEP>cited_defense<SEP>OTHER",
+      "source_id": "68",
+      "chunk_ids": "68_0<SEP>68_0",
+      "weight": 0.8573200106620789
+    }
+  },
+  {
+    "('ELIZABETH HOLMES', 'CONSPIRACY TO DEFRAUD PATIENTS')": {
+      "description": "ELIZABETH HOLMES found not guilty of CONSPIRACY TO DEFRAUD PATIENTS",
+      "keywords": "PERSON<SEP>found_not_guilty_of<SEP>OTHER",
+      "source_id": "68",
+      "chunk_ids": "68_1<SEP>68_1",
+      "weight": 0.8586099743843079
+    }
+  },
+  {
+    "('TRIAL', 'WEDNESDAY')": {
+      "description": "TRIAL set to begin WEDNESDAY",
+      "keywords": "EVENT<SEP>set_to_begin<SEP>EVENT",
+      "source_id": "68",
+      "chunk_ids": "68_1<SEP>68_1",
+      "weight": 0.8086984753608704
+    }
+  },
+  {
+    "('TRIAL', 'OPENING ARGUMENTS')": {
+      "description": "TRIAL set to begin OPENING ARGUMENTS",
+      "keywords": "EVENT<SEP>set_to_begin<SEP>EVENT",
+      "source_id": "68",
+      "chunk_ids": "68_1<SEP>68_1",
+      "weight": 0.8711776733398438
+    }
+  },
+  {
+    "('RAMESH \"SUNNY\" BALWANI', 'ELIZABETH HOLMES')": {
+      "description": "RAMESH \"SUNNY\" BALWANI indicted alongside ELIZABETH HOLMES",
+      "keywords": "PERSON<SEP>indicted_alongside<SEP>PERSON",
+      "source_id": "68",
+      "chunk_ids": "68_1<SEP>68_1",
+      "weight": 0.845995306968689
+    }
+  },
+  {
+    "('RAMESH \"SUNNY\" BALWANI', 'FEDERAL FRAUD CHARGES')": {
+      "description": "RAMESH \"SUNNY\" BALWANI indicted for FEDERAL FRAUD CHARGES",
+      "keywords": "PERSON<SEP>indicted_for<SEP>EVENT",
+      "source_id": "68",
+      "chunk_ids": "68_1<SEP>68_1",
+      "weight": 0.8448032140731812
+    }
+  }
+]

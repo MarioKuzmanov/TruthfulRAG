@@ -1,0 +1,50 @@
+[
+  {
+    "src_id": "\"INTERNET EXPLORER\"",
+    "tgt_id": "\"MICROSOFT\"",
+    "description": "\"Microsoft is the developer of Internet Explorer, which is being retired by the company.\"",
+    "keywords": "\"product development, retirement\""
+  },
+  {
+    "src_id": "\"MICROSOFT EDGE\"",
+    "tgt_id": "\"MICROSOFT\"",
+    "description": "\"Microsoft is developing Microsoft Edge to replace Internet Explorer, indicating a shift in product strategy.\"",
+    "keywords": "\"product replacement, strategic shift\""
+  },
+  {
+    "src_id": "\"JESSICA GUYNN\"",
+    "tgt_id": "\"USA TODAY\"",
+    "description": "\"Jessica Guynn works for USA TODAY, contributing to its articles.\"",
+    "keywords": "\"employment, contribution\""
+  },
+  {
+    "src_id": "\"EDWARD C. BAIG\"",
+    "tgt_id": "\"USA TODAY\"",
+    "description": "\"Edward C. Baig works for USA TODAY, contributing to its articles.\"",
+    "keywords": "\"employment, contribution\""
+  },
+  {
+    "src_id": "\"ALIA E. DASTAGIR\"",
+    "tgt_id": "\"USA TODAY\"",
+    "description": "\"Alia E. Dastagir works for USA TODAY, contributing to its articles.\"",
+    "keywords": "\"employment, contribution\""
+  },
+  {
+    "src_id": "\"ROB PEGORARO\"",
+    "tgt_id": "\"USA TODAY\"",
+    "description": "\"Rob Pegoraro works for USA TODAY, contributing to its articles.\"",
+    "keywords": "\"employment, contribution\""
+  },
+  {
+    "src_id": "\"TAYLOR WILSON\"",
+    "tgt_id": "\"USA TODAY\"",
+    "description": "\"Taylor Wilson works for USA TODAY, contributing to its articles.\"",
+    "keywords": "\"employment, contribution\""
+  },
+  {
+    "src_id": "\"AMAZON LABOR UNION\"",
+    "tgt_id": "\"AMAZON\"",
+    "description": "\"Amazon faces a union challenge from the Amazon Labor Union, which was formed by its workers.\"",
+    "keywords": "\"union challenge, worker solidarity\""
+  }
+]

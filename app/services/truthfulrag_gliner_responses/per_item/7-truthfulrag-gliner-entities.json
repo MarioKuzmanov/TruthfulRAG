@@ -1,0 +1,296 @@
+{
+  "FORD MOTOR CO.": {
+    "entity_type": "ORGANIZATION",
+    "description": "FORD MOTOR CO. is an entity of type ORGANIZATION",
+    "source_id": "7",
+    "chunk_id": "7_0",
+    "confidence": 0.9551070928573608
+  },
+  "2.9 MILLION VEHICLES": {
+    "entity_type": "OTHER",
+    "description": "2.9 MILLION VEHICLES is an entity of type OTHER",
+    "source_id": "7",
+    "chunk_id": "7_0",
+    "confidence": 0.908804178237915
+  },
+  "2013-2019 ESCAPE": {
+    "entity_type": "OTHER",
+    "description": "2013-2019 ESCAPE is an entity of type OTHER",
+    "source_id": "7",
+    "chunk_id": "7_0",
+    "confidence": 0.896703839302063
+  },
+  "2013-2018 C-MAX": {
+    "entity_type": "OTHER",
+    "description": "2013-2018 C-MAX is an entity of type OTHER",
+    "source_id": "7",
+    "chunk_id": "7_0",
+    "confidence": 0.8991960287094116
+  },
+  "FUSION": {
+    "entity_type": "OTHER",
+    "description": "FUSION is an entity of type OTHER",
+    "source_id": "7",
+    "chunk_id": "7_0",
+    "confidence": 0.9035898447036743
+  },
+  "TRANSIT CONNECT": {
+    "entity_type": "OTHER",
+    "description": "TRANSIT CONNECT is an entity of type OTHER",
+    "source_id": "7",
+    "chunk_id": "7_0",
+    "confidence": 0.9065950512886047
+  },
+  "EDGE": {
+    "entity_type": "OTHER",
+    "description": "EDGE is an entity of type OTHER",
+    "source_id": "7",
+    "chunk_id": "7_0",
+    "confidence": 0.9094380140304565
+  },
+  "NATIONAL HIGHWAY TRAFFIC SAFETY ADMINISTRATION": {
+    "entity_type": "ORGANIZATION",
+    "description": "NATIONAL HIGHWAY TRAFFIC SAFETY ADMINISTRATION is an entity of type ORGANIZATION",
+    "source_id": "7",
+    "chunk_id": "7_0",
+    "confidence": 0.8848617672920227
+  },
+  "TOYOTA": {
+    "entity_type": "ORGANIZATION",
+    "description": "TOYOTA is an entity of type ORGANIZATION",
+    "source_id": "7",
+    "chunk_id": "7_0",
+    "confidence": 0.9592882990837097
+  },
+  "MASSIVE RECALL": {
+    "entity_type": "EVENT",
+    "description": "MASSIVE RECALL is an entity of type EVENT",
+    "source_id": "7",
+    "chunk_id": "7_0",
+    "confidence": 0.4087858498096466
+  },
+  "AIRBAG SENSOR DEFECT": {
+    "entity_type": "EVENT",
+    "description": "AIRBAG SENSOR DEFECT is an entity of type EVENT",
+    "source_id": "7",
+    "chunk_id": "7_0",
+    "confidence": 0.7391647100448608
+  },
+  "U.S.": {
+    "entity_type": "LOCATION",
+    "description": "U.S. is an entity of type LOCATION",
+    "source_id": "7",
+    "chunk_id": "7_0",
+    "confidence": 0.9350466132164001
+  },
+  "COROLLA": {
+    "entity_type": "OTHER",
+    "description": "COROLLA is an entity of type OTHER",
+    "source_id": "7",
+    "chunk_id": "7_0",
+    "confidence": 0.8951651453971863
+  },
+  "MATRIX": {
+    "entity_type": "OTHER",
+    "description": "MATRIX is an entity of type OTHER",
+    "source_id": "7",
+    "chunk_id": "7_0",
+    "confidence": 0.8648257255554199
+  },
+  "AVALON": {
+    "entity_type": "OTHER",
+    "description": "AVALON is an entity of type OTHER",
+    "source_id": "7",
+    "chunk_id": "7_0",
+    "confidence": 0.8977251052856445
+  },
+  "AVALON HYBRID": {
+    "entity_type": "OTHER",
+    "description": "AVALON HYBRID is an entity of type OTHER",
+    "source_id": "7",
+    "chunk_id": "7_0",
+    "confidence": 0.908269464969635
+  },
+  "JAMES R. HEALEY": {
+    "entity_type": "PERSON",
+    "description": "JAMES R. HEALEY is an entity of type PERSON",
+    "source_id": "7",
+    "chunk_id": "7_0",
+    "confidence": 0.6765496730804443
+  },
+  "USATODAY": {
+    "entity_type": "ORGANIZATION",
+    "description": "USATODAY is an entity of type ORGANIZATION",
+    "source_id": "7",
+    "chunk_id": "7_0",
+    "confidence": 0.5090104341506958
+  },
+  "ASSOCIATED PRESS": {
+    "entity_type": "ORGANIZATION",
+    "description": "ASSOCIATED PRESS is an entity of type ORGANIZATION",
+    "source_id": "7",
+    "chunk_id": "7_0",
+    "confidence": 0.47554245591163635
+  },
+  "TOKYO": {
+    "entity_type": "LOCATION",
+    "description": "TOKYO is an entity of type LOCATION",
+    "source_id": "7",
+    "chunk_id": "7_0",
+    "confidence": 0.8660540580749512
+  },
+  "SPORTS UTILITY VEHICLES": {
+    "entity_type": "OTHER",
+    "description": "SPORTS UTILITY VEHICLES is an entity of type OTHER",
+    "source_id": "7",
+    "chunk_id": "7_0",
+    "confidence": 0.42580118775367737
+  },
+  "SEAT BELTS": {
+    "entity_type": "EVENT",
+    "description": "SEAT BELTS is an entity of type EVENT",
+    "source_id": "7",
+    "chunk_id": "7_0",
+    "confidence": 0.5830906629562378
+  },
+  "NATHAN BOMEY": {
+    "entity_type": "PERSON",
+    "description": "NATHAN BOMEY is an entity of type PERSON",
+    "source_id": "7",
+    "chunk_id": "7_0",
+    "confidence": 0.8132991194725037
+  },
+  "USA TODAY": {
+    "entity_type": "ORGANIZATION",
+    "description": "USA TODAY is an entity of type ORGANIZATION",
+    "source_id": "7",
+    "chunk_id": "7_0",
+    "confidence": 0.40637707710266113
+  },
+  "MATTHEW ROSE": {
+    "entity_type": "PERSON",
+    "description": "MATTHEW ROSE is an entity of type PERSON",
+    "source_id": "7",
+    "chunk_id": "7_0",
+    "confidence": 0.9752115607261658
+  },
+  "KIA OPTIMA": {
+    "entity_type": "OTHER",
+    "description": "KIA OPTIMA is an entity of type OTHER",
+    "source_id": "7",
+    "chunk_id": "7_0",
+    "confidence": 0.9373968839645386
+  },
+  "BIG TOASTED MARSHMALLOW": {
+    "entity_type": "OTHER",
+    "description": "BIG TOASTED MARSHMALLOW is an entity of type OTHER",
+    "source_id": "7",
+    "chunk_id": "7_0",
+    "confidence": 0.9334902167320251
+  },
+  "FLAMES": {
+    "entity_type": "EVENT",
+    "description": "FLAMES is an entity of type EVENT",
+    "source_id": "7",
+    "chunk_id": "7_0",
+    "confidence": 0.5190863013267517
+  },
+  "HYUNDAI": {
+    "entity_type": "OTHER",
+    "description": "HYUNDAI is an entity of type OTHER",
+    "source_id": "7",
+    "chunk_id": "7_0",
+    "confidence": 0.42109042406082153
+  },
+  "CHRIS WOODYARD": {
+    "entity_type": "PERSON",
+    "description": "CHRIS WOODYARD is an entity of type PERSON",
+    "source_id": "7",
+    "chunk_id": "7_0",
+    "confidence": 0.7000355124473572
+  },
+  "GENERAL MOTORS": {
+    "entity_type": "ORGANIZATION",
+    "description": "GENERAL MOTORS is an entity of type ORGANIZATION",
+    "source_id": "7",
+    "chunk_id": "7_0",
+    "confidence": 0.9779059290885925
+  },
+  "YEAR-END RESULTS": {
+    "entity_type": "EVENT",
+    "description": "YEAR-END RESULTS is an entity of type EVENT",
+    "source_id": "7",
+    "chunk_id": "7_0",
+    "confidence": 0.517362654209137
+  },
+  "EIGHT-WEEK PRODUCTION SHUTDOWN": {
+    "entity_type": "EVENT",
+    "description": "EIGHT-WEEK PRODUCTION SHUTDOWN is an entity of type EVENT",
+    "source_id": "7",
+    "chunk_id": "7_0",
+    "confidence": 0.8854315876960754
+  },
+  "COVID-19 PANDEMIC": {
+    "entity_type": "EVENT",
+    "description": "COVID-19 PANDEMIC is an entity of type EVENT",
+    "source_id": "7",
+    "chunk_id": "7_0",
+    "confidence": 0.9674000144004822
+  },
+  "TAKATA AIRBAG-INFLATOR RECALL": {
+    "entity_type": "EVENT",
+    "description": "TAKATA AIRBAG-INFLATOR RECALL is an entity of type EVENT",
+    "source_id": "7",
+    "chunk_id": "7_0",
+    "confidence": 0.9545705914497375
+  },
+  "TOTAL MARKET SHARE": {
+    "entity_type": "OTHER",
+    "description": "TOTAL MARKET SHARE is an entity of type OTHER",
+    "source_id": "7",
+    "chunk_id": "7_0",
+    "confidence": 0.7759406566619873
+  },
+  "18.32%": {
+    "entity_type": "OTHER",
+    "description": "18.32% is an entity of type OTHER",
+    "source_id": "7",
+    "chunk_id": "7_0",
+    "confidence": 0.9593091607093811
+  },
+  "17.09%": {
+    "entity_type": "OTHER",
+    "description": "17.09% is an entity of type OTHER",
+    "source_id": "7",
+    "chunk_id": "7_0",
+    "confidence": 0.8937398195266724
+  },
+  "COX AUTOMOTIVE": {
+    "entity_type": "ORGANIZATION",
+    "description": "COX AUTOMOTIVE is an entity of type ORGANIZATION",
+    "source_id": "7",
+    "chunk_id": "7_0",
+    "confidence": 0.9790233373641968
+  },
+  "LARGEST YEAR-OVER-YEAR GAIN": {
+    "entity_type": "EVENT",
+    "description": "LARGEST YEAR-OVER-YEAR GAIN is an entity of type EVENT",
+    "source_id": "7",
+    "chunk_id": "7_0",
+    "confidence": 0.4432099461555481
+  },
+  "BRENT SNAVELY": {
+    "entity_type": "PERSON",
+    "description": "BRENT SNAVELY is an entity of type PERSON",
+    "source_id": "7",
+    "chunk_id": "7_0",
+    "confidence": 0.5087254047393799
+  },
+  "GREG GARDNER": {
+    "entity_type": "PERSON",
+    "description": "GREG GARDNER is an entity of type PERSON",
+    "source_id": "7",
+    "chunk_id": "7_0",
+    "confidence": 0.7971953749656677
+  }
+}

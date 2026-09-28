@@ -1,0 +1,173 @@
+[
+  {
+    "('FORD MOTOR CO.', '2.9 MILLION VEHICLES')": {
+      "description": "FORD MOTOR CO. is recalling 2.9 MILLION VEHICLES",
+      "keywords": "ORGANIZATION<SEP>is_recalling<SEP>OTHER",
+      "source_id": "7",
+      "chunk_ids": "7_0<SEP>7_0",
+      "weight": 0.9762678742408752
+    }
+  },
+  {
+    "('2.9 MILLION VEHICLES', 'EDGE')": {
+      "description": "2.9 MILLION VEHICLES affects EDGE",
+      "keywords": "OTHER<SEP>affects<SEP>OTHER",
+      "source_id": "7",
+      "chunk_ids": "7_0<SEP>7_0",
+      "weight": 0.8145405650138855
+    }
+  },
+  {
+    "('TOYOTA', '2.9 MILLION VEHICLES')": {
+      "description": "TOYOTA is recalling 2.9 MILLION VEHICLES",
+      "keywords": "ORGANIZATION<SEP>is_recalling<SEP>OTHER",
+      "source_id": "7",
+      "chunk_ids": "7_0<SEP>7_0",
+      "weight": 0.8583666682243347
+    }
+  },
+  {
+    "('TOYOTA', 'COROLLA')": {
+      "description": "TOYOTA is recalling COROLLA",
+      "keywords": "ORGANIZATION<SEP>is_recalling<SEP>OTHER",
+      "source_id": "7",
+      "chunk_ids": "7_0<SEP>7_0",
+      "weight": 0.9004024863243103
+    }
+  },
+  {
+    "('TOYOTA', 'MATRIX')": {
+      "description": "TOYOTA is recalling MATRIX",
+      "keywords": "ORGANIZATION<SEP>is_recalling<SEP>OTHER",
+      "source_id": "7",
+      "chunk_ids": "7_0<SEP>7_0",
+      "weight": 0.8771650195121765
+    }
+  },
+  {
+    "('TOYOTA', 'AVALON')": {
+      "description": "TOYOTA is recalling AVALON",
+      "keywords": "ORGANIZATION<SEP>is_recalling<SEP>OTHER",
+      "source_id": "7",
+      "chunk_ids": "7_0<SEP>7_0",
+      "weight": 0.8928667306900024
+    }
+  },
+  {
+    "('TOYOTA', 'AVALON HYBRID')": {
+      "description": "TOYOTA is recalling AVALON HYBRID",
+      "keywords": "ORGANIZATION<SEP>is_recalling<SEP>OTHER",
+      "source_id": "7",
+      "chunk_ids": "7_0<SEP>7_0",
+      "weight": 0.8720397353172302
+    }
+  },
+  {
+    "('TOYOTA', 'SPORTS UTILITY VEHICLES')": {
+      "description": "TOYOTA is recalling SPORTS UTILITY VEHICLES",
+      "keywords": "ORGANIZATION<SEP>is_recalling<SEP>OTHER",
+      "source_id": "7",
+      "chunk_ids": "7_0<SEP>7_0",
+      "weight": 0.8506927490234375
+    }
+  },
+  {
+    "('MASSIVE RECALL', 'MATTHEW ROSE')": {
+      "description": "MASSIVE RECALL experienced by MATTHEW ROSE",
+      "keywords": "EVENT<SEP>experienced_by<SEP>PERSON",
+      "source_id": "7",
+      "chunk_ids": "7_0<SEP>7_0",
+      "weight": 0.9172073602676392
+    }
+  },
+  {
+    "('AIRBAG SENSOR DEFECT', 'MATTHEW ROSE')": {
+      "description": "AIRBAG SENSOR DEFECT experienced by MATTHEW ROSE",
+      "keywords": "EVENT<SEP>experienced_by<SEP>PERSON",
+      "source_id": "7",
+      "chunk_ids": "7_0<SEP>7_0",
+      "weight": 0.8737235069274902
+    }
+  },
+  {
+    "('SEAT BELTS', 'MATTHEW ROSE')": {
+      "description": "SEAT BELTS experienced by MATTHEW ROSE",
+      "keywords": "EVENT<SEP>experienced_by<SEP>PERSON",
+      "source_id": "7",
+      "chunk_ids": "7_0<SEP>7_0",
+      "weight": 0.9132790565490723
+    }
+  },
+  {
+    "('KIA OPTIMA', 'MATTHEW ROSE')": {
+      "description": "KIA OPTIMA experienced by MATTHEW ROSE",
+      "keywords": "OTHER<SEP>experienced_by<SEP>PERSON",
+      "source_id": "7",
+      "chunk_ids": "7_0<SEP>7_0",
+      "weight": 0.8878128528594971
+    }
+  },
+  {
+    "('KIA OPTIMA', 'BIG TOASTED MARSHMALLOW')": {
+      "description": "KIA OPTIMA described as BIG TOASTED MARSHMALLOW",
+      "keywords": "OTHER<SEP>described_as<SEP>OTHER",
+      "source_id": "7",
+      "chunk_ids": "7_0<SEP>7_0",
+      "weight": 0.8692745566368103
+    }
+  },
+  {
+    "('FLAMES', 'MATTHEW ROSE')": {
+      "description": "FLAMES experienced by MATTHEW ROSE",
+      "keywords": "EVENT<SEP>experienced_by<SEP>PERSON",
+      "source_id": "7",
+      "chunk_ids": "7_0<SEP>7_0",
+      "weight": 0.9787882566452026
+    }
+  },
+  {
+    "('GENERAL MOTORS', '18.32%')": {
+      "description": "GENERAL MOTORS rose to 18.32%",
+      "keywords": "ORGANIZATION<SEP>rose_to<SEP>OTHER",
+      "source_id": "7",
+      "chunk_ids": "7_0<SEP>7_0",
+      "weight": 0.8386030197143555
+    }
+  },
+  {
+    "('EIGHT-WEEK PRODUCTION SHUTDOWN', 'MATTHEW ROSE')": {
+      "description": "EIGHT-WEEK PRODUCTION SHUTDOWN experienced by MATTHEW ROSE",
+      "keywords": "EVENT<SEP>experienced_by<SEP>PERSON",
+      "source_id": "7",
+      "chunk_ids": "7_0<SEP>7_0",
+      "weight": 0.8819798231124878
+    }
+  },
+  {
+    "('EIGHT-WEEK PRODUCTION SHUTDOWN', 'COVID-19 PANDEMIC')": {
+      "description": "EIGHT-WEEK PRODUCTION SHUTDOWN caused by COVID-19 PANDEMIC",
+      "keywords": "EVENT<SEP>caused_by<SEP>EVENT",
+      "source_id": "7",
+      "chunk_ids": "7_0<SEP>7_0",
+      "weight": 0.8327968716621399
+    }
+  },
+  {
+    "('TOTAL MARKET SHARE', '18.32%')": {
+      "description": "TOTAL MARKET SHARE rose to 18.32%",
+      "keywords": "OTHER<SEP>rose_to<SEP>OTHER",
+      "source_id": "7",
+      "chunk_ids": "7_0<SEP>7_0",
+      "weight": 0.9741926193237305
+    }
+  },
+  {
+    "('TOTAL MARKET SHARE', '17.09%')": {
+      "description": "TOTAL MARKET SHARE rose to 17.09%",
+      "keywords": "OTHER<SEP>rose_to<SEP>OTHER",
+      "source_id": "7",
+      "chunk_ids": "7_0<SEP>7_0",
+      "weight": 0.9654297232627869
+    }
+  }
+]

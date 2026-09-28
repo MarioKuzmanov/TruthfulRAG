@@ -1,0 +1,260 @@
+[
+  {
+    "entity_type": "\"LOCATION\"",
+    "description": "\"Uzhhorod is a small city in the far southwestern corner of Ukraine, where First Lady Jill Biden made an unannounced trip during Mother's Day.\"",
+    "source_id": "99",
+    "entity_name": "\"UZHHOROD\""
+  },
+  {
+    "entity_type": "\"LOCATION\"",
+    "description": "\"Ukraine is a country under invasion by Russia, where First Lady Jill Biden visited a converted school serving as temporary housing for displaced citizens.\"",
+    "source_id": "99",
+    "entity_name": "\"UKRAINE\""
+  },
+  {
+    "entity_type": "\"ORGANIZATION\"",
+    "description": "\"Russia is the country that has invaded Ukraine, causing displacement and conflict.\"",
+    "source_id": "99",
+    "entity_name": "\"RUSSIA\""
+  },
+  {
+    "entity_type": "\"PERSON\"",
+    "description": "\"Olena Zelenska is the first lady of Ukraine, whom First Lady Jill Biden met with at a converted school.\"",
+    "source_id": "99",
+    "entity_name": "\"OLENA ZELENSKA\""
+  },
+  {
+    "entity_type": "\"PERSON\"",
+    "description": "\"Jill Biden is the First Lady of the United States, on a tour emphasizing the benefits of partnerships with Latin American countries.\"<SEP>\"Jill Biden is the First Lady of the United States, who made an unannounced trip to Ukraine and Romania.\"",
+    "source_id": "99",
+    "entity_name": "\"JILL BIDEN\""
+  },
+  {
+    "entity_type": "\"PERSON\"",
+    "description": "\"Ashley Biden is Jill Biden's daughter, who accompanied her on a trip to Latin America.\"",
+    "source_id": "99",
+    "entity_name": "\"ASHLEY BIDEN\""
+  },
+  {
+    "entity_type": "\"LOCATION\"",
+    "description": "\"Washington is the capital of the United States, from where Jill Biden departed for her trips.\"",
+    "source_id": "99",
+    "entity_name": "\"WASHINGTON\""
+  },
+  {
+    "entity_type": "\"LOCATION\"",
+    "description": "\"Romania is a country where First Lady Jill Biden will visit to show support for displaced Ukrainian families.\"",
+    "source_id": "99",
+    "entity_name": "\"ROMANIA\""
+  },
+  {
+    "entity_type": "\"LOCATION\"",
+    "description": "\"Slovakia is a country where First Lady Jill Biden will visit to show support for displaced Ukrainian families.\"",
+    "source_id": "99",
+    "entity_name": "\"SLOVAKIA\""
+  },
+  {
+    "entity_type": "\"LOCATION\"",
+    "description": "\"Bucharest is the capital city of Romania, where First Lady Jill Biden will hold meetings with Romanian government officials.\"",
+    "source_id": "99",
+    "entity_name": "\"BUCHAREST\""
+  },
+  {
+    "entity_type": "\"LOCATION\"",
+    "description": "\"Ecuador is a country where First Lady Jill Biden made a stop during her Latin American tour.\"",
+    "source_id": "99",
+    "entity_name": "\"ECUADOR\""
+  },
+  {
+    "entity_type": "\"LOCATION\"",
+    "description": "\"Panama is a country where First Lady Jill Biden made a stop during her Latin American tour.\"",
+    "source_id": "99",
+    "entity_name": "\"PANAMA\""
+  },
+  {
+    "entity_type": "\"LOCATION\"",
+    "description": "\"Costa Rica is a country where First Lady Jill Biden made a stop during her Latin American tour.\"",
+    "source_id": "99",
+    "entity_name": "\"COSTA RICA\""
+  },
+  {
+    "entity_type": "\"PERSON\"",
+    "description": "\"Douglas Emhoff is the Second Gentleman of the United States, who will sit with Jill Biden to watch President Joe Biden's speech.\"",
+    "source_id": "99",
+    "entity_name": "\"DOUGLAS EMHOFF\""
+  },
+  {
+    "entity_type": "\"PERSON\"",
+    "description": "\"Joe Biden is the President of the United States, whose job approval rating is currently low.\"",
+    "source_id": "99",
+    "entity_name": "\"JOE BIDEN\""
+  },
+  {
+    "entity_type": "\"PERSON\"",
+    "description": "\"Markarova is an individual who met with members of Congress to ask for continued sanctions and more weapons for Ukraine.\"",
+    "source_id": "99",
+    "entity_name": "\"MARKAROVA\""
+  },
+  {
+    "entity_type": "\"ORGANIZATION\"",
+    "description": "\"New York Times and Siena College conducted a poll that showed a low job approval rating for President Joe Biden.\"",
+    "source_id": "99",
+    "entity_name": "\"NEW YORK TIMES AND SIENA COLLEGE\""
+  },
+  {
+    "entity_type": "\"ORGANIZATION\"",
+    "description": "\"The United Nations High Commissioner for Refugees provided statistics on the number of Ukrainians crossing the border into Romania.\"",
+    "source_id": "99",
+    "entity_name": "\"UNITED NATIONS HIGH COMMISSIONER FOR REFUGEES\""
+  },
+  {
+    "entity_type": "\"LOCATION\"",
+    "description": "\"Texas is the location of a recent mass shooting at an elementary school, which caused President Joe Biden to face the task of comforting families.\"",
+    "source_id": "99",
+    "entity_name": "\"TEXAS\""
+  },
+  {
+    "entity_type": "\"LOCATION\"",
+    "description": "\"San Jose is the location where First Lady Jill Biden concluded her Latin American tour.\"",
+    "source_id": "99",
+    "entity_name": "\"SAN JOSE\""
+  },
+  {
+    "entity_type": "\"EVENT\"",
+    "description": "\"Mother's Day is the occasion when First Lady Jill Biden made an unannounced trip to Uzhhorod, Ukraine.\"",
+    "source_id": "99",
+    "entity_name": "\"MOTHER'S DAY\""
+  },
+  {
+    "entity_type": "\"EVENT\"",
+    "description": "\"Latin American tour is the six-day trip to Ecuador, Panama, and Costa Rica made by First Lady Jill Biden.\"",
+    "source_id": "99",
+    "entity_name": "\"LATIN AMERICAN TOUR\""
+  },
+  {
+    "entity_type": "\"EVENT\"",
+    "description": "\"Mass shooting is the recent incident in Texas that caused President Joe Biden to face the task of comforting families.\"",
+    "source_id": "99",
+    "entity_name": "\"MASS SHOOTING\""
+  },
+  {
+    "entity_type": "\"CONCEPT\"",
+    "description": "\"Democratic backsliding is a concern mentioned in relation to the US partnership with Latin American countries.\"",
+    "source_id": "99",
+    "entity_name": "\"DEMOCRATIC BACKSLIDING\""
+  },
+  {
+    "entity_type": "\"CONCEPT\"",
+    "description": "\"Sanctions are measures discussed in relation to supporting Ukraine against Russia's invasion.\"",
+    "source_id": "99",
+    "entity_name": "\"SANCTIONS\""
+  },
+  {
+    "entity_type": "\"CONCEPT\"",
+    "description": "\"Weapons are requested by Markarova for Ukraine's defense against Russia's invasion.\"",
+    "source_id": "99",
+    "entity_name": "\"WEAPONS\""
+  },
+  {
+    "entity_type": "\"LOCATION\"",
+    "description": "\"San Jose, Costa Rica is a location visited by Jill Biden during her tour.\"",
+    "source_id": "99",
+    "entity_name": "\"SAN JOSE, COSTA RICA\""
+  },
+  {
+    "entity_type": "\"LOCATION\"",
+    "description": "\"Quito, Ecuador is a location visited by Jill Biden during her tour.\"",
+    "source_id": "99",
+    "entity_name": "\"QUITO, ECUADOR\""
+  },
+  {
+    "entity_type": "\"LOCATION\"",
+    "description": "\"The Ecuadorian Presidential Palace is the venue for Jill Biden's speech in Quito.\"",
+    "source_id": "99",
+    "entity_name": "\"ECUADORIAN PRESIDENTIAL PALACE\""
+  },
+  {
+    "entity_type": "\"LOCATION\"",
+    "description": "\"The Carondelet presidential palace is the venue for Jill Biden's speech in Quito.\"",
+    "source_id": "99",
+    "entity_name": "\"CARONDELET PRESIDENTIAL PALACE\""
+  },
+  {
+    "entity_type": "\"PERSON\"",
+    "description": "\"Guillermo Lasso is the President of Ecuador, who gave a speech before Jill Biden's remarks.\"",
+    "source_id": "99",
+    "entity_name": "\"GUILLERMO LASSO\""
+  },
+  {
+    "entity_type": "\"ORGANIZATION\"",
+    "description": "\"The United States is mentioned as a partner in the context of Jill Biden's tour and speeches.\"",
+    "source_id": "99",
+    "entity_name": "\"UNITED STATES\""
+  },
+  {
+    "entity_type": "\"LOCATION\"",
+    "description": "\"Latin America is the region of focus for Jill Biden's tour and speeches.\"",
+    "source_id": "99",
+    "entity_name": "\"LATIN AMERICA\""
+  },
+  {
+    "entity_type": "\"EVENT\"",
+    "description": "\"Massacres are mentioned as a context for Jill Biden's tour, highlighting the need for prevention.\"",
+    "source_id": "99",
+    "entity_name": "\"MASSACRES\""
+  },
+  {
+    "entity_type": "\"ORGANIZATION\"",
+    "description": "\"CNN is the news network reporting on Jill Biden's tour and speeches.\"",
+    "source_id": "99",
+    "entity_name": "\"CNN\""
+  },
+  {
+    "entity_type": "\"EVENT\"",
+    "description": "\"Tours are the activities Jill Biden is engaged in during her visit to Latin America.\"",
+    "source_id": "99",
+    "entity_name": "\"TOURS\""
+  },
+  {
+    "entity_type": "\"EVENT\"",
+    "description": "\"Speeches are the primary mode of communication for Jill Biden during her tour.\"",
+    "source_id": "99",
+    "entity_name": "\"SPEECHES\""
+  },
+  {
+    "entity_type": "\"EVENT\"",
+    "description": "\"Remembrance is the somber event held after a day of mourning.\"",
+    "source_id": "99",
+    "entity_name": "\"REMEMBRANCE\""
+  },
+  {
+    "entity_type": "\"CONCEPT\"",
+    "description": "\"Grief is the emotional state experienced by the nation after a somber remembrance.\"",
+    "source_id": "99",
+    "entity_name": "\"GRIEF\""
+  },
+  {
+    "entity_type": "\"EVENT\"",
+    "description": "\"Future massacres are the potential threats that the nation aims to prevent.\"",
+    "source_id": "99",
+    "entity_name": "\"FUTURE MASSACRES\""
+  },
+  {
+    "entity_type": "\"CONCEPT\"",
+    "description": "\"Partnerships are emphasized as beneficial for both the United States and Latin American countries.\"",
+    "source_id": "99",
+    "entity_name": "\"PARTNERSHIPS\""
+  },
+  {
+    "entity_type": "\"CONCEPT\"",
+    "description": "\"Global assistance is highlighted as important for building alliances.\"",
+    "source_id": "99",
+    "entity_name": "\"GLOBAL ASSISTANCE\""
+  },
+  {
+    "entity_type": "\"CONCEPT\"",
+    "description": "\"Alliances are mentioned as a key aspect of the United States' engagement with Latin America.\"",
+    "source_id": "99",
+    "entity_name": "\"ALLIANCES\""
+  }
+]
