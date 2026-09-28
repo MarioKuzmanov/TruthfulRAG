@@ -4,7 +4,7 @@
 
 ### Quick Start
 
-Recommended to create a clean environment (for now)
+Recommended to create a clean environment
 - `conda create -n truthful-rag-service python=3.11`
 - `conda activate truthful-rag-service`
 - `pip install -r app/requirements.txt`
