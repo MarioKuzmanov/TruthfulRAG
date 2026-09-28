@@ -1,6 +1,5 @@
-from fastapi import APIRouter, Response, Depends
+from fastapi import APIRouter, Response, Depends, HTTPException
 from app.services.setup_service import get_selected_item_id
-from app.services.prompt_service import AbstractPromptService, get_prompt_service
 from app.services.llm_service import get_llm_service, LLMService
 
 router = APIRouter()
@@ -10,6 +9,9 @@ router = APIRouter()
 def response_without_cot(item_id: str = Depends(get_selected_item_id),
                          llm_service: LLMService = Depends(get_llm_service)):
     response = llm_service.response_without_cot(item_id)
+    if response is None:
+        raise HTTPException(status_code=404, detail="Item not found")
+
     content = (f"## PREDICTED ANSWER\n\n"
                f"{response['predicted_answer']}\n\n"
                f"---\n\n"
@@ -24,6 +26,9 @@ def response_without_cot(item_id: str = Depends(get_selected_item_id),
 @router.get("/response-cot/")
 def response_with_cot(item_id: str = Depends(get_selected_item_id), llm_service: LLMService = Depends(get_llm_service)):
     response = llm_service.response_with_cot(item_id)
+    if response is None:
+        raise HTTPException(status_code=404, detail="Item not found")
+
     content = (f"## PREDICTED ANSWER\n\n"
                f"{response['predicted_answer']}\n\n"
                f"---\n\n"
@@ -37,14 +42,3 @@ def response_with_cot(item_id: str = Depends(get_selected_item_id), llm_service:
 
     return Response(content=content, status_code=200, media_type="text/markdown")
 
-
-@router.get("/prompt-wo-cot/")
-def get_prompt_wo_cot(prompt_service: AbstractPromptService = Depends(get_prompt_service)):
-    content = prompt_service.prompt_llm_wo_cot()
-    return Response(content=content, status_code=200, media_type="text/markdown")
-
-
-@router.get("/prompt-cot/")
-def get_prompt_cot(prompt_service: AbstractPromptService = Depends(get_prompt_service)):
-    content = prompt_service.prompt_llm_with_cot()
-    return Response(content=content, status_code=200, media_type="text/markdown")
