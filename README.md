@@ -12,6 +12,30 @@ This project aims to extend [**TruthfulRAG**](https://github.com/STAIR-BUPT/Trut
 
 ## Repository Structure
 
+```text
+app/                         FastAPI demo service
+datas/                       TimeQA, FaithEval, MuSiQue and SQuAD data
+gliner_truthfulrag/
+  adapter.py                 Converts GLiNER output to TruthfulRAGs KG format
+  main.py                    Main experiment runner
+  eval.py                    Markdown report generator
+  kg_building.ipynb          KG construction walkthrough
+  prompts/                   Predicate- and path-extraction prompts
+  core/                      Environment management
+  services/
+    chunk_service.py         Token-based context chunking (GLiNER tokenizer)
+    llm_service.py           Batched predicate extraction with Qwen
+    ner_re_service.py        GLiNER entity and relation extraction
+    kg_service.py            Orchestrator entrypoint for all services
+    direct_path_service.py   Direct-path ablation
+    helpers.py               Helpers for downloading, loading and offloading models
+truthfulrag/                 Original TruthfulRAG implementation
+outputs/                     Stored predictions, statistics and markdown reports
+baselines.py                 Baseline experiment runner
+baselines_eval.py            Baseline evaluation
+run_experiment.ipynb         Example experiment walkthrough
+```
+
 ## Citations
 
 ### TruthfulRAG
