@@ -10,6 +10,14 @@ This project aims to extend [**TruthfulRAG**](https://github.com/STAIR-BUPT/Trut
 
 ## 4. How to Reproduce
 
+### Requirements
+
+- Python 3.11
+- CUDA-capable GPU with enough VRAM for `Qwen/Qwen2.5-7B-Instruct` and `knowledgator/gliner-relex-large-v0.5`
+- Git and Conda or a different Python environment manager
+
+All experiments were run on a single NVIDIA A100 (Colab and BwUniCluster3.0) or H100 (BwUniCluster3.0) GPU, based on availability.
+
 ## Repository Structure
 
 ```text
@@ -29,7 +37,7 @@ gliner_truthfulrag/
     kg_service.py            Orchestrator entrypoint for all services
     direct_path_service.py   Direct-path ablation
     helpers.py               Helpers for downloading, loading and offloading models
-truthfulrag/                 Original TruthfulRAG implementation
+truthfulrag/                 Extended original TruthfulRAG implementation
 outputs/                     Stored predictions, statistics and markdown reports
 baselines.py                 Baseline experiment runner
 baselines_eval.py            Baseline evaluation
