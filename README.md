@@ -4,6 +4,29 @@ This project aims to extend [**TruthfulRAG**](https://github.com/STAIR-BUPT/Trut
 
 ## 1. Project Overview and Research Questions
 
+Retrieval-Augmented Generation (RAG) provides Large Language Models (LLMs) with external source data before generation. Nonetheless, those recovered sources may contain knowledge which conflicts with the knowledge the LLM learns during training. The paper [TruthfulRAG](https://arxiv.org/abs/2511.10375) presents a framework to resolving these factual-level conflicts. The author's approach entails the construction of Knowledge Graphs (KGs) from subject-predicate-object triples extracted from the external source, two-hop graph traversal for reasoning path retrieval, path relevancy ranking based on the query and entropy-based path filtering before final generation.
+
+In the original implementation, large parts of the KG construction step (i.e., entity extraction, relation-label generation, and triple extraction) are performed by an LLM. This requires multiple LLM inference calls, making the pipeline resource- and time-intensive. Additionally, we identified several inconsistencies:
+
+- **Entropy-filtering discrepancy:** The formulas described in Equations (9) and (11) in the paper differ from the formula implemented in the official repository.
+- **Final-generation discrepancy:** Equation (12) in the paper does not mention the entire source context, although the implementation provides it alongside the reasoning paths during final generation.
+
+Our main contribution is the replacement of the costly LLM-based KG backend with a faster backend based on GLiNER-relex, a 500M-parameter specialized model for zero-shot Named Entity Recognition and Relationship Extraction. The remainder of the TruthfulRAG pipeline, which includes graph retrieval, entropy-based filtering, final generation and evaluation, remains unchanged, allowing a fair comparison between both KG construction methods.
+
+This project primarily aims to address the following questions:
+
+1. **Reproduction**: Can we replicate the results reported in the original paper?
+2. **Efficiency and Quality**: How does our GLiNER-based pipeline compare to the TruthfulRAG pipeline, in regards to answer quality and runtime?
+3. **Role of Reasoning Paths**: To what extent does the inclusion of reasoning paths affect answer quality, with and without appending the entire original context.
+
+Additionally we partly address further questions. These however are not the main focus of this project and can be further investigated in the future:
+
+4. **Entropy-filtering consistency**: How does the entropy-filtering method described in the paper compare with the method currently implemented in the official repository?
+5. **Necessity of KG Construction**: Can query-aware reasoning paths be extracted directly from the source context while preserving answer quality and reducing runtime?
+6. **Practical Deployability**: Can the proposed pipeline be integrated into TruthfulRAG as a deployable service?
+
+> **Disclaimer**: The original paper reports experiments on the datasets FaithEval, MuSiQue, RealtimeQA and SQuAD across the three models `GPT-4o-mini`, `Qwen2.5-7B-Instruct` and `Mistral-7B-Instruct`. Due to time and resource constraints, we chose to run all experiments on `Qwen2.5-7B-Instruct` only and report results on both FaithEval and RealtimeQA. While the GLiNER backend currently only supports `Qwen2.5-7B-Instruct`, the pipeline can be evaluated on the other datasets as is.
+
 ## 2. Methodology
 
 ## 3. Main Results
@@ -46,7 +69,7 @@ The results will be saved under:
 
 ```text
 outputs/gliner-test-5/res.json
-outputs/gliner-test-5/stats.json
+outputs/gliner-test-5/stats.jsonl
 ```
 
 You can then generate a Markdown summary with:
