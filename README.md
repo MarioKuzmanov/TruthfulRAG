@@ -16,7 +16,7 @@ This project aims to extend [**TruthfulRAG**](https://github.com/STAIR-BUPT/Trut
 
 ### TruthfulRAG
 
-```code
+```bibtex
 @article{liu2025truthfulrag,
   title={TruthfulRAG: Resolving Factual-level Conflicts in Retrieval-Augmented Generation with Knowledge Graphs},
   author={Liu, Shuyi and Shang, Yuming and Zhang, Xi},
@@ -27,7 +27,7 @@ This project aims to extend [**TruthfulRAG**](https://github.com/STAIR-BUPT/Trut
 
 ### GLiNER
 
-```code
+```bibtex
 @inproceedings{zaratiana-etal-2024-gliner,
     title = "{GL}i{NER}: Generalist Model for Named Entity Recognition using Bidirectional Transformer",
     author = "Zaratiana, Urchade and
@@ -40,5 +40,3 @@ This project aims to extend [**TruthfulRAG**](https://github.com/STAIR-BUPT/Trut
     pages = "5364--5376",
 }
 ```
-
-
