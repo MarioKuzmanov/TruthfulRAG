@@ -19,7 +19,7 @@ This project primarily aims to address the following questions:
 2. **Efficiency and Quality**: How does our GLiNER-based pipeline compare to the TruthfulRAG pipeline, in regards to answer quality and runtime?
 3. **Role of Reasoning Paths**: To what extent does the inclusion of reasoning paths affect answer quality, with and without appending the entire original context.
 
-Additionally we partly address further questions. These however are not the main focus of this project and can be further investigated in the future:
+Additionally, we partly address further questions. These however are not the main focus of this project and can be further investigated in the future:
 
 4. **Entropy-filtering consistency**: How does the entropy-filtering method described in the paper compare with the method currently implemented in the official repository?
 5. **Necessity of KG Construction**: Can query-aware reasoning paths be extracted directly from the source context while preserving answer quality and reducing runtime?
