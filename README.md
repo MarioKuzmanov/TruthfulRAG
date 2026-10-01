@@ -55,7 +55,7 @@ further investigated in the future:
 
 ## 2. Methodology
 
-Our proposed method consists of four steps. Firstly, the contex is split into chunks using the tokenizer (DeBERTa) of the GLiNER-relex model. As it supports a maximum sequence length of 512 tokens, chunks are adjusted to match those limits. 
+Our proposed method consists of four steps. Firstly, the context is split into chunks using the tokenizer (DeBERTa) of the GLiNER-relex model. As it supports a maximum sequence length of 512 tokens, chunks are adjusted to match those limits. 
 
 Secondly, we feed the text chunks into the LLM, which remains the same throughout the entire pipeline.
 Instead of being responsible for all steps of KG construction, our LLM-call only extracts a list of predicates from the text. In TruthfulRAG the default NER entity types are predefined (_ORG, PER, LOC, EVT_), so combined with the newly extracted predicates we have all the NER and RE schemas needed for KG construction.
