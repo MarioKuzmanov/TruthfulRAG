@@ -58,12 +58,12 @@ further investigated in the future:
 Our method consists of four main steps. First, the item is split into chunks using the tokenizer (DeBERTa) of the GLiNER-relex model. As it supports a max sequence length of 512 tokens, chunks are adjusted to match the limits. 
 
 Second, we feed the text chunks to the LLM, which is always the same as the main one. For example, if TruthfulRAG uses the Qwen model, the GLiNER-pipeline would use it as well.
-Instead of being responsible for all steps of KG construction, our LLM-call extracts a list of predicates from the text. As in TruthfulRAG the default NER schema is predefined (_ORG, PER, LOC, EVT_), the newly extracted predicates are used as the RE schema.
+Instead of being responsible for all steps of KG construction, our LLM-call only extracts a list of predicates from the text. In TruthfulRAG the default NER schema is predefined (_ORG, PER, LOC, EVT_), so with the newly extracted predicates we have both the NER and RE schemas.
 
-Then, text chunks with the established entity and relation classes are given to GLiNER-relex, which scores and returns relations.
+Then, the textual chunks with the already established entity and relation classes are given to GLiNER-relex, which scores and returns relations.
 
-Finally, the pipeline is integrated as an alternative `kg-backend` into TruthfulRAG. The integration requires a filled `description` field for each entity and relation predicate, so we follow a rule-based approach to generate generic descriptions from the given entity types and predicates.
-For example, the entity `America` is described as: `AMERICA: AMERICA is an entity of type LOCATION`. Similarly, an edge description could be `AMERICA->PRICES: AMERICA spiking prices PRICES`.
+Finally, the pipeline is integrated as an alternative `kg-backend` into TruthfulRAG with configurable settings, e.g., batch size. The integration requires a filled `description` field for each node and edge, so we follow a rule-based approach to generate generic descriptions from the given entity types and predicates.
+For example, the node `America` is described as: `AMERICA: AMERICA is an entity of type LOCATION`. Similarly, an edge description could be `AMERICA->PRICES: AMERICA spiking prices PRICES`.
 Such adaptation is required in order to create a knowledge graph instance (in TruthfulRAG) and still use it without making further changes in the retrieval logic. 
 
 The approach, together with the preliminary study are thoroughly described
