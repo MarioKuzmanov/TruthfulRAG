@@ -24,7 +24,7 @@ pipeline resource- and time-intensive. Additionally, we identified several incon
 
 Our main contribution is the replacement of the costly LLM-based KG backend with a faster backend based
 on [GLiNER-relex](https://huggingface.co/knowledgator/gliner-relex-large-v0.5),
-a 500M-parameter specialized model for zero-shot Named Entity Recognition and Relationship Extraction. The remainder of
+a 500M-parameter specialized model for zero-shot Named Entity Recognition (NER) and Relationship Extraction (RE). The remainder of
 the TruthfulRAG pipeline, which includes graph retrieval, entropy-based filtering, final generation and evaluation,
 remains unchanged, allowing a fair comparison between both KG construction methods.
 
@@ -55,14 +55,14 @@ further investigated in the future:
 
 ## 2. Methodology
 
-Our method consists of four main steps. First, the item is split into chunks using the tokenizer (DeBERTa) of the GLiNER-relex model. As it supports a max sequence length of 512 tokens, chunks are adjusted to match the limits. 
+Our proposed method consists of four steps. Firstly, the contex is split into chunks using the tokenizer (DeBERTa) of the GLiNER-relex model. As it supports a maximum sequence length of 512 tokens, chunks are adjusted to match those limits. 
 
-Second, we feed the text chunks to the LLM, which is always the same as the main one. For example, if TruthfulRAG uses the Qwen model, the GLiNER-pipeline would use it as well.
-Instead of being responsible for all steps of KG construction, our LLM-call only extracts a list of predicates from the text. In TruthfulRAG the default NER schema is predefined (_ORG, PER, LOC, EVT_), so with the newly extracted predicates we have both the NER and RE schemas.
+Secondly, we feed the text chunks into the LLM, which remains the same throughout the entire pipeline.
+Instead of being responsible for all steps of KG construction, our LLM-call only extracts a list of predicates from the text. In TruthfulRAG the default NER entity types are predefined (_ORG, PER, LOC, EVT_), so combined with the newly extracted predicates we have all the NER and RE schemas needed for KG construction.
 
-Then, the textual chunks with the already established entity and relation classes are given to GLiNER-relex, which scores and returns relations.
+Then, the textual chunks with the already established entity and relationship types are passed to GLiNER-relex, which scores and returns relations.
 
-Finally, the pipeline is integrated as an alternative `kg-backend` into TruthfulRAG with configurable settings, e.g., batch size. The integration requires a filled `description` field for each node and edge, so we follow a rule-based approach to generate generic descriptions from the given entity types and predicates.
+Finally, the pipeline is integrated as an alternative `kg-backend` into TruthfulRAG with configurable settings, e.g., batch size. The integration requires a filled `description` field for each node and edge, so we follow a rule-based approach to generate generic descriptions from the given entity types and predicates, differing from the LLM-generated text attributes in the original TruthfulRAG.
 For example, the node `America` is described as: `AMERICA: AMERICA is an entity of type LOCATION`. Similarly, an edge description could be `AMERICA->PRICES: AMERICA spiking prices PRICES`.
 Such adaptation is required in order to create a knowledge graph instance (in TruthfulRAG) and still use it without making further changes in the retrieval logic. 
 
@@ -89,9 +89,9 @@ with `cot`.
 | TruthfulRAG | 73.2%             | 73.5%                  | FaithEval  |
 
 Our replication yields similar results on FaithEval and somewhat close on RealtimeQA for TruthfulRAG. Surprisingly, RAG
-performs better with and without CoT. The trend has to be validated on the other datasets.
+performs better with and without CoT. This trend has to be further validated on the other datasets.
 
-- **How does our GLiNER pipeline compares to the TruthfulRAG's KG building?**
+- **How does our GLiNER pipeline compare to TruthfulRAG's KG building?**
 
 We continue the comparisons based on our replicated results. Also, the reported runtimes are measured within the same
 GPU
@@ -104,11 +104,11 @@ environment to ensure fair comparisons. Filtered paths are the total number of f
 | TruthfulRAG-GLiNER   | 76.6%    | 4452 s              | 12926 s       | 7678           | FaithEval  |
 | TruthfulRAG-Original | 73.5%    | 43170 s             | 51678 s       | 7815           | FaithEval  |
 
-So, GLiNER improves the accuracy by up to 3.1 percentage points, while being 9-9.7x faster at KG building.
+GLiNER improves the accuracy by up to 3.1 percentage points, while being 9-9.7x faster at KG building.
 
 - **What are the effects of reasoning paths?**
 
-The baseline is provided with both contexts and paths. `wo-context` provides only the final paths without the source
+The baselines are both pipelines provided with both original contexts and paths. `wo-context` provides only the final paths without appending the source
 context. The methods are only evaluated on RealtimeQA.
 
 | Method                          | Accuracy | 
@@ -118,10 +118,10 @@ context. The methods are only evaluated on RealtimeQA.
 | TruthfulRAG-GLiNER-wo-context   | 53.9%    |
 | TruthfulRAG-Original-wo-context | 57.5%    | 
 
-The huge drop in both methods clearly indicates the reliance on context beyond facts.
-Motivated by the huge important of context, we implement an approach that skips the KG building path to directly extract
+The significant accuracy drop for both methods clearly indicates the heavy reliance on context beyond the paths, an insight unexplored in the TruthfulRAG paper. \
+Motivated by the importance of context, we implement an approach that skips the time-intensive KG building entirely and directly extracts
 and
-provide triples for generating responses.
+provides triples by a single LLM-call for generating responses.
 
 | Method                 | Accuracy | Path Extraction Runtime | Total Runtime | Avg. Filtered Paths | Dataset    | 
 |------------------------|----------|-------------------------|---------------|---------------------|------------|
@@ -129,7 +129,7 @@ provide triples for generating responses.
 | RAG-triples-wo-context | 57.5%    | 161 s                   | 319 s         | 157                 | RealtimeQA |
 | RAG-triples            | 75.7%    | 2709 s                  | 5041 s        | 3302                | FaithEval  |
 
-Without the context, the same drop is observed. However, RAG + triples has very slightly worse performance than GLiNER,
+Without providing the full context, the same drop is observed. However, RAG + triples has a slightly worse performance than GLiNER,
 while being 2-3x faster.
 
 All tables present averages where multiple runs are performed. For runtimes, when the runs were performed in different
@@ -235,7 +235,7 @@ The demo service requires a few lightweight dependencies, it does not run any LL
 GPU.
 
 However,
-the recommended way of doing so is to create a new fresh environment (assumes conda is available):
+the recommended way of doing so is to create a new fresh environment (assuming conda is available):
 
 ```
 conda create -n truthful-rag-service python=3.11 
