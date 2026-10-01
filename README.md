@@ -54,6 +54,9 @@ further investigated in the future:
 
 ## 2. Methodology
 
+Our method consists of three main steps. The implementation is limited by the TruthfulRAG retrieval logic
+The approach, together with the preliminary study are thoroughly described in [implementation.md](gliner_truthfulrag/implementation.md). The prompt for predicate extraction is [raw_predicate_extraction.md](gliner_truthfulrag/prompts/raw_predicate_extraction.md).
+
 ## 3. Main Results
 
 - **Can we replicate the results reported in the original paper?**
