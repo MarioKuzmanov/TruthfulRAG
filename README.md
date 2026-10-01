@@ -313,4 +313,6 @@ run_experiment.ipynb         Example experiment walkthrough
 }
 ```
 
-## AI-Assistance statement
+## AI-Assistance Statement
+
+[Follow this link to our AI usage statement for this project.](ai_statement.md)
