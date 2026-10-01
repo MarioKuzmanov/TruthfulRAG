@@ -1,35 +1,123 @@
 # TruthfulRAG with GLiNER-Based Knowledge Graph Construction
 
-This project aims to extend [**TruthfulRAG**](https://github.com/STAIR-BUPT/TruthfulRAG/tree/main) by replacing the LLM-based Knowledge Graph Construction with a faster pipeline, based on [**GLiNER**](https://github.com/urchade/GLiNER) (Generalist and Lightweight Model for Named Entity Recognition).
+This project aims to extend [**TruthfulRAG**](https://github.com/STAIR-BUPT/TruthfulRAG/tree/main) by replacing the
+LLM-based Knowledge Graph Construction with a faster pipeline, based on [**GLiNER**](https://github.com/urchade/GLiNER)
+(Generalist and Lightweight Model for Named Entity Recognition).
 
 ## 1. Project Overview and Research Questions
 
-Retrieval-Augmented Generation (RAG) provides Large Language Models (LLMs) with external source data before generation. Nonetheless, those recovered sources may contain knowledge which conflicts with the knowledge the LLM learns during training. The paper [TruthfulRAG](https://arxiv.org/abs/2511.10375) presents a framework to resolving these factual-level conflicts. The author's approach entails the construction of Knowledge Graphs (KGs) from subject-predicate-object triples extracted from the external source, two-hop graph traversal for reasoning path retrieval, path relevancy ranking based on the query and entropy-based path filtering before final generation.
+Retrieval-Augmented Generation (RAG) provides Large Language Models (LLMs) with external source data before generation.
+Nonetheless, those recovered sources may contain knowledge which conflicts with the knowledge the LLM learns during
+training. The paper [TruthfulRAG](https://arxiv.org/abs/2511.10375) presents a framework to resolving these
+factual-level conflicts. The author's approach entails the construction of Knowledge Graphs (KGs) from
+subject-predicate-object triples extracted from the external source, two-hop graph traversal for reasoning path
+retrieval, path relevancy ranking based on the query and entropy-based path filtering before final generation.
 
-In the original implementation, large parts of the KG construction step (i.e., entity extraction, relation-label generation, and triple extraction) are performed by an LLM. This requires multiple LLM inference calls, making the pipeline resource- and time-intensive. Additionally, we identified several inconsistencies:
+In the original implementation, large parts of the KG construction step (i.e., entity extraction, relation-label
+generation, and triple extraction) are performed by an LLM. This requires multiple LLM inference calls, making the
+pipeline resource- and time-intensive. Additionally, we identified several inconsistencies:
 
-- **Entropy-filtering discrepancy:** The formulas described in Equations (9) and (11) in the paper differ from the formula implemented in the official repository.
-- **Final-generation discrepancy:** Equation (12) in the paper does not mention the entire source context, although the implementation provides it alongside the reasoning paths during final generation.
+- **Entropy-filtering discrepancy:** The formulas described in Equations (9) and (11) in the paper differ from the
+  formula implemented in the official repository.
+- **Final-generation discrepancy:** Equation (12) in the paper does not mention the entire source context, although the
+  implementation provides it alongside the reasoning paths during final generation.
 
-Our main contribution is the replacement of the costly LLM-based KG backend with a faster backend based on GLiNER-relex, a 500M-parameter specialized model for zero-shot Named Entity Recognition and Relationship Extraction. The remainder of the TruthfulRAG pipeline, which includes graph retrieval, entropy-based filtering, final generation and evaluation, remains unchanged, allowing a fair comparison between both KG construction methods.
+Our main contribution is the replacement of the costly LLM-based KG backend with a faster backend based on GLiNER-relex,
+a 500M-parameter specialized model for zero-shot Named Entity Recognition and Relationship Extraction. The remainder of
+the TruthfulRAG pipeline, which includes graph retrieval, entropy-based filtering, final generation and evaluation,
+remains unchanged, allowing a fair comparison between both KG construction methods.
 
 This project primarily aims to address the following questions:
 
 1. **Reproduction**: Can we replicate the results reported in the original paper?
-2. **Efficiency and Quality**: How does our GLiNER-based pipeline compare to the TruthfulRAG pipeline, in regards to answer quality and runtime?
-3. **Role of Reasoning Paths**: To what extent does the inclusion of reasoning paths affect answer quality, with and without appending the entire original context.
+2. **Efficiency and Quality**: How does our GLiNER-based pipeline compare to the TruthfulRAG pipeline, in regards to
+   answer quality and runtime?
+3. **Role of Reasoning Paths**: To what extent does the inclusion of reasoning paths affect answer quality, with and
+   without appending the entire original context.
 
-Additionally, we partly address further questions. These however are not the main focus of this project and can be further investigated in the future:
+Additionally, we partly address further questions. These however are not the main focus of this project and can be
+further investigated in the future:
 
-4. **Entropy-filtering consistency**: How does the entropy-filtering method described in the paper compare with the method currently implemented in the official repository?
-5. **Necessity of KG Construction**: Can query-aware reasoning paths be extracted directly from the source context while preserving answer quality and reducing runtime?
+4. **Entropy-filtering consistency**: How does the entropy-filtering method described in the paper compare with the
+   method currently implemented in the official repository?
+5. **Necessity of KG Construction**: Can query-aware reasoning paths be extracted directly from the source context while
+   preserving answer quality and reducing runtime?
 6. **Practical Deployability**: Can the proposed pipeline be integrated into TruthfulRAG as a deployable service?
 
-> **Disclaimer**: The original paper reports experiments on the datasets FaithEval, MuSiQue, RealtimeQA and SQuAD across the three models `GPT-4o-mini`, `Qwen2.5-7B-Instruct` and `Mistral-7B-Instruct`. Due to time and resource constraints, we chose to run all experiments on `Qwen2.5-7B-Instruct` only and report results on both FaithEval and RealtimeQA. While the GLiNER backend currently only supports `Qwen2.5-7B-Instruct`, the pipeline can be evaluated on the other datasets as is.
+> **Disclaimer**: The original paper reports experiments on the datasets FaithEval, MuSiQue, RealtimeQA and SQuAD across
+> the three models `GPT-4o-mini`, `Qwen2.5-7B-Instruct` and `Mistral-7B-Instruct`. Due to time and resource constraints,
+> we chose to run all experiments on `Qwen2.5-7B-Instruct` only and report results on both FaithEval and RealtimeQA.
+> While
+> the GLiNER backend currently only supports `Qwen2.5-7B-Instruct`, the pipeline can be evaluated on the other datasets
+> as
+> is.
 
 ## 2. Methodology
 
 ## 3. Main Results
+
+- **Can we replicate the results reported in the original paper?**
+
+The table reports the accuracy scores presented in the original paper and compares them with the results we got from
+running the published code. All methods use `Qwen2.5-7B-Instruct` as LLM. Their baseline methods predict `wo_cot`, but
+we also report their scores
+with `cot`.
+
+| Method      | TruthfulRAG-paper | TruthfulRAG-replicated | Dataset    | 
+|-------------|-------------------|------------------------|------------|
+| LLM         | 40.7%             | 43.4%                  | RealtimeQA |  
+| LLM-cot     | -                 | 37.2%                  | RealtimeQA |
+| RAG         | 78.7%             | 82.3%                  | RealtimeQA |
+| RAG-cot     | -                 | 84.1%                  | RealtimeQA |
+| TruthfulRAG | 82.3%             | 80.1%                  | RealtimeQA |
+| TruthfulRAG | 73.2%             | 73.5%                  | FaithEval  |
+
+Our replication yields similar results on FaithEval and somewhat close on RealtimeQA for TruthfulRAG. Surprisingly, RAG
+performs better with and without CoT. The trend has to be validated on the other datasets.
+
+- **How does our GLiNER pipeline compares to the TruthfulRAG's KG building?**
+
+We continue the comparisons based on our replicated results. Also, the reported runtimes are measured within the same
+GPU
+environment to ensure fair comparisons. Filtered paths are the total number of filtered facts for the dataset.
+
+| Method               | Accuracy | KG Building Runtime | Total Runtime | Filtered Paths | Dataset    | 
+|----------------------|----------|---------------------|---------------|----------------|------------|
+| TruthfulRAG-GLiNER   | 81.7%    | 540 s               | 1304 s        | 619            | RealtimeQA |
+| TruthfulRAG-Original | 80.1%    | 4855 s              | 5612 s        | 534            | RealtimeQA |
+| TruthfulRAG-GLiNER   | 76.6%    | 4452 s              | 12926 s       | 7678           | FaithEval  |
+| TruthfulRAG-Original | 73.5%    | 43170 s             | 51678 s       | 7815           | FaithEval  |
+
+So, GLiNER improves the accuracy by up to 3.1 percentage points, while being 9-9.7x faster at KG building.
+
+- **What are the effects of reasoning paths?**
+
+The baseline is provided with both contexts and paths. `wo-context` provides only the final paths without the source
+context. The methods are only evaluated on RealtimeQA.
+
+| Method                          | Accuracy | 
+|---------------------------------|----------|
+| TruthfulRAG-GLiNER-Baseline     | 81.7%    | 
+| TruthfulRAG-Original-Baseline   | 80.1%    |
+| TruthfulRAG-GLiNER-wo-context   | 53.9%    |
+| TruthfulRAG-Original-wo-context | 57.5%    | 
+
+The huge drop in both methods clearly indicates the reliance on context beyond facts.
+Motivated by the huge important of context, we implement an approach that skips the KG building path to directly extract
+and
+provide triples for generating responses.
+
+| Method                 | Accuracy | Path Extraction Runtime | Total Runtime | Avg. Filtered Paths | Dataset    | 
+|------------------------|----------|-------------------------|---------------|---------------------|------------|
+| RAG-triples            | 81.4%    | 164 s                   | 365 s         | 157                 | RealtimeQA |
+| RAG-triples-wo-context | 57.5%    | 161 s                   | 319 s         | 157                 | RealtimeQA |
+| RAG-triples            | 75.7%    | 2709 s                  | 5041 s        | 3302                | FaithEval  |
+
+Without the context, the same drop is observed. However, RAG + triples has very slightly worse performance than GLiNER,
+while being 2-3x faster.
+
+All tables present averages where multiple runs are performed. For runtimes, when the runs were performed in different
+compute environments, we only average from one environment. The individual outcomes can be found at `outputs/`.
 
 ## 4. How to Reproduce
 
@@ -39,7 +127,8 @@ Additionally, we partly address further questions. These however are not the mai
 - CUDA-capable GPU with enough VRAM for `Qwen/Qwen2.5-7B-Instruct` and `knowledgator/gliner-relex-large-v0.5`
 - Git and Conda or a different Python environment manager
 
-All experiments were run on a single NVIDIA A100 (Colab and BwUniCluster3.0) or H100 (BwUniCluster3.0) GPU, based on availability.
+All experiments were run on a single NVIDIA A100 (Colab and BwUniCluster3.0) or H100 (BwUniCluster3.0) GPU, based on
+availability.
 
 ### Installation
 
@@ -126,9 +215,32 @@ We also include the following options to run additional experiments:
 
 ### Run the demonstration API
 
-TODO
+The demo service requires a few lightweight dependencies, it does not run any LLMs in real-time and does not require
+GPU.
 
+However,
+the recommended way of doing so is to create a new fresh environment (assumes conda is available):
 
+```
+conda create -n truthful-rag-service python=3.11 
+conda activate truthful-rag-service 
+```
+
+Then, install the requirements which are in the `app/` directory:
+
+`pip install -r app/requirements.txt`
+
+Finally, for convenience use the `Makefile` to start the FastAPI server (from the repository root):
+
+`make start`
+
+By default, the Swagger UI will be available at: `http://0.0.0.0:8000/docs#/`. We implement tests for each endpoint on
+the service, which can be started with `python -m unittest -v app.tests.test_endpoints` while the service is running. If
+the binded url changes, the `URL` in the test file should be changed, too.
+
+The demo exposes the intermediate steps, including prompts, extracted paths, reasoning and final responses of all
+evaluated methods on a small set of 5 examples. It requires to be started with a single worker because we are
+sharing it through all methods to directly compare responses.
 
 ## Repository Structure
 
@@ -184,3 +296,5 @@ run_experiment.ipynb         Example experiment walkthrough
     pages = "5364--5376",
 }
 ```
+
+## AI-Assistance statement
