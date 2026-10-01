@@ -22,7 +22,8 @@ pipeline resource- and time-intensive. Additionally, we identified several incon
 - **Final-generation discrepancy:** Equation (12) in the paper does not mention the entire source context, although the
   implementation provides it alongside the reasoning paths during final generation.
 
-Our main contribution is the replacement of the costly LLM-based KG backend with a faster backend based on GLiNER-relex,
+Our main contribution is the replacement of the costly LLM-based KG backend with a faster backend based
+on [GLiNER-relex](https://huggingface.co/knowledgator/gliner-relex-large-v0.5),
 a 500M-parameter specialized model for zero-shot Named Entity Recognition and Relationship Extraction. The remainder of
 the TruthfulRAG pipeline, which includes graph retrieval, entropy-based filtering, final generation and evaluation,
 remains unchanged, allowing a fair comparison between both KG construction methods.
@@ -54,8 +55,20 @@ further investigated in the future:
 
 ## 2. Methodology
 
-Our method consists of three main steps. The implementation is limited by the TruthfulRAG retrieval logic
-The approach, together with the preliminary study are thoroughly described in [implementation.md](gliner_truthfulrag/implementation.md). The prompt for predicate extraction is [raw_predicate_extraction.md](gliner_truthfulrag/prompts/raw_predicate_extraction.md).
+Our method consists of four main steps. First, the item is split into chunks using the tokenizer (DeBERTa) of the GLiNER-relex model. As it supports a max sequence length of 512 tokens, chunks are adjusted to match the limits. 
+
+Second, we feed the text chunks to the LLM, which is always the same as the main one. For example, if TruthfulRAG uses the Qwen model, the GLiNER-pipeline would use it as well.
+Instead of being responsible for all steps of KG construction, our LLM-call extracts a list of predicates from the text. As in TruthfulRAG the default NER schema is predefined (_ORG, PER, LOC, EVT_), the newly extracted predicates are used as the RE schema.
+
+Then, text chunks with the established entity and relation classes are given to GLiNER-relex, which scores and returns relations.
+
+Finally, the pipeline is integrated as an alternative `kg-backend` into TruthfulRAG. The integration requires a filled `description` field for each entity and relation predicate, so we follow a rule-based approach to generate generic descriptions from the given entity types and predicates.
+For example, the entity `America` is described as: `AMERICA: AMERICA is an entity of type LOCATION`. Similarly, an edge description could be `AMERICA->PRICES: AMERICA spiking prices PRICES`.
+Such adaptation is required in order to create a knowledge graph instance (in TruthfulRAG) and still use it without making further changes in the retrieval logic. 
+
+The approach, together with the preliminary study are thoroughly described
+in [implementation.md](gliner_truthfulrag/implementation.md). The prompt for predicate extraction
+is [raw_predicate_extraction.md](gliner_truthfulrag/prompts/raw_predicate_extraction.md).
 
 ## 3. Main Results
 
